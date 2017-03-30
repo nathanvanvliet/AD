@@ -1,0 +1,9 @@
+d:\users\natha\documents\visual studio 2017\Projects\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.exe.config
+d:\users\natha\documents\visual studio 2017\Projects\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.exe
+d:\users\natha\documents\visual studio 2017\Projects\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.pdb
+d:\users\natha\documents\visual studio 2017\Projects\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csprojResolveAssemblyReference.cache
+d:\users\natha\documents\visual studio 2017\Projects\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Main.resources
+d:\users\natha\documents\visual studio 2017\Projects\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Properties.Resources.resources
+d:\users\natha\documents\visual studio 2017\Projects\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csproj.GenerateResource.Cache
+d:\users\natha\documents\visual studio 2017\Projects\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.exe
+d:\users\natha\documents\visual studio 2017\Projects\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.pdb
