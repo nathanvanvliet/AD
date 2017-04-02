@@ -46,14 +46,22 @@ namespace Eindopdracht
         /// <returns></returns>
         public T pop()
         {
-            //Load the last item
-            T item = list.Last();
+            try
+            {
+                //Load the last item
+                T item = list.Last();
 
-            //remove last item from the list
-            list.Remove(list.Last());
+                //remove last item from the list
+                list.Remove(list.Last());
 
-            //return removed item
-            return item;
+                //return removed item
+                return item;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
         /// <summary>
@@ -74,6 +82,18 @@ namespace Eindopdracht
             {
                 Console.WriteLine(list[i]);
             }
+        }
+
+
+        /// <summary>
+        /// This method is only created to be able to get the content of the stack 
+        /// to print it to the listbox 
+        /// </summary>
+        /// <param name="index"> the index number to get the item of</param>
+        /// <returns>the item at the given index number</returns>
+        public T getIndex(int index)
+        {
+            return list[index];
         }
     }
 }

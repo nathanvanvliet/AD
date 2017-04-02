@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BinarySearchTree.cs" />
     <Compile Include="Hash.cs" />
     <Compile Include="ListIter.cs" />
     <Compile Include="Main.cs">
@@ -58,7 +59,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search.cs" />
-    <Compile Include="Sort.cs" />
+    <Compile Include="_Sort.cs" />
     <Compile Include="TimeModule.cs" />
     <Compile Include="_CirculairLinkedList.cs" />
     <Compile Include="_DoublyLinkedList.cs" />

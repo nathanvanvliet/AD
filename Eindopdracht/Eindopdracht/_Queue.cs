@@ -47,10 +47,10 @@ namespace Eindopdracht
         public T deQueue()
         {
             //Load the newest item
-            T item = list.First();
+            T item = list.Last();
 
             //remove last item from the list
-            list.Remove(list.First());
+            list.Remove(list.Last());
 
             //return removed item
             return item;
@@ -74,6 +74,17 @@ namespace Eindopdracht
             {
                 Console.WriteLine(list[i]);
             }
+        }
+
+        /// <summary>
+        /// This method is only created to be able to get the content of the queue 
+        /// to print it to the listbox 
+        /// </summary>
+        /// <param name="index"> the index number to get the item of</param>
+        /// <returns>the item at the given index number</returns>
+        public T getIndex(int index)
+        {
+            return list[index];
         }
     }
 }

@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Eindopdracht
 {
-    public class pqItem
+    public class pqItem<T> where T : IComparable
     {
         public int priority = 0;
-        public Object value = new object();
+        public T value;
 
-        public pqItem(Object value, int priority) {
+        public pqItem(T value, int priority)
+        {
             this.value = value;
             this.priority = priority;
         }
@@ -19,7 +20,7 @@ namespace Eindopdracht
 
     class _PriorityQueue<T> where T : IComparable
     {
-        private List<pqItem> list = new List<pqItem>();
+        private List<pqItem<T>> list = new List<pqItem<T>>();
 
         public _PriorityQueue()
         {
@@ -33,7 +34,7 @@ namespace Eindopdracht
         public void EnQueue(T item, int priority)
         {
             //add the item to the list
-            list.Insert(0, new pqItem(item, priority));
+            list.Insert(0, new pqItem<T>(item, priority));
 
             //order the list for priority
             list.Sort((x, y) =>
@@ -54,17 +55,17 @@ namespace Eindopdracht
         /// </summary>
         public void clear()
         {
-            list = new List<pqItem>();
+            list = new List<pqItem<T>>();
         }
 
         /// <summary>
         /// remove the newest item from the queue (first)
         /// </summary>
         /// <returns></returns>
-        public Object deQueue()
+        public T deQueue()
         {
             //Load the newest item
-            Object item = list.First().value;
+            T item = list.First().value;
 
             //remove last item from the list
             list.Remove(list.First());
@@ -77,7 +78,7 @@ namespace Eindopdracht
         /// return the newest item on the queue
         /// </summary>
         /// <returns></returns>
-        public Object Peek()
+        public T Peek()
         {
             return list.First().value;
         }
@@ -91,6 +92,17 @@ namespace Eindopdracht
             {
                 Console.WriteLine(list[i]);
             }
+        }
+        /// <summary>
+        /// This method is only created to be able to get the content of the Pqueue 
+        /// to print it to the listbox 
+        /// </summary>
+        /// <param name="index"> the index number to get the item of</param>
+        /// <returns>the item at the given index number</returns>
+        public T getIndex(int index)
+        {
+            pqItem<T> temp = list[index];
+            return temp.value;
         }
     }
 }

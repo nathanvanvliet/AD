@@ -7,3 +7,12 @@ d:\users\natha\documents\visual studio 2017\Projects\Eindopdracht\Eindopdracht\o
 d:\users\natha\documents\visual studio 2017\Projects\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csproj.GenerateResource.Cache
 d:\users\natha\documents\visual studio 2017\Projects\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.exe
 d:\users\natha\documents\visual studio 2017\Projects\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.pdb
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.exe.config
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.exe
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.pdb
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csprojResolveAssemblyReference.cache
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Main.resources
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Properties.Resources.resources
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csproj.GenerateResource.Cache
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.exe
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.pdb
