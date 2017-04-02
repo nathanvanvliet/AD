@@ -14,6 +14,7 @@ namespace Eindopdracht
         public TreeNode<T> left;
         // stores the node on the right
         public TreeNode<T> right;
+       
 
         /// <summary>
         /// Writes the data of this node to the console.
@@ -37,10 +38,11 @@ namespace Eindopdracht
     {
         public TreeNode<T> root;
 
+        List<TreeNode<T>> nodes = new List<TreeNode<T>>();
         public BinarySearchTree()
         {
             // default root is null (nothing) until a node is made
-            root = null; 
+            root = null;
         }
 
         /// <summary>
@@ -111,10 +113,10 @@ namespace Eindopdracht
         /// <param name="theRoot"> the root node of the search tree </param>
         public void inOrder(TreeNode<T> theRoot)
         {
-            if(theRoot != null)
+            if (theRoot != null)
             {
                 inOrder(theRoot.left);
-                theRoot.displayNode();
+                nodes.Add(theRoot);
                 inOrder(theRoot.right);
             }
         }
@@ -128,7 +130,7 @@ namespace Eindopdracht
         {
             if (theRoot != null)
             {
-                theRoot.displayNode();
+                nodes.Add(theRoot);
                 inOrder(theRoot.left);
                 inOrder(theRoot.right);
             }
@@ -145,7 +147,7 @@ namespace Eindopdracht
             {
                 inOrder(theRoot.left);
                 inOrder(theRoot.right);
-                theRoot.displayNode();
+                nodes.Add(theRoot);
             }
         }
 
@@ -155,14 +157,24 @@ namespace Eindopdracht
         /// <returns>the lowest data</returns>
         public T findMin()
         {
+            // return this when there is no root. 
+            T fail = default(T);
             // start at the root
             TreeNode<T> current = root;
-            // keep selecting the left node while it exists, this will always be the lowest
-            while (current.left != null)
+            if (current != null)
             {
-                current = current.left;
+                // keep selecting the left node while it exists, this will always be the lowest
+                while (current.left != null)
+                {
+                    current = current.left;
+                }
+                return current.data;
             }
-            return current.data;
+            else
+            {
+                return fail;
+            }
+           
         }
 
         /// <summary>
@@ -172,48 +184,250 @@ namespace Eindopdracht
         public T findMax()
         {
             //start at the root
+            T fail = default(T);
             TreeNode<T> current = root;
-            // keep selecting the right node while it exists, this will always be the highest
-            while (current.right != null)
+            if (current != null)
             {
-                current = current.right; 
+                // keep selecting the right node while it exists, this will always be the highest
+                while (current.right != null)
+                {
+                    current = current.right;
+                }
+                return current.data;
             }
-            return current.data;
+            else
+            {
+                return fail; 
+            }
         }
 
         /// <summary>
-        /// 
+        /// Find and return the node containing specific data
         /// </summary>
-        /// <param name="key"></param>
-        /// <returns></returns>
+        /// <param name="key"> the data to be searched for </param>
+        /// <returns>the node containing the data</returns>
         public TreeNode<T> find(T key)
         {
             try
             {
                 if (root != null)
                 {
+                    // start at root
                     TreeNode<T> current = root;
+                    // keep searching as long as node data does not match key
                     while (current.data.CompareTo(key) != 0)
                     {
-                        if (current.data.CompareTo(key) < 0)
+                        // if the data is bigger than the key, search the left node
+                        if (current.data.CompareTo(key) > 0)
                         {
                             current = current.left;
                         }
+                        // if data is smaller than the key, search right node
                         else
                         {
                             current = current.right;
                         }
+                        if (current == null)
+                        {
+                            // if nothing is found, return null
+                            return null;
+                        }
                     }
+                    // return node
                     return current;
                 }
                 return null;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(e);
                 throw;
             }
         }
 
+        /// <summary>
+        /// Delete the node with the given key
+        /// </summary>
+        /// <param name="key"> data of the node to be deleted </param>
+        /// <returns>true if deleting was succesful, false if it wasn't </returns>
+        public bool delete(T key)
+        {
+            TreeNode<T> current = root;
+            TreeNode<T> parent = root;
+            bool isLeftChild = true;
+            try
+            {
+                while (current.data.CompareTo(key) != 0)
+                {
+                    parent = current;
+                    if (current.data.CompareTo(key) > 0)
+                    {
+                        isLeftChild = true;
+                        current = current.right;
+                    }
+                    else
+                    {
+                        isLeftChild = false;
+                        current = current.right;
+                    }
+                    if (current == null)
+                    {
+                        return false;
+                    }
+                }
+                if (current.left == null && current.right == null)
+                {
+                    if (current == root)
+                    {
+                        root = null;
+                    }
+                    else if (isLeftChild)
+                    {
+                        parent.left = null;
+                    }
+                    else
+                    {
+                        parent.right = null;
+                    }
+                }
+                else if (current.right == null)
+                {
+                    if (current == root)
+                    {
+                        root = current.left;
+                    }
+                    else if (isLeftChild)
+                    {
+                        parent.left = current.left;
+                    }
+                    else
+                    {
+                        parent.right = current.right;
+                    }
+                }
+                else if (current.left == null)
+                {
+                    if (current == root)
+                    {
+                        root = current.right;
+                    }
+                    else if (isLeftChild)
+                    {
+                        parent.left = current.right;
+                    }
+                    else
+                    {
+                        parent.right = current.right;
+                    }
+                }
+                else
+                {
+                    TreeNode<T> successor = GetSuccessor(current);
+                    if (current == root)
+                    {
+                        root = successor;
+                    }
+                    else if (isLeftChild)
+                    {
+                        parent.left = successor;
+                    }
+                    else
+                    {
+                        parent.right = successor;
+                    }
+                    successor.left = current.left;
+                }
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
+
+        /// <summary>
+        /// Find node to replace the node to be deleted 
+        /// </summary>
+        /// <param name="delNode"> node to be deleted </param>
+        /// <returns>the node to replace the node to be deleted </returns>
+        private TreeNode<T> GetSuccessor(TreeNode<T> delNode)
+        {
+            try
+            {
+                TreeNode<T> successorParent = delNode;
+                TreeNode<T> successor = delNode;
+                TreeNode<T> current = delNode.right;
+                while (current != null)
+                {
+                    successorParent = current;
+                    successor = current;
+                    current = current.left;
+                }
+                if (successor != delNode.right)
+                {
+                    successorParent.left = successor.right;
+                    successor.right = delNode.right;
+                }
+                return successor;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
+
+        // Methods after this comment are just for testing and getting the nodes to the Form
+
+        /// <summary>
+        /// return the root node, for test purposes
+        /// </summary>
+        /// <returns>the root node</returns>
+        public TreeNode<T> returnRoot()
+        {
+            return root;
+        }
+
+
+        /// <summary>
+        /// clear the local list, this list is for test purposes
+        /// </summary>
+        public void clearList()
+        {
+            nodes.Clear();
+        }
+
+        /// <summary>
+        /// add all nodes to the list, for test purposes. 
+        /// </summary>
+        /// <param name="node"> root node</param>
+        public void getNodes(TreeNode<T> node)
+        {
+           
+            if (node != null)
+            {
+                nodes.Add(node);
+            }
+            if (node.left != null)
+            {
+                getNodes(node.left);
+            }
+            if(node.right != null)
+            {
+                getNodes(node.right);
+            }
+        }
+
+        /// <summary>
+        /// get the local node list, for test purposes
+        /// </summary>
+        /// <returns> the node list </returns>
+        public List<TreeNode<T>> getList()
+        {
+            return nodes;
+        }
     }
 }

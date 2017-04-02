@@ -9,7 +9,7 @@ namespace Eindopdracht
     class _Stack<T> where T : IComparable
     {
         private List<T> list = new List<T>();
-
+        T fail = default(T);
         public _Stack() {
 
         }
@@ -60,7 +60,7 @@ namespace Eindopdracht
             catch(Exception e)
             {
                 Console.WriteLine(e);
-                throw;
+                return fail;
             }
         }
 
@@ -70,7 +70,15 @@ namespace Eindopdracht
         /// <returns></returns>
         public T Peek()
         {
-            return list.Last();
+            try
+            {
+                return list.Last();
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+                return fail;
+            }
         }
 
         /// <summary>

@@ -9,7 +9,7 @@ namespace Eindopdracht
     class _Queue<T> where T : IComparable
     {
         private List<T> list = new List<T>();
-
+        T fail = default(T);
         public _Queue() {
 
         }
@@ -46,14 +46,22 @@ namespace Eindopdracht
         /// <returns></returns>
         public T deQueue()
         {
-            //Load the newest item
-            T item = list.Last();
+            try
+            {
+                //Load the newest item
+                T item = list.Last();
 
-            //remove last item from the list
-            list.Remove(list.Last());
+                //remove last item from the list
+                list.Remove(list.Last());
 
-            //return removed item
-            return item;
+                //return removed item
+                return item;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+                return fail;
+            }
         }
 
         /// <summary>
@@ -62,7 +70,15 @@ namespace Eindopdracht
         /// <returns></returns>
         public T Peek()
         {
-            return list.First();
+            try
+            {
+                return list.First();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return fail;
+            }
         }
 
         /// <summary>

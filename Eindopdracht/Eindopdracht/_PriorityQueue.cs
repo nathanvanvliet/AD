@@ -10,7 +10,7 @@ namespace Eindopdracht
     {
         public int priority = 0;
         public T value;
-
+       
         public pqItem(T value, int priority)
         {
             this.value = value;
@@ -21,7 +21,7 @@ namespace Eindopdracht
     class _PriorityQueue<T> where T : IComparable
     {
         private List<pqItem<T>> list = new List<pqItem<T>>();
-
+        T fail = default(T);
         public _PriorityQueue()
         {
 
@@ -64,14 +64,22 @@ namespace Eindopdracht
         /// <returns></returns>
         public T deQueue()
         {
-            //Load the newest item
-            T item = list.First().value;
+            try
+            {
+                //Load the newest item
+                T item = list.First().value;
 
-            //remove last item from the list
-            list.Remove(list.First());
+                //remove last item from the list
+                list.Remove(list.First());
 
-            //return removed item
-            return item;
+                //return removed item
+                return item;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+                return fail; 
+            }
         }
 
         /// <summary>
@@ -80,7 +88,15 @@ namespace Eindopdracht
         /// <returns></returns>
         public T Peek()
         {
-            return list.First().value;
+            try
+            {
+                return list.First().value;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return fail;
+            }
         }
 
         /// <summary>

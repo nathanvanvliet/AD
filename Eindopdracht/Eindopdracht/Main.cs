@@ -33,7 +33,7 @@ namespace Eindopdracht
         private long time_bubble = long.MaxValue, time_selection = long.MaxValue, time_insertion = long.MaxValue;
 
         // binary search tree
-        BinarySearchTree<int> nums = new BinarySearchTree<int>();
+        BinarySearchTree<string> stringTree = new BinarySearchTree<string>();
 
         public Main()
         {
@@ -41,6 +41,7 @@ namespace Eindopdracht
             System.Diagnostics.Process.GetCurrentProcess().PriorityClass = System.Diagnostics.ProcessPriorityClass.RealTime;
             InitializeComponent();
         }
+ 
 
         // Form actions for ArrayList
         #region Arraylist
@@ -124,9 +125,12 @@ namespace Eindopdracht
 
         private void removeAtButton_Click(object sender, EventArgs e)
         {
-            int index = int.Parse(indexBox.Text);
-            stringArray.removeAt(index);
-            refresh();
+            if(indexBox.Text != "")
+            {
+                int index = int.Parse(indexBox.Text);
+                stringArray.removeAt(index);
+                refresh();
+            }
         }
         #endregion
 
@@ -135,39 +139,81 @@ namespace Eindopdracht
 
         private void intFirstOcc_Click(object sender, EventArgs e)
         {
-            searchInput = int.Parse(intInputBox.Text);
-            intResultLabel.Text = Search<int>.firstSeqSearch(searchIntArray, searchInput).ToString();
+            try
+            {
+                searchInput = int.Parse(intInputBox.Text);
+                intResultLabel.Text = Search<int>.firstSeqSearch(searchIntArray, searchInput).ToString();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         private void intLastOcc_Click(object sender, EventArgs e)
         {
-            searchInput = int.Parse(intInputBox.Text);
-            intResultLabel.Text = Search<int>.lastSeqSearch(searchIntArray, searchInput).ToString();
+            try
+            {
+                searchInput = int.Parse(intInputBox.Text);
+                intResultLabel.Text = Search<int>.lastSeqSearch(searchIntArray, searchInput).ToString();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         private void intCustOcc_Click(object sender, EventArgs e)
         {
-            searchInput = int.Parse(intInputBox.Text);
-            int occ = int.Parse(intOccBox.Text);
-            intResultLabel.Text = Search<int>.occuranceSeqSearch(searchIntArray, searchInput, occ).ToString();
+            try
+            {
+                searchInput = int.Parse(intInputBox.Text);
+                int occ = int.Parse(intOccBox.Text);
+                intResultLabel.Text = Search<int>.occuranceSeqSearch(searchIntArray, searchInput, occ).ToString();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         private void intMin_Click(object sender, EventArgs e)
         {
-            intResultLabel.Text = Search<int>.FindMin(searchIntArray).ToString();
+            try
+            {
+                intResultLabel.Text = Search<int>.FindMin(searchIntArray).ToString();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         private void intMax_Click(object sender, EventArgs e)
         {
-            intResultLabel.Text = Search<int>.FindMax(searchIntArray).ToString();
+            try
+            {
+                intResultLabel.Text = Search<int>.FindMax(searchIntArray).ToString();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         private void intbinary_Click(object sender, EventArgs e)
         {
-            searchInput = int.Parse(intInputBox.Text);
-            int[] temp = searchIntArray;
-            Array.Sort(temp);
-            intResultLabel.Text = Search<int>.binarySearch(temp, searchInput).ToString();
+            try
+            {
+                searchInput = int.Parse(intInputBox.Text);
+                int[] temp = searchIntArray;
+                Array.Sort(temp);
+                intResultLabel.Text = Search<int>.binarySearch(temp, searchInput).ToString();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         private void stringFirstOcc_Click(object sender, EventArgs e)
@@ -184,9 +230,16 @@ namespace Eindopdracht
 
         private void stringCustOcc_Click(object sender, EventArgs e)
         {
-            stringInput = stringBox.Text;
-            int occ = int.Parse(stringOccBox.Text);
-            stringResultLabel.Text = Search<string>.occuranceSeqSearch(searchStringArray, stringInput, occ).ToString();
+            try
+            {
+                stringInput = stringBox.Text;
+                int occ = int.Parse(stringOccBox.Text);
+                stringResultLabel.Text = Search<string>.occuranceSeqSearch(searchStringArray, stringInput, occ).ToString();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         private void stringMin_Click(object sender, EventArgs e)
@@ -312,7 +365,7 @@ namespace Eindopdracht
 
         private void pPeek_Click(object sender, EventArgs e)
         {
-            pPeekLabel.Text = pQueue.Peek().ToString();
+            pPeekLabel.Text = pQueue.Peek();
         }
 
         private void pClear_Click(object sender, EventArgs e)
@@ -1013,38 +1066,178 @@ namespace Eindopdracht
             bubbleTickLabel.Text = time_bubble.ToString();
             insertionTickLabel.Text = time_insertion.ToString();
         }
+
+        private void treeBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
         #endregion
 
         // form actions for binary search tree
-
-        private void button2_Click(object sender, EventArgs e)
+        #region BinarySearchTree
+        private void Insert_Click(object sender, EventArgs e)
         {
-           
-            nums.Insert(23);
-            nums.Insert(45);
-            nums.Insert(16);
-            nums.Insert(37);
-            nums.Insert(3);
-            nums.Insert(99);
-            nums.Insert(22);
-            nums.inOrder(nums.root);
+            string a = treeInput.Text;
+            if (a != "")
+            {
+                stringTree.Insert(a);
+                refreshTree();
+                treeInput.Clear();
+            }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Min_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text != "")
+            treeMinLabel.Text = stringTree.findMin();
+        }
+
+        private void max_Click(object sender, EventArgs e)
+        {
+            treeMaxLabel.Text = stringTree.findMax();
+        }
+
+
+        private void delButton_Click(object sender, EventArgs e)
+        {
+            string a = treeInput.Text;
+            if (a != "")
             {
-                TreeNode<int> found = nums.find(int.Parse(textBox1.Text));
-                if (found != null)
+                stringTree.delete(a);
+                refreshTree();
+                treeInput.Clear();
+            }
+        }
+
+        private void leftNode_Click(object sender, EventArgs e)
+        {
+            if(treeBox.SelectedItem != null)
+            {
+                string temp = treeBox.SelectedItem.ToString();
+                TreeNode<string> selected = stringTree.find(temp);
+                if (selected != null && selected.left != null)
                 {
-                    Console.WriteLine(found.data.ToString());
+                    string left = selected.left.data;
+                    treeBox.SelectedItem = left;
                 }
-                else
+            }
+           
+        }
+
+
+        private void rangeButton_Click(object sender, EventArgs e)
+        {
+            /*
+            stringTree.Insert(23.ToString());
+            stringTree.Insert(45.ToString());
+            stringTree.Insert(16.ToString());
+            stringTree.Insert(13.ToString());
+            stringTree.Insert(37.ToString());
+            stringTree.Insert(99.ToString());
+            stringTree.Insert(22.ToString());
+            */
+            stringTree.Insert("a");
+            stringTree.Insert("d");
+            stringTree.Insert("v");
+            stringTree.Insert("q");
+            stringTree.Insert("b");
+            stringTree.Insert("z");
+            stringTree.Insert("s");
+            refreshTree();
+        }
+
+        private void rightNode_Click(object sender, EventArgs e)
+        {
+            if(treeBox.SelectedItem != null)
+            {
+                string temp = treeBox.SelectedItem.ToString();
+                TreeNode<string> selected = stringTree.find(temp);
+                if (selected != null && selected.right != null)
                 {
-                    Console.WriteLine("no results");
+                    string right = selected.right.data;
+                    treeBox.SelectedItem = right;
                 }
             }
         }
+
+
+        private void inButton_Click(object sender, EventArgs e)
+        {
+            orderedTreeBox.Items.Clear();
+            stringTree.clearList();
+            TreeNode<string> root = stringTree.returnRoot();
+            stringTree.inOrder(root);
+            List<TreeNode<string>> list = stringTree.getList();
+            foreach (TreeNode<string> node in list)
+            {
+                orderedTreeBox.Items.Add(node.data);
+            }
+        }
+
+        private void preButton_Click(object sender, EventArgs e)
+        {
+            orderedTreeBox.Items.Clear();
+            stringTree.clearList();
+            TreeNode<string> root = stringTree.returnRoot();
+            stringTree.preOrder(root);
+            List<TreeNode<string>> list = stringTree.getList();
+            foreach (TreeNode<string> node in list)
+            {
+                orderedTreeBox.Items.Add(node.data);
+            }
+        }
+
+        private void postButton_Click(object sender, EventArgs e)
+        {
+            orderedTreeBox.Items.Clear();
+            stringTree.clearList();
+            TreeNode<string> root = stringTree.returnRoot();
+            stringTree.postOrder(root);
+            List<TreeNode<string>> list = stringTree.getList();
+            foreach (TreeNode<string> node in list)
+            {
+                orderedTreeBox.Items.Add(node.data);
+            }
+        }
+
+        private void stringBox_Leave(object sender, EventArgs e)
+        {
+            if(stringBox.Text == "")
+            {
+                stringBox.Text = " ";
+            }
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            if (treeInput.Text != "")
+            {
+                TreeNode<string> found = stringTree.find(treeInput.Text);
+                if (found != null)
+                {
+                    treeSearchLabel.Text = found.data.ToString();
+                }
+                else
+                {
+                    treeSearchLabel.Text = "no results";
+                }
+                treeInput.Clear();
+            }
+        }
+
+        private void refreshTree()
+        {
+            treeBox.Items.Clear();
+            stringTree.clearList();
+            TreeNode<string> root = stringTree.returnRoot();
+            stringTree.getNodes(root);
+            List<TreeNode<string>> list = stringTree.getList();
+            foreach (TreeNode<string> node in list)
+            {
+                treeBox.Items.Add(node.data);
+            }
+        }
+
+        #endregion
 
     }
 }

@@ -51,7 +51,59 @@
             this.label1 = new System.Windows.Forms.Label();
             this.arrayBox = new System.Windows.Forms.ListBox();
             this.Sort = new System.Windows.Forms.TabPage();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.timeLabelSelect = new System.Windows.Forms.Label();
+            this.selectReverse = new System.Windows.Forms.Button();
+            this.selectSortInt = new System.Windows.Forms.Button();
+            this.selectSortString = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.selectSortBox = new System.Windows.Forms.ListBox();
+            this.selectUnsortBox = new System.Windows.Forms.ListBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.bubbleClear = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.bubbleTimeLabel = new System.Windows.Forms.Label();
+            this.bubbleReverse = new System.Windows.Forms.Button();
+            this.bubbleInt = new System.Windows.Forms.Button();
+            this.bubbleArray = new System.Windows.Forms.Button();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.bubbleSorted = new System.Windows.Forms.ListBox();
+            this.bubbleUnsort = new System.Windows.Forms.ListBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.insertClear = new System.Windows.Forms.Button();
+            this.label31 = new System.Windows.Forms.Label();
+            this.insertTimeLabel = new System.Windows.Forms.Label();
+            this.insertReverse = new System.Windows.Forms.Button();
+            this.insertInt = new System.Windows.Forms.Button();
+            this.insertString = new System.Windows.Forms.Button();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.insertSorted = new System.Windows.Forms.ListBox();
+            this.insertUnsort = new System.Windows.Forms.ListBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.winnerLabel = new System.Windows.Forms.Label();
+            this.insertionTickLabel = new System.Windows.Forms.Label();
+            this.bubbleTickLabel = new System.Windows.Forms.Label();
+            this.selectTickLabel = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.sortInt = new System.Windows.Forms.Button();
+            this.sortReverse = new System.Windows.Forms.Button();
+            this.sortString = new System.Windows.Forms.Button();
+            this.label32 = new System.Windows.Forms.Label();
+            this.execCount = new System.Windows.Forms.NumericUpDown();
             this.Search = new System.Windows.Forms.TabPage();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.compareButton = new System.Windows.Forms.Button();
             this.stringResultLabel = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -82,37 +134,31 @@
             this.intInputBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.Queue = new System.Windows.Forms.TabPage();
-            this.Stack = new System.Windows.Forms.TabPage();
-            this.Hash = new System.Windows.Forms.TabPage();
-            this.Lists = new System.Windows.Forms.TabPage();
-            this.Iterator = new System.Windows.Forms.TabPage();
-            this.SearchTree = new System.Windows.Forms.TabPage();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.queueList = new System.Windows.Forms.ListBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.queuebox = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.enqueueButt = new System.Windows.Forms.Button();
-            this.dequeueButt = new System.Windows.Forms.Button();
-            this.peekButt = new System.Windows.Forms.Button();
-            this.clearButt = new System.Windows.Forms.Button();
-            this.countButt = new System.Windows.Forms.Button();
-            this.peekLabel = new System.Windows.Forms.Label();
-            this.countLabel = new System.Windows.Forms.Label();
-            this.pQueueList = new System.Windows.Forms.ListBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.pPeekLabel = new System.Windows.Forms.Label();
-            this.pCountLabel = new System.Windows.Forms.Label();
-            this.pInput = new System.Windows.Forms.TextBox();
-            this.pPriority = new System.Windows.Forms.NumericUpDown();
-            this.label20 = new System.Windows.Forms.Label();
-            this.pEnqueue = new System.Windows.Forms.Button();
-            this.pDequeue = new System.Windows.Forms.Button();
-            this.pPeek = new System.Windows.Forms.Button();
-            this.pClear = new System.Windows.Forms.Button();
             this.pCount = new System.Windows.Forms.Button();
+            this.pClear = new System.Windows.Forms.Button();
+            this.pPeek = new System.Windows.Forms.Button();
+            this.pDequeue = new System.Windows.Forms.Button();
+            this.pEnqueue = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.pPriority = new System.Windows.Forms.NumericUpDown();
+            this.pInput = new System.Windows.Forms.TextBox();
+            this.pCountLabel = new System.Windows.Forms.Label();
+            this.pPeekLabel = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.pQueueList = new System.Windows.Forms.ListBox();
+            this.countLabel = new System.Windows.Forms.Label();
+            this.peekLabel = new System.Windows.Forms.Label();
+            this.countButt = new System.Windows.Forms.Button();
+            this.clearButt = new System.Windows.Forms.Button();
+            this.peekButt = new System.Windows.Forms.Button();
+            this.dequeueButt = new System.Windows.Forms.Button();
+            this.enqueueButt = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.queuebox = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.queueList = new System.Windows.Forms.ListBox();
+            this.Stack = new System.Windows.Forms.TabPage();
             this.sCountLabel = new System.Windows.Forms.Label();
             this.sPeekLabel = new System.Windows.Forms.Label();
             this.stackCount = new System.Windows.Forms.Button();
@@ -124,79 +170,49 @@
             this.stackInput = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.stackList = new System.Windows.Forms.ListBox();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.selectUnsortBox = new System.Windows.Forms.ListBox();
-            this.selectSortBox = new System.Windows.Forms.ListBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.selectSortString = new System.Windows.Forms.Button();
-            this.selectSortInt = new System.Windows.Forms.Button();
-            this.selectReverse = new System.Windows.Forms.Button();
-            this.timeLabelSelect = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.bubbleClear = new System.Windows.Forms.Button();
-            this.label26 = new System.Windows.Forms.Label();
-            this.bubbleTimeLabel = new System.Windows.Forms.Label();
-            this.bubbleReverse = new System.Windows.Forms.Button();
-            this.bubbleInt = new System.Windows.Forms.Button();
-            this.bubbleArray = new System.Windows.Forms.Button();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.bubbleSorted = new System.Windows.Forms.ListBox();
-            this.bubbleUnsort = new System.Windows.Forms.ListBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.insertClear = new System.Windows.Forms.Button();
-            this.label31 = new System.Windows.Forms.Label();
-            this.insertTimeLabel = new System.Windows.Forms.Label();
-            this.insertReverse = new System.Windows.Forms.Button();
-            this.insertInt = new System.Windows.Forms.Button();
-            this.insertString = new System.Windows.Forms.Button();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.insertSorted = new System.Windows.Forms.ListBox();
-            this.insertUnsort = new System.Windows.Forms.ListBox();
-            this.execCount = new System.Windows.Forms.NumericUpDown();
-            this.label32 = new System.Windows.Forms.Label();
-            this.sortString = new System.Windows.Forms.Button();
-            this.sortReverse = new System.Windows.Forms.Button();
-            this.sortInt = new System.Windows.Forms.Button();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.selectTickLabel = new System.Windows.Forms.Label();
-            this.bubbleTickLabel = new System.Windows.Forms.Label();
-            this.insertionTickLabel = new System.Windows.Forms.Label();
-            this.winnerLabel = new System.Windows.Forms.Label();
+            this.Hash = new System.Windows.Forms.TabPage();
+            this.Lists = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Iterator = new System.Windows.Forms.TabPage();
+            this.SearchTree = new System.Windows.Forms.TabPage();
+            this.label40 = new System.Windows.Forms.Label();
+            this.rangeButton = new System.Windows.Forms.Button();
+            this.orderedTreeBox = new System.Windows.Forms.ListBox();
+            this.postButton = new System.Windows.Forms.Button();
+            this.preButton = new System.Windows.Forms.Button();
+            this.inButton = new System.Windows.Forms.Button();
+            this.rightNode = new System.Windows.Forms.Button();
+            this.leftNode = new System.Windows.Forms.Button();
+            this.treeMaxLabel = new System.Windows.Forms.Label();
+            this.treeMinLabel = new System.Windows.Forms.Label();
+            this.treeSearchLabel = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.delButton = new System.Windows.Forms.Button();
+            this.max = new System.Windows.Forms.Button();
+            this.Min = new System.Windows.Forms.Button();
+            this.treeBox = new System.Windows.Forms.ListBox();
+            this.treeInput = new System.Windows.Forms.TextBox();
+            this.searchButton = new System.Windows.Forms.Button();
+            this.Insert = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.ArrayList.SuspendLayout();
             this.Sort.SuspendLayout();
-            this.Search.SuspendLayout();
-            this.Queue.SuspendLayout();
-            this.Stack.SuspendLayout();
-            this.Lists.SuspendLayout();
-            this.SearchTree.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pPriority)).BeginInit();
             this.tabControl2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.execCount)).BeginInit();
+            this.Search.SuspendLayout();
+            this.Queue.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pPriority)).BeginInit();
+            this.Stack.SuspendLayout();
+            this.Lists.SuspendLayout();
             this.tabControl3.SuspendLayout();
+            this.SearchTree.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -436,6 +452,500 @@
             this.Sort.Text = "Sort";
             this.Sort.UseVisualStyleBackColor = true;
             // 
+            // tabControl2
+            // 
+            this.tabControl2.Controls.Add(this.tabPage1);
+            this.tabControl2.Controls.Add(this.tabPage2);
+            this.tabControl2.Controls.Add(this.tabPage3);
+            this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Location = new System.Drawing.Point(0, 0);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(527, 444);
+            this.tabControl2.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.label25);
+            this.tabPage1.Controls.Add(this.timeLabelSelect);
+            this.tabPage1.Controls.Add(this.selectReverse);
+            this.tabPage1.Controls.Add(this.selectSortInt);
+            this.tabPage1.Controls.Add(this.selectSortString);
+            this.tabPage1.Controls.Add(this.label22);
+            this.tabPage1.Controls.Add(this.label21);
+            this.tabPage1.Controls.Add(this.selectSortBox);
+            this.tabPage1.Controls.Add(this.selectUnsortBox);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(519, 418);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Selection";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(384, 38);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(329, 297);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(49, 20);
+            this.label25.TabIndex = 8;
+            this.label25.Text = "Ticks:";
+            // 
+            // timeLabelSelect
+            // 
+            this.timeLabelSelect.AutoSize = true;
+            this.timeLabelSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeLabelSelect.Location = new System.Drawing.Point(397, 297);
+            this.timeLabelSelect.Name = "timeLabelSelect";
+            this.timeLabelSelect.Size = new System.Drawing.Size(0, 20);
+            this.timeLabelSelect.TabIndex = 7;
+            // 
+            // selectReverse
+            // 
+            this.selectReverse.Location = new System.Drawing.Point(374, 208);
+            this.selectReverse.Name = "selectReverse";
+            this.selectReverse.Size = new System.Drawing.Size(128, 23);
+            this.selectReverse.TabIndex = 6;
+            this.selectReverse.Text = "reverse sort string";
+            this.selectReverse.UseVisualStyleBackColor = true;
+            this.selectReverse.Click += new System.EventHandler(this.selectReverse_Click);
+            // 
+            // selectSortInt
+            // 
+            this.selectSortInt.Location = new System.Drawing.Point(374, 237);
+            this.selectSortInt.Name = "selectSortInt";
+            this.selectSortInt.Size = new System.Drawing.Size(128, 23);
+            this.selectSortInt.TabIndex = 5;
+            this.selectSortInt.Text = "sort int array (1000)";
+            this.selectSortInt.UseVisualStyleBackColor = true;
+            this.selectSortInt.Click += new System.EventHandler(this.selectSortInt_Click);
+            // 
+            // selectSortString
+            // 
+            this.selectSortString.Location = new System.Drawing.Point(374, 179);
+            this.selectSortString.Name = "selectSortString";
+            this.selectSortString.Size = new System.Drawing.Size(128, 23);
+            this.selectSortString.TabIndex = 4;
+            this.selectSortString.Text = "sort string array (100)";
+            this.selectSortString.UseVisualStyleBackColor = true;
+            this.selectSortString.Click += new System.EventHandler(this.selectSortString_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(214, 19);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(62, 13);
+            this.label22.TabIndex = 3;
+            this.label22.Text = "sorted array";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(30, 19);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(74, 13);
+            this.label21.TabIndex = 2;
+            this.label21.Text = "unsorted array";
+            // 
+            // selectSortBox
+            // 
+            this.selectSortBox.FormattingEnabled = true;
+            this.selectSortBox.Location = new System.Drawing.Point(214, 38);
+            this.selectSortBox.Name = "selectSortBox";
+            this.selectSortBox.Size = new System.Drawing.Size(143, 238);
+            this.selectSortBox.TabIndex = 1;
+            // 
+            // selectUnsortBox
+            // 
+            this.selectUnsortBox.FormattingEnabled = true;
+            this.selectUnsortBox.Location = new System.Drawing.Point(30, 38);
+            this.selectUnsortBox.Name = "selectUnsortBox";
+            this.selectUnsortBox.Size = new System.Drawing.Size(142, 238);
+            this.selectUnsortBox.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.bubbleClear);
+            this.tabPage2.Controls.Add(this.label26);
+            this.tabPage2.Controls.Add(this.bubbleTimeLabel);
+            this.tabPage2.Controls.Add(this.bubbleReverse);
+            this.tabPage2.Controls.Add(this.bubbleInt);
+            this.tabPage2.Controls.Add(this.bubbleArray);
+            this.tabPage2.Controls.Add(this.label28);
+            this.tabPage2.Controls.Add(this.label29);
+            this.tabPage2.Controls.Add(this.bubbleSorted);
+            this.tabPage2.Controls.Add(this.bubbleUnsort);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(519, 418);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Bubble";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // bubbleClear
+            // 
+            this.bubbleClear.Location = new System.Drawing.Point(377, 39);
+            this.bubbleClear.Name = "bubbleClear";
+            this.bubbleClear.Size = new System.Drawing.Size(75, 23);
+            this.bubbleClear.TabIndex = 19;
+            this.bubbleClear.Text = "Clear";
+            this.bubbleClear.UseVisualStyleBackColor = true;
+            this.bubbleClear.Click += new System.EventHandler(this.bubbleClear_Click);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(322, 298);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(49, 20);
+            this.label26.TabIndex = 18;
+            this.label26.Text = "Ticks:";
+            // 
+            // bubbleTimeLabel
+            // 
+            this.bubbleTimeLabel.AutoSize = true;
+            this.bubbleTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bubbleTimeLabel.Location = new System.Drawing.Point(390, 298);
+            this.bubbleTimeLabel.Name = "bubbleTimeLabel";
+            this.bubbleTimeLabel.Size = new System.Drawing.Size(0, 20);
+            this.bubbleTimeLabel.TabIndex = 17;
+            // 
+            // bubbleReverse
+            // 
+            this.bubbleReverse.Location = new System.Drawing.Point(367, 209);
+            this.bubbleReverse.Name = "bubbleReverse";
+            this.bubbleReverse.Size = new System.Drawing.Size(128, 23);
+            this.bubbleReverse.TabIndex = 16;
+            this.bubbleReverse.Text = "reverse sort string";
+            this.bubbleReverse.UseVisualStyleBackColor = true;
+            this.bubbleReverse.Click += new System.EventHandler(this.bubbleReverse_Click);
+            // 
+            // bubbleInt
+            // 
+            this.bubbleInt.Location = new System.Drawing.Point(367, 238);
+            this.bubbleInt.Name = "bubbleInt";
+            this.bubbleInt.Size = new System.Drawing.Size(128, 23);
+            this.bubbleInt.TabIndex = 15;
+            this.bubbleInt.Text = "sort int array (1000)";
+            this.bubbleInt.UseVisualStyleBackColor = true;
+            this.bubbleInt.Click += new System.EventHandler(this.bubbleInt_Click);
+            // 
+            // bubbleArray
+            // 
+            this.bubbleArray.Location = new System.Drawing.Point(367, 180);
+            this.bubbleArray.Name = "bubbleArray";
+            this.bubbleArray.Size = new System.Drawing.Size(128, 23);
+            this.bubbleArray.TabIndex = 14;
+            this.bubbleArray.Text = "sort string array (100)";
+            this.bubbleArray.UseVisualStyleBackColor = true;
+            this.bubbleArray.Click += new System.EventHandler(this.bubbleArray_Click);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(207, 20);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(62, 13);
+            this.label28.TabIndex = 13;
+            this.label28.Text = "sorted array";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(23, 20);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(74, 13);
+            this.label29.TabIndex = 12;
+            this.label29.Text = "unsorted array";
+            // 
+            // bubbleSorted
+            // 
+            this.bubbleSorted.FormattingEnabled = true;
+            this.bubbleSorted.Location = new System.Drawing.Point(207, 39);
+            this.bubbleSorted.Name = "bubbleSorted";
+            this.bubbleSorted.Size = new System.Drawing.Size(143, 238);
+            this.bubbleSorted.TabIndex = 11;
+            // 
+            // bubbleUnsort
+            // 
+            this.bubbleUnsort.FormattingEnabled = true;
+            this.bubbleUnsort.Location = new System.Drawing.Point(23, 39);
+            this.bubbleUnsort.Name = "bubbleUnsort";
+            this.bubbleUnsort.Size = new System.Drawing.Size(142, 238);
+            this.bubbleUnsort.TabIndex = 10;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.insertClear);
+            this.tabPage3.Controls.Add(this.label31);
+            this.tabPage3.Controls.Add(this.insertTimeLabel);
+            this.tabPage3.Controls.Add(this.insertReverse);
+            this.tabPage3.Controls.Add(this.insertInt);
+            this.tabPage3.Controls.Add(this.insertString);
+            this.tabPage3.Controls.Add(this.label33);
+            this.tabPage3.Controls.Add(this.label34);
+            this.tabPage3.Controls.Add(this.insertSorted);
+            this.tabPage3.Controls.Add(this.insertUnsort);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(519, 418);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Insertion";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // insertClear
+            // 
+            this.insertClear.Location = new System.Drawing.Point(377, 79);
+            this.insertClear.Name = "insertClear";
+            this.insertClear.Size = new System.Drawing.Size(75, 23);
+            this.insertClear.TabIndex = 29;
+            this.insertClear.Text = "Clear";
+            this.insertClear.UseVisualStyleBackColor = true;
+            this.insertClear.Click += new System.EventHandler(this.insertClear_Click);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(322, 338);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(49, 20);
+            this.label31.TabIndex = 28;
+            this.label31.Text = "Ticks:";
+            // 
+            // insertTimeLabel
+            // 
+            this.insertTimeLabel.AutoSize = true;
+            this.insertTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insertTimeLabel.Location = new System.Drawing.Point(390, 338);
+            this.insertTimeLabel.Name = "insertTimeLabel";
+            this.insertTimeLabel.Size = new System.Drawing.Size(0, 20);
+            this.insertTimeLabel.TabIndex = 27;
+            // 
+            // insertReverse
+            // 
+            this.insertReverse.Location = new System.Drawing.Point(367, 249);
+            this.insertReverse.Name = "insertReverse";
+            this.insertReverse.Size = new System.Drawing.Size(128, 23);
+            this.insertReverse.TabIndex = 26;
+            this.insertReverse.Text = "reverse sort string";
+            this.insertReverse.UseVisualStyleBackColor = true;
+            this.insertReverse.Click += new System.EventHandler(this.insertReverse_Click);
+            // 
+            // insertInt
+            // 
+            this.insertInt.Location = new System.Drawing.Point(367, 278);
+            this.insertInt.Name = "insertInt";
+            this.insertInt.Size = new System.Drawing.Size(128, 23);
+            this.insertInt.TabIndex = 25;
+            this.insertInt.Text = "sort int array (1000)";
+            this.insertInt.UseVisualStyleBackColor = true;
+            this.insertInt.Click += new System.EventHandler(this.insertInt_Click);
+            // 
+            // insertString
+            // 
+            this.insertString.Location = new System.Drawing.Point(367, 220);
+            this.insertString.Name = "insertString";
+            this.insertString.Size = new System.Drawing.Size(128, 23);
+            this.insertString.TabIndex = 24;
+            this.insertString.Text = "sort string array (100)";
+            this.insertString.UseVisualStyleBackColor = true;
+            this.insertString.Click += new System.EventHandler(this.insertString_Click);
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(207, 60);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(62, 13);
+            this.label33.TabIndex = 23;
+            this.label33.Text = "sorted array";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(23, 60);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(74, 13);
+            this.label34.TabIndex = 22;
+            this.label34.Text = "unsorted array";
+            // 
+            // insertSorted
+            // 
+            this.insertSorted.FormattingEnabled = true;
+            this.insertSorted.Location = new System.Drawing.Point(207, 79);
+            this.insertSorted.Name = "insertSorted";
+            this.insertSorted.Size = new System.Drawing.Size(143, 238);
+            this.insertSorted.TabIndex = 21;
+            // 
+            // insertUnsort
+            // 
+            this.insertUnsort.FormattingEnabled = true;
+            this.insertUnsort.Location = new System.Drawing.Point(23, 79);
+            this.insertUnsort.Name = "insertUnsort";
+            this.insertUnsort.Size = new System.Drawing.Size(142, 238);
+            this.insertUnsort.TabIndex = 20;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.winnerLabel);
+            this.tabPage4.Controls.Add(this.insertionTickLabel);
+            this.tabPage4.Controls.Add(this.bubbleTickLabel);
+            this.tabPage4.Controls.Add(this.selectTickLabel);
+            this.tabPage4.Controls.Add(this.label38);
+            this.tabPage4.Controls.Add(this.label37);
+            this.tabPage4.Controls.Add(this.label36);
+            this.tabPage4.Controls.Add(this.label35);
+            this.tabPage4.Controls.Add(this.sortInt);
+            this.tabPage4.Controls.Add(this.sortReverse);
+            this.tabPage4.Controls.Add(this.sortString);
+            this.tabPage4.Controls.Add(this.label32);
+            this.tabPage4.Controls.Add(this.execCount);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(519, 418);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Compare";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // winnerLabel
+            // 
+            this.winnerLabel.AutoSize = true;
+            this.winnerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.winnerLabel.Location = new System.Drawing.Point(197, 153);
+            this.winnerLabel.Name = "winnerLabel";
+            this.winnerLabel.Size = new System.Drawing.Size(0, 20);
+            this.winnerLabel.TabIndex = 12;
+            // 
+            // insertionTickLabel
+            // 
+            this.insertionTickLabel.AutoSize = true;
+            this.insertionTickLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insertionTickLabel.Location = new System.Drawing.Point(383, 110);
+            this.insertionTickLabel.Name = "insertionTickLabel";
+            this.insertionTickLabel.Size = new System.Drawing.Size(0, 18);
+            this.insertionTickLabel.TabIndex = 11;
+            // 
+            // bubbleTickLabel
+            // 
+            this.bubbleTickLabel.AutoSize = true;
+            this.bubbleTickLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bubbleTickLabel.Location = new System.Drawing.Point(383, 81);
+            this.bubbleTickLabel.Name = "bubbleTickLabel";
+            this.bubbleTickLabel.Size = new System.Drawing.Size(0, 18);
+            this.bubbleTickLabel.TabIndex = 10;
+            // 
+            // selectTickLabel
+            // 
+            this.selectTickLabel.AutoSize = true;
+            this.selectTickLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectTickLabel.Location = new System.Drawing.Point(383, 51);
+            this.selectTickLabel.Name = "selectTickLabel";
+            this.selectTickLabel.Size = new System.Drawing.Size(0, 18);
+            this.selectTickLabel.TabIndex = 9;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(380, 19);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(44, 18);
+            this.label38.TabIndex = 8;
+            this.label38.Text = "Ticks";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(198, 110);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(164, 18);
+            this.label37.TabIndex = 7;
+            this.label37.Text = "Best time insertion sort:";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(198, 81);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(151, 18);
+            this.label36.TabIndex = 6;
+            this.label36.Text = "Best time bubble sort:";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(197, 51);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(167, 18);
+            this.label35.TabIndex = 5;
+            this.label35.Text = "Best time selection sort:";
+            // 
+            // sortInt
+            // 
+            this.sortInt.Location = new System.Drawing.Point(27, 132);
+            this.sortInt.Name = "sortInt";
+            this.sortInt.Size = new System.Drawing.Size(120, 23);
+            this.sortInt.TabIndex = 4;
+            this.sortInt.Text = "sort int array (1000)";
+            this.sortInt.UseVisualStyleBackColor = true;
+            this.sortInt.Click += new System.EventHandler(this.sortInt_Click);
+            // 
+            // sortReverse
+            // 
+            this.sortReverse.Location = new System.Drawing.Point(27, 102);
+            this.sortReverse.Name = "sortReverse";
+            this.sortReverse.Size = new System.Drawing.Size(120, 23);
+            this.sortReverse.TabIndex = 3;
+            this.sortReverse.Text = "reverse sort string";
+            this.sortReverse.UseVisualStyleBackColor = true;
+            this.sortReverse.Click += new System.EventHandler(this.sortReverse_Click);
+            // 
+            // sortString
+            // 
+            this.sortString.Location = new System.Drawing.Point(27, 72);
+            this.sortString.Name = "sortString";
+            this.sortString.Size = new System.Drawing.Size(120, 23);
+            this.sortString.TabIndex = 2;
+            this.sortString.Text = "sort string array (100)";
+            this.sortString.UseVisualStyleBackColor = true;
+            this.sortString.Click += new System.EventHandler(this.sortString_Click);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(24, 20);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(117, 13);
+            this.label32.TabIndex = 1;
+            this.label32.Text = "How many executions?";
+            // 
+            // execCount
+            // 
+            this.execCount.Location = new System.Drawing.Point(27, 45);
+            this.execCount.Name = "execCount";
+            this.execCount.Size = new System.Drawing.Size(120, 20);
+            this.execCount.TabIndex = 0;
+            // 
             // Search
             // 
             this.Search.Controls.Add(this.label30);
@@ -477,6 +987,42 @@
             this.Search.TabIndex = 2;
             this.Search.Text = "Search";
             this.Search.UseVisualStyleBackColor = true;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(362, 217);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(63, 13);
+            this.label30.TabIndex = 32;
+            this.label30.Text = "Occurance:";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(362, 10);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(63, 13);
+            this.label27.TabIndex = 31;
+            this.label27.Text = "Occurance:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(308, 344);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(205, 13);
+            this.label14.TabIndex = 30;
+            this.label14.Text = "sorted: \"a\", \"c\", \"d\", \"d\", \"g\", \"h\", \"s\", \"t\'";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(311, 129);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(168, 13);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "sorted: 2, 2, 3, 3, 3, 4, 4, 5, 5, 7, 7";
             // 
             // compareButton
             // 
@@ -607,6 +1153,7 @@
             this.stringBox.Name = "stringBox";
             this.stringBox.Size = new System.Drawing.Size(100, 20);
             this.stringBox.TabIndex = 15;
+            this.stringBox.Leave += new System.EventHandler(this.stringBox_Leave);
             // 
             // label15
             // 
@@ -779,6 +1326,220 @@
             this.Queue.Text = "Queue";
             this.Queue.UseVisualStyleBackColor = true;
             // 
+            // pCount
+            // 
+            this.pCount.Location = new System.Drawing.Point(421, 174);
+            this.pCount.Name = "pCount";
+            this.pCount.Size = new System.Drawing.Size(75, 23);
+            this.pCount.TabIndex = 23;
+            this.pCount.Text = "Count";
+            this.pCount.UseVisualStyleBackColor = true;
+            this.pCount.Click += new System.EventHandler(this.pCount_Click);
+            // 
+            // pClear
+            // 
+            this.pClear.Location = new System.Drawing.Point(421, 122);
+            this.pClear.Name = "pClear";
+            this.pClear.Size = new System.Drawing.Size(75, 23);
+            this.pClear.TabIndex = 22;
+            this.pClear.Text = "clear";
+            this.pClear.UseVisualStyleBackColor = true;
+            this.pClear.Click += new System.EventHandler(this.pClear_Click);
+            // 
+            // pPeek
+            // 
+            this.pPeek.Location = new System.Drawing.Point(421, 66);
+            this.pPeek.Name = "pPeek";
+            this.pPeek.Size = new System.Drawing.Size(75, 23);
+            this.pPeek.TabIndex = 21;
+            this.pPeek.Text = "peek";
+            this.pPeek.UseVisualStyleBackColor = true;
+            this.pPeek.Click += new System.EventHandler(this.pPeek_Click);
+            // 
+            // pDequeue
+            // 
+            this.pDequeue.Location = new System.Drawing.Point(280, 311);
+            this.pDequeue.Name = "pDequeue";
+            this.pDequeue.Size = new System.Drawing.Size(75, 23);
+            this.pDequeue.TabIndex = 20;
+            this.pDequeue.Text = "dequeue";
+            this.pDequeue.UseVisualStyleBackColor = true;
+            this.pDequeue.Click += new System.EventHandler(this.pDequeue_Click);
+            // 
+            // pEnqueue
+            // 
+            this.pEnqueue.Location = new System.Drawing.Point(280, 281);
+            this.pEnqueue.Name = "pEnqueue";
+            this.pEnqueue.Size = new System.Drawing.Size(75, 23);
+            this.pEnqueue.TabIndex = 19;
+            this.pEnqueue.Text = "enqueue";
+            this.pEnqueue.UseVisualStyleBackColor = true;
+            this.pEnqueue.Click += new System.EventHandler(this.pEnqueue_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(386, 235);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(37, 13);
+            this.label20.TabIndex = 18;
+            this.label20.Text = "priority";
+            // 
+            // pPriority
+            // 
+            this.pPriority.Location = new System.Drawing.Point(386, 254);
+            this.pPriority.Name = "pPriority";
+            this.pPriority.Size = new System.Drawing.Size(50, 20);
+            this.pPriority.TabIndex = 17;
+            // 
+            // pInput
+            // 
+            this.pInput.Location = new System.Drawing.Point(280, 254);
+            this.pInput.Name = "pInput";
+            this.pInput.Size = new System.Drawing.Size(100, 20);
+            this.pInput.TabIndex = 16;
+            // 
+            // pCountLabel
+            // 
+            this.pCountLabel.AutoSize = true;
+            this.pCountLabel.Location = new System.Drawing.Point(418, 204);
+            this.pCountLabel.Name = "pCountLabel";
+            this.pCountLabel.Size = new System.Drawing.Size(0, 13);
+            this.pCountLabel.TabIndex = 15;
+            // 
+            // pPeekLabel
+            // 
+            this.pPeekLabel.AutoSize = true;
+            this.pPeekLabel.Location = new System.Drawing.Point(418, 96);
+            this.pPeekLabel.Name = "pPeekLabel";
+            this.pPeekLabel.Size = new System.Drawing.Size(0, 13);
+            this.pPeekLabel.TabIndex = 14;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(280, 235);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(30, 13);
+            this.label19.TabIndex = 13;
+            this.label19.Text = "input";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(280, 25);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(109, 13);
+            this.label18.TabIndex = 12;
+            this.label18.Text = "PriorityQueue content";
+            // 
+            // pQueueList
+            // 
+            this.pQueueList.FormattingEnabled = true;
+            this.pQueueList.Location = new System.Drawing.Point(280, 44);
+            this.pQueueList.Name = "pQueueList";
+            this.pQueueList.Size = new System.Drawing.Size(120, 186);
+            this.pQueueList.TabIndex = 11;
+            // 
+            // countLabel
+            // 
+            this.countLabel.AutoSize = true;
+            this.countLabel.Location = new System.Drawing.Point(159, 204);
+            this.countLabel.Name = "countLabel";
+            this.countLabel.Size = new System.Drawing.Size(0, 13);
+            this.countLabel.TabIndex = 10;
+            // 
+            // peekLabel
+            // 
+            this.peekLabel.AutoSize = true;
+            this.peekLabel.Location = new System.Drawing.Point(159, 96);
+            this.peekLabel.Name = "peekLabel";
+            this.peekLabel.Size = new System.Drawing.Size(0, 13);
+            this.peekLabel.TabIndex = 9;
+            // 
+            // countButt
+            // 
+            this.countButt.Location = new System.Drawing.Point(159, 174);
+            this.countButt.Name = "countButt";
+            this.countButt.Size = new System.Drawing.Size(75, 23);
+            this.countButt.TabIndex = 8;
+            this.countButt.Text = "count";
+            this.countButt.UseVisualStyleBackColor = true;
+            this.countButt.Click += new System.EventHandler(this.countButt_Click);
+            // 
+            // clearButt
+            // 
+            this.clearButt.Location = new System.Drawing.Point(159, 123);
+            this.clearButt.Name = "clearButt";
+            this.clearButt.Size = new System.Drawing.Size(75, 23);
+            this.clearButt.TabIndex = 7;
+            this.clearButt.Text = "clear";
+            this.clearButt.UseVisualStyleBackColor = true;
+            this.clearButt.Click += new System.EventHandler(this.clearButt_Click);
+            // 
+            // peekButt
+            // 
+            this.peekButt.Location = new System.Drawing.Point(159, 66);
+            this.peekButt.Name = "peekButt";
+            this.peekButt.Size = new System.Drawing.Size(75, 23);
+            this.peekButt.TabIndex = 6;
+            this.peekButt.Text = "peek";
+            this.peekButt.UseVisualStyleBackColor = true;
+            this.peekButt.Click += new System.EventHandler(this.peekButt_Click);
+            // 
+            // dequeueButt
+            // 
+            this.dequeueButt.Location = new System.Drawing.Point(23, 311);
+            this.dequeueButt.Name = "dequeueButt";
+            this.dequeueButt.Size = new System.Drawing.Size(75, 23);
+            this.dequeueButt.TabIndex = 5;
+            this.dequeueButt.Text = "dequeue";
+            this.dequeueButt.UseVisualStyleBackColor = true;
+            this.dequeueButt.Click += new System.EventHandler(this.dequeueButt_Click);
+            // 
+            // enqueueButt
+            // 
+            this.enqueueButt.Location = new System.Drawing.Point(23, 281);
+            this.enqueueButt.Name = "enqueueButt";
+            this.enqueueButt.Size = new System.Drawing.Size(75, 23);
+            this.enqueueButt.TabIndex = 4;
+            this.enqueueButt.Text = "enqueue";
+            this.enqueueButt.UseVisualStyleBackColor = true;
+            this.enqueueButt.Click += new System.EventHandler(this.enqueueButt_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(23, 235);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(30, 13);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "input";
+            // 
+            // queuebox
+            // 
+            this.queuebox.Location = new System.Drawing.Point(23, 254);
+            this.queuebox.Name = "queuebox";
+            this.queuebox.Size = new System.Drawing.Size(100, 20);
+            this.queuebox.TabIndex = 2;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(23, 25);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(78, 13);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Queue content";
+            // 
+            // queueList
+            // 
+            this.queueList.FormattingEnabled = true;
+            this.queueList.Location = new System.Drawing.Point(23, 44);
+            this.queueList.Name = "queueList";
+            this.queueList.Size = new System.Drawing.Size(120, 186);
+            this.queueList.TabIndex = 0;
+            // 
             // Stack
             // 
             this.Stack.Controls.Add(this.sCountLabel);
@@ -798,278 +1559,6 @@
             this.Stack.TabIndex = 4;
             this.Stack.Text = "Stack";
             this.Stack.UseVisualStyleBackColor = true;
-            // 
-            // Hash
-            // 
-            this.Hash.Location = new System.Drawing.Point(4, 22);
-            this.Hash.Name = "Hash";
-            this.Hash.Size = new System.Drawing.Size(527, 444);
-            this.Hash.TabIndex = 5;
-            this.Hash.Text = "Hash";
-            this.Hash.UseVisualStyleBackColor = true;
-            // 
-            // Lists
-            // 
-            this.Lists.Controls.Add(this.tabControl3);
-            this.Lists.Location = new System.Drawing.Point(4, 22);
-            this.Lists.Name = "Lists";
-            this.Lists.Size = new System.Drawing.Size(527, 444);
-            this.Lists.TabIndex = 6;
-            this.Lists.Text = "Lists";
-            this.Lists.UseVisualStyleBackColor = true;
-            // 
-            // Iterator
-            // 
-            this.Iterator.Location = new System.Drawing.Point(4, 22);
-            this.Iterator.Name = "Iterator";
-            this.Iterator.Size = new System.Drawing.Size(527, 444);
-            this.Iterator.TabIndex = 7;
-            this.Iterator.Text = "Iterator";
-            this.Iterator.UseVisualStyleBackColor = true;
-            // 
-            // SearchTree
-            // 
-            this.SearchTree.Controls.Add(this.button3);
-            this.SearchTree.Controls.Add(this.textBox1);
-            this.SearchTree.Controls.Add(this.button2);
-            this.SearchTree.Location = new System.Drawing.Point(4, 22);
-            this.SearchTree.Name = "SearchTree";
-            this.SearchTree.Size = new System.Drawing.Size(527, 444);
-            this.SearchTree.TabIndex = 8;
-            this.SearchTree.Text = "SearchTree";
-            this.SearchTree.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(311, 129);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(168, 13);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "sorted: 2, 2, 3, 3, 3, 4, 4, 5, 5, 7, 7";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(308, 344);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(205, 13);
-            this.label14.TabIndex = 30;
-            this.label14.Text = "sorted: \"a\", \"c\", \"d\", \"d\", \"g\", \"h\", \"s\", \"t\'";
-            // 
-            // queueList
-            // 
-            this.queueList.FormattingEnabled = true;
-            this.queueList.Location = new System.Drawing.Point(23, 44);
-            this.queueList.Name = "queueList";
-            this.queueList.Size = new System.Drawing.Size(120, 186);
-            this.queueList.TabIndex = 0;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(23, 25);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(78, 13);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "Queue content";
-            // 
-            // queuebox
-            // 
-            this.queuebox.Location = new System.Drawing.Point(23, 254);
-            this.queuebox.Name = "queuebox";
-            this.queuebox.Size = new System.Drawing.Size(100, 20);
-            this.queuebox.TabIndex = 2;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(23, 235);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(30, 13);
-            this.label17.TabIndex = 3;
-            this.label17.Text = "input";
-            // 
-            // enqueueButt
-            // 
-            this.enqueueButt.Location = new System.Drawing.Point(23, 281);
-            this.enqueueButt.Name = "enqueueButt";
-            this.enqueueButt.Size = new System.Drawing.Size(75, 23);
-            this.enqueueButt.TabIndex = 4;
-            this.enqueueButt.Text = "enqueue";
-            this.enqueueButt.UseVisualStyleBackColor = true;
-            this.enqueueButt.Click += new System.EventHandler(this.enqueueButt_Click);
-            // 
-            // dequeueButt
-            // 
-            this.dequeueButt.Location = new System.Drawing.Point(23, 311);
-            this.dequeueButt.Name = "dequeueButt";
-            this.dequeueButt.Size = new System.Drawing.Size(75, 23);
-            this.dequeueButt.TabIndex = 5;
-            this.dequeueButt.Text = "dequeue";
-            this.dequeueButt.UseVisualStyleBackColor = true;
-            this.dequeueButt.Click += new System.EventHandler(this.dequeueButt_Click);
-            // 
-            // peekButt
-            // 
-            this.peekButt.Location = new System.Drawing.Point(159, 66);
-            this.peekButt.Name = "peekButt";
-            this.peekButt.Size = new System.Drawing.Size(75, 23);
-            this.peekButt.TabIndex = 6;
-            this.peekButt.Text = "peek";
-            this.peekButt.UseVisualStyleBackColor = true;
-            this.peekButt.Click += new System.EventHandler(this.peekButt_Click);
-            // 
-            // clearButt
-            // 
-            this.clearButt.Location = new System.Drawing.Point(159, 123);
-            this.clearButt.Name = "clearButt";
-            this.clearButt.Size = new System.Drawing.Size(75, 23);
-            this.clearButt.TabIndex = 7;
-            this.clearButt.Text = "clear";
-            this.clearButt.UseVisualStyleBackColor = true;
-            this.clearButt.Click += new System.EventHandler(this.clearButt_Click);
-            // 
-            // countButt
-            // 
-            this.countButt.Location = new System.Drawing.Point(159, 174);
-            this.countButt.Name = "countButt";
-            this.countButt.Size = new System.Drawing.Size(75, 23);
-            this.countButt.TabIndex = 8;
-            this.countButt.Text = "count";
-            this.countButt.UseVisualStyleBackColor = true;
-            this.countButt.Click += new System.EventHandler(this.countButt_Click);
-            // 
-            // peekLabel
-            // 
-            this.peekLabel.AutoSize = true;
-            this.peekLabel.Location = new System.Drawing.Point(159, 96);
-            this.peekLabel.Name = "peekLabel";
-            this.peekLabel.Size = new System.Drawing.Size(0, 13);
-            this.peekLabel.TabIndex = 9;
-            // 
-            // countLabel
-            // 
-            this.countLabel.AutoSize = true;
-            this.countLabel.Location = new System.Drawing.Point(159, 204);
-            this.countLabel.Name = "countLabel";
-            this.countLabel.Size = new System.Drawing.Size(0, 13);
-            this.countLabel.TabIndex = 10;
-            // 
-            // pQueueList
-            // 
-            this.pQueueList.FormattingEnabled = true;
-            this.pQueueList.Location = new System.Drawing.Point(280, 44);
-            this.pQueueList.Name = "pQueueList";
-            this.pQueueList.Size = new System.Drawing.Size(120, 186);
-            this.pQueueList.TabIndex = 11;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(280, 25);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(109, 13);
-            this.label18.TabIndex = 12;
-            this.label18.Text = "PriorityQueue content";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(280, 235);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(30, 13);
-            this.label19.TabIndex = 13;
-            this.label19.Text = "input";
-            // 
-            // pPeekLabel
-            // 
-            this.pPeekLabel.AutoSize = true;
-            this.pPeekLabel.Location = new System.Drawing.Point(418, 96);
-            this.pPeekLabel.Name = "pPeekLabel";
-            this.pPeekLabel.Size = new System.Drawing.Size(0, 13);
-            this.pPeekLabel.TabIndex = 14;
-            // 
-            // pCountLabel
-            // 
-            this.pCountLabel.AutoSize = true;
-            this.pCountLabel.Location = new System.Drawing.Point(418, 204);
-            this.pCountLabel.Name = "pCountLabel";
-            this.pCountLabel.Size = new System.Drawing.Size(0, 13);
-            this.pCountLabel.TabIndex = 15;
-            // 
-            // pInput
-            // 
-            this.pInput.Location = new System.Drawing.Point(280, 254);
-            this.pInput.Name = "pInput";
-            this.pInput.Size = new System.Drawing.Size(100, 20);
-            this.pInput.TabIndex = 16;
-            // 
-            // pPriority
-            // 
-            this.pPriority.Location = new System.Drawing.Point(386, 254);
-            this.pPriority.Name = "pPriority";
-            this.pPriority.Size = new System.Drawing.Size(50, 20);
-            this.pPriority.TabIndex = 17;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(386, 235);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(37, 13);
-            this.label20.TabIndex = 18;
-            this.label20.Text = "priority";
-            // 
-            // pEnqueue
-            // 
-            this.pEnqueue.Location = new System.Drawing.Point(280, 281);
-            this.pEnqueue.Name = "pEnqueue";
-            this.pEnqueue.Size = new System.Drawing.Size(75, 23);
-            this.pEnqueue.TabIndex = 19;
-            this.pEnqueue.Text = "enqueue";
-            this.pEnqueue.UseVisualStyleBackColor = true;
-            this.pEnqueue.Click += new System.EventHandler(this.pEnqueue_Click);
-            // 
-            // pDequeue
-            // 
-            this.pDequeue.Location = new System.Drawing.Point(280, 311);
-            this.pDequeue.Name = "pDequeue";
-            this.pDequeue.Size = new System.Drawing.Size(75, 23);
-            this.pDequeue.TabIndex = 20;
-            this.pDequeue.Text = "dequeue";
-            this.pDequeue.UseVisualStyleBackColor = true;
-            this.pDequeue.Click += new System.EventHandler(this.pDequeue_Click);
-            // 
-            // pPeek
-            // 
-            this.pPeek.Location = new System.Drawing.Point(421, 66);
-            this.pPeek.Name = "pPeek";
-            this.pPeek.Size = new System.Drawing.Size(75, 23);
-            this.pPeek.TabIndex = 21;
-            this.pPeek.Text = "peek";
-            this.pPeek.UseVisualStyleBackColor = true;
-            this.pPeek.Click += new System.EventHandler(this.pPeek_Click);
-            // 
-            // pClear
-            // 
-            this.pClear.Location = new System.Drawing.Point(421, 122);
-            this.pClear.Name = "pClear";
-            this.pClear.Size = new System.Drawing.Size(75, 23);
-            this.pClear.TabIndex = 22;
-            this.pClear.Text = "clear";
-            this.pClear.UseVisualStyleBackColor = true;
-            this.pClear.Click += new System.EventHandler(this.pClear_Click);
-            // 
-            // pCount
-            // 
-            this.pCount.Location = new System.Drawing.Point(421, 174);
-            this.pCount.Name = "pCount";
-            this.pCount.Size = new System.Drawing.Size(75, 23);
-            this.pCount.TabIndex = 23;
-            this.pCount.Text = "Count";
-            this.pCount.UseVisualStyleBackColor = true;
-            this.pCount.Click += new System.EventHandler(this.pCount_Click);
             // 
             // sCountLabel
             // 
@@ -1170,517 +1659,24 @@
             this.stackList.Size = new System.Drawing.Size(120, 186);
             this.stackList.TabIndex = 11;
             // 
-            // tabControl2
-            // 
-            this.tabControl2.Controls.Add(this.tabPage1);
-            this.tabControl2.Controls.Add(this.tabPage2);
-            this.tabControl2.Controls.Add(this.tabPage3);
-            this.tabControl2.Controls.Add(this.tabPage4);
-            this.tabControl2.Location = new System.Drawing.Point(0, 0);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(527, 444);
-            this.tabControl2.TabIndex = 0;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.label25);
-            this.tabPage1.Controls.Add(this.timeLabelSelect);
-            this.tabPage1.Controls.Add(this.selectReverse);
-            this.tabPage1.Controls.Add(this.selectSortInt);
-            this.tabPage1.Controls.Add(this.selectSortString);
-            this.tabPage1.Controls.Add(this.label22);
-            this.tabPage1.Controls.Add(this.label21);
-            this.tabPage1.Controls.Add(this.selectSortBox);
-            this.tabPage1.Controls.Add(this.selectUnsortBox);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(519, 339);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Selection";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.bubbleClear);
-            this.tabPage2.Controls.Add(this.label26);
-            this.tabPage2.Controls.Add(this.bubbleTimeLabel);
-            this.tabPage2.Controls.Add(this.bubbleReverse);
-            this.tabPage2.Controls.Add(this.bubbleInt);
-            this.tabPage2.Controls.Add(this.bubbleArray);
-            this.tabPage2.Controls.Add(this.label28);
-            this.tabPage2.Controls.Add(this.label29);
-            this.tabPage2.Controls.Add(this.bubbleSorted);
-            this.tabPage2.Controls.Add(this.bubbleUnsort);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(519, 418);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Bubble";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.insertClear);
-            this.tabPage3.Controls.Add(this.label31);
-            this.tabPage3.Controls.Add(this.insertTimeLabel);
-            this.tabPage3.Controls.Add(this.insertReverse);
-            this.tabPage3.Controls.Add(this.insertInt);
-            this.tabPage3.Controls.Add(this.insertString);
-            this.tabPage3.Controls.Add(this.label33);
-            this.tabPage3.Controls.Add(this.label34);
-            this.tabPage3.Controls.Add(this.insertSorted);
-            this.tabPage3.Controls.Add(this.insertUnsort);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(519, 418);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Insertion";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // selectUnsortBox
-            // 
-            this.selectUnsortBox.FormattingEnabled = true;
-            this.selectUnsortBox.Location = new System.Drawing.Point(30, 38);
-            this.selectUnsortBox.Name = "selectUnsortBox";
-            this.selectUnsortBox.Size = new System.Drawing.Size(142, 238);
-            this.selectUnsortBox.TabIndex = 0;
-            // 
-            // selectSortBox
-            // 
-            this.selectSortBox.FormattingEnabled = true;
-            this.selectSortBox.Location = new System.Drawing.Point(214, 38);
-            this.selectSortBox.Name = "selectSortBox";
-            this.selectSortBox.Size = new System.Drawing.Size(143, 238);
-            this.selectSortBox.TabIndex = 1;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(30, 19);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(74, 13);
-            this.label21.TabIndex = 2;
-            this.label21.Text = "unsorted array";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(214, 19);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(62, 13);
-            this.label22.TabIndex = 3;
-            this.label22.Text = "sorted array";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.winnerLabel);
-            this.tabPage4.Controls.Add(this.insertionTickLabel);
-            this.tabPage4.Controls.Add(this.bubbleTickLabel);
-            this.tabPage4.Controls.Add(this.selectTickLabel);
-            this.tabPage4.Controls.Add(this.label38);
-            this.tabPage4.Controls.Add(this.label37);
-            this.tabPage4.Controls.Add(this.label36);
-            this.tabPage4.Controls.Add(this.label35);
-            this.tabPage4.Controls.Add(this.sortInt);
-            this.tabPage4.Controls.Add(this.sortReverse);
-            this.tabPage4.Controls.Add(this.sortString);
-            this.tabPage4.Controls.Add(this.label32);
-            this.tabPage4.Controls.Add(this.execCount);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(519, 418);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Compare";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // selectSortString
-            // 
-            this.selectSortString.Location = new System.Drawing.Point(374, 179);
-            this.selectSortString.Name = "selectSortString";
-            this.selectSortString.Size = new System.Drawing.Size(128, 23);
-            this.selectSortString.TabIndex = 4;
-            this.selectSortString.Text = "sort string array (100)";
-            this.selectSortString.UseVisualStyleBackColor = true;
-            this.selectSortString.Click += new System.EventHandler(this.selectSortString_Click);
-            // 
-            // selectSortInt
-            // 
-            this.selectSortInt.Location = new System.Drawing.Point(374, 237);
-            this.selectSortInt.Name = "selectSortInt";
-            this.selectSortInt.Size = new System.Drawing.Size(128, 23);
-            this.selectSortInt.TabIndex = 5;
-            this.selectSortInt.Text = "sort int array (1000)";
-            this.selectSortInt.UseVisualStyleBackColor = true;
-            this.selectSortInt.Click += new System.EventHandler(this.selectSortInt_Click);
-            // 
-            // selectReverse
-            // 
-            this.selectReverse.Location = new System.Drawing.Point(374, 208);
-            this.selectReverse.Name = "selectReverse";
-            this.selectReverse.Size = new System.Drawing.Size(128, 23);
-            this.selectReverse.TabIndex = 6;
-            this.selectReverse.Text = "reverse sort string";
-            this.selectReverse.UseVisualStyleBackColor = true;
-            this.selectReverse.Click += new System.EventHandler(this.selectReverse_Click);
-            // 
-            // timeLabelSelect
-            // 
-            this.timeLabelSelect.AutoSize = true;
-            this.timeLabelSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeLabelSelect.Location = new System.Drawing.Point(397, 297);
-            this.timeLabelSelect.Name = "timeLabelSelect";
-            this.timeLabelSelect.Size = new System.Drawing.Size(0, 20);
-            this.timeLabelSelect.TabIndex = 7;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(329, 297);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(49, 20);
-            this.label25.TabIndex = 8;
-            this.label25.Text = "Ticks:";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(384, 38);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // bubbleClear
-            // 
-            this.bubbleClear.Location = new System.Drawing.Point(377, 39);
-            this.bubbleClear.Name = "bubbleClear";
-            this.bubbleClear.Size = new System.Drawing.Size(75, 23);
-            this.bubbleClear.TabIndex = 19;
-            this.bubbleClear.Text = "Clear";
-            this.bubbleClear.UseVisualStyleBackColor = true;
-            this.bubbleClear.Click += new System.EventHandler(this.bubbleClear_Click);
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(322, 298);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(49, 20);
-            this.label26.TabIndex = 18;
-            this.label26.Text = "Ticks:";
-            // 
-            // bubbleTimeLabel
-            // 
-            this.bubbleTimeLabel.AutoSize = true;
-            this.bubbleTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bubbleTimeLabel.Location = new System.Drawing.Point(390, 298);
-            this.bubbleTimeLabel.Name = "bubbleTimeLabel";
-            this.bubbleTimeLabel.Size = new System.Drawing.Size(0, 20);
-            this.bubbleTimeLabel.TabIndex = 17;
-            // 
-            // bubbleReverse
-            // 
-            this.bubbleReverse.Location = new System.Drawing.Point(367, 209);
-            this.bubbleReverse.Name = "bubbleReverse";
-            this.bubbleReverse.Size = new System.Drawing.Size(128, 23);
-            this.bubbleReverse.TabIndex = 16;
-            this.bubbleReverse.Text = "reverse sort string";
-            this.bubbleReverse.UseVisualStyleBackColor = true;
-            this.bubbleReverse.Click += new System.EventHandler(this.bubbleReverse_Click);
-            // 
-            // bubbleInt
-            // 
-            this.bubbleInt.Location = new System.Drawing.Point(367, 238);
-            this.bubbleInt.Name = "bubbleInt";
-            this.bubbleInt.Size = new System.Drawing.Size(128, 23);
-            this.bubbleInt.TabIndex = 15;
-            this.bubbleInt.Text = "sort int array (1000)";
-            this.bubbleInt.UseVisualStyleBackColor = true;
-            this.bubbleInt.Click += new System.EventHandler(this.bubbleInt_Click);
-            // 
-            // bubbleArray
-            // 
-            this.bubbleArray.Location = new System.Drawing.Point(367, 180);
-            this.bubbleArray.Name = "bubbleArray";
-            this.bubbleArray.Size = new System.Drawing.Size(128, 23);
-            this.bubbleArray.TabIndex = 14;
-            this.bubbleArray.Text = "sort string array (100)";
-            this.bubbleArray.UseVisualStyleBackColor = true;
-            this.bubbleArray.Click += new System.EventHandler(this.bubbleArray_Click);
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(207, 20);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(62, 13);
-            this.label28.TabIndex = 13;
-            this.label28.Text = "sorted array";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(23, 20);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(74, 13);
-            this.label29.TabIndex = 12;
-            this.label29.Text = "unsorted array";
-            // 
-            // bubbleSorted
-            // 
-            this.bubbleSorted.FormattingEnabled = true;
-            this.bubbleSorted.Location = new System.Drawing.Point(207, 39);
-            this.bubbleSorted.Name = "bubbleSorted";
-            this.bubbleSorted.Size = new System.Drawing.Size(143, 238);
-            this.bubbleSorted.TabIndex = 11;
-            // 
-            // bubbleUnsort
-            // 
-            this.bubbleUnsort.FormattingEnabled = true;
-            this.bubbleUnsort.Location = new System.Drawing.Point(23, 39);
-            this.bubbleUnsort.Name = "bubbleUnsort";
-            this.bubbleUnsort.Size = new System.Drawing.Size(142, 238);
-            this.bubbleUnsort.TabIndex = 10;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(362, 10);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(63, 13);
-            this.label27.TabIndex = 31;
-            this.label27.Text = "Occurance:";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(362, 217);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(63, 13);
-            this.label30.TabIndex = 32;
-            this.label30.Text = "Occurance:";
-            // 
-            // insertClear
-            // 
-            this.insertClear.Location = new System.Drawing.Point(377, 79);
-            this.insertClear.Name = "insertClear";
-            this.insertClear.Size = new System.Drawing.Size(75, 23);
-            this.insertClear.TabIndex = 29;
-            this.insertClear.Text = "Clear";
-            this.insertClear.UseVisualStyleBackColor = true;
-            this.insertClear.Click += new System.EventHandler(this.insertClear_Click);
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(322, 338);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(49, 20);
-            this.label31.TabIndex = 28;
-            this.label31.Text = "Ticks:";
-            // 
-            // insertTimeLabel
-            // 
-            this.insertTimeLabel.AutoSize = true;
-            this.insertTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insertTimeLabel.Location = new System.Drawing.Point(390, 338);
-            this.insertTimeLabel.Name = "insertTimeLabel";
-            this.insertTimeLabel.Size = new System.Drawing.Size(0, 20);
-            this.insertTimeLabel.TabIndex = 27;
-            // 
-            // insertReverse
-            // 
-            this.insertReverse.Location = new System.Drawing.Point(367, 249);
-            this.insertReverse.Name = "insertReverse";
-            this.insertReverse.Size = new System.Drawing.Size(128, 23);
-            this.insertReverse.TabIndex = 26;
-            this.insertReverse.Text = "reverse sort string";
-            this.insertReverse.UseVisualStyleBackColor = true;
-            this.insertReverse.Click += new System.EventHandler(this.insertReverse_Click);
-            // 
-            // insertInt
-            // 
-            this.insertInt.Location = new System.Drawing.Point(367, 278);
-            this.insertInt.Name = "insertInt";
-            this.insertInt.Size = new System.Drawing.Size(128, 23);
-            this.insertInt.TabIndex = 25;
-            this.insertInt.Text = "sort int array (1000)";
-            this.insertInt.UseVisualStyleBackColor = true;
-            this.insertInt.Click += new System.EventHandler(this.insertInt_Click);
-            // 
-            // insertString
-            // 
-            this.insertString.Location = new System.Drawing.Point(367, 220);
-            this.insertString.Name = "insertString";
-            this.insertString.Size = new System.Drawing.Size(128, 23);
-            this.insertString.TabIndex = 24;
-            this.insertString.Text = "sort string array (100)";
-            this.insertString.UseVisualStyleBackColor = true;
-            this.insertString.Click += new System.EventHandler(this.insertString_Click);
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(207, 60);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(62, 13);
-            this.label33.TabIndex = 23;
-            this.label33.Text = "sorted array";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(23, 60);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(74, 13);
-            this.label34.TabIndex = 22;
-            this.label34.Text = "unsorted array";
-            // 
-            // insertSorted
-            // 
-            this.insertSorted.FormattingEnabled = true;
-            this.insertSorted.Location = new System.Drawing.Point(207, 79);
-            this.insertSorted.Name = "insertSorted";
-            this.insertSorted.Size = new System.Drawing.Size(143, 238);
-            this.insertSorted.TabIndex = 21;
-            // 
-            // insertUnsort
-            // 
-            this.insertUnsort.FormattingEnabled = true;
-            this.insertUnsort.Location = new System.Drawing.Point(23, 79);
-            this.insertUnsort.Name = "insertUnsort";
-            this.insertUnsort.Size = new System.Drawing.Size(142, 238);
-            this.insertUnsort.TabIndex = 20;
-            // 
-            // execCount
-            // 
-            this.execCount.Location = new System.Drawing.Point(27, 45);
-            this.execCount.Name = "execCount";
-            this.execCount.Size = new System.Drawing.Size(120, 20);
-            this.execCount.TabIndex = 0;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(24, 20);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(117, 13);
-            this.label32.TabIndex = 1;
-            this.label32.Text = "How many executions?";
-            // 
-            // sortString
-            // 
-            this.sortString.Location = new System.Drawing.Point(27, 72);
-            this.sortString.Name = "sortString";
-            this.sortString.Size = new System.Drawing.Size(120, 23);
-            this.sortString.TabIndex = 2;
-            this.sortString.Text = "sort string array (100)";
-            this.sortString.UseVisualStyleBackColor = true;
-            this.sortString.Click += new System.EventHandler(this.sortString_Click);
-            // 
-            // sortReverse
-            // 
-            this.sortReverse.Location = new System.Drawing.Point(27, 102);
-            this.sortReverse.Name = "sortReverse";
-            this.sortReverse.Size = new System.Drawing.Size(120, 23);
-            this.sortReverse.TabIndex = 3;
-            this.sortReverse.Text = "reverse sort string";
-            this.sortReverse.UseVisualStyleBackColor = true;
-            this.sortReverse.Click += new System.EventHandler(this.sortReverse_Click);
-            // 
-            // sortInt
-            // 
-            this.sortInt.Location = new System.Drawing.Point(27, 132);
-            this.sortInt.Name = "sortInt";
-            this.sortInt.Size = new System.Drawing.Size(120, 23);
-            this.sortInt.TabIndex = 4;
-            this.sortInt.Text = "sort int array (1000)";
-            this.sortInt.UseVisualStyleBackColor = true;
-            this.sortInt.Click += new System.EventHandler(this.sortInt_Click);
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(197, 51);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(167, 18);
-            this.label35.TabIndex = 5;
-            this.label35.Text = "Best time selection sort:";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(198, 81);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(151, 18);
-            this.label36.TabIndex = 6;
-            this.label36.Text = "Best time bubble sort:";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(198, 110);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(164, 18);
-            this.label37.TabIndex = 7;
-            this.label37.Text = "Best time insertion sort:";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(380, 19);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(44, 18);
-            this.label38.TabIndex = 8;
-            this.label38.Text = "Ticks";
-            // 
-            // selectTickLabel
-            // 
-            this.selectTickLabel.AutoSize = true;
-            this.selectTickLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectTickLabel.Location = new System.Drawing.Point(383, 51);
-            this.selectTickLabel.Name = "selectTickLabel";
-            this.selectTickLabel.Size = new System.Drawing.Size(0, 18);
-            this.selectTickLabel.TabIndex = 9;
-            // 
-            // bubbleTickLabel
-            // 
-            this.bubbleTickLabel.AutoSize = true;
-            this.bubbleTickLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bubbleTickLabel.Location = new System.Drawing.Point(383, 81);
-            this.bubbleTickLabel.Name = "bubbleTickLabel";
-            this.bubbleTickLabel.Size = new System.Drawing.Size(0, 18);
-            this.bubbleTickLabel.TabIndex = 10;
-            // 
-            // insertionTickLabel
-            // 
-            this.insertionTickLabel.AutoSize = true;
-            this.insertionTickLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insertionTickLabel.Location = new System.Drawing.Point(383, 110);
-            this.insertionTickLabel.Name = "insertionTickLabel";
-            this.insertionTickLabel.Size = new System.Drawing.Size(0, 18);
-            this.insertionTickLabel.TabIndex = 11;
-            // 
-            // winnerLabel
-            // 
-            this.winnerLabel.AutoSize = true;
-            this.winnerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.winnerLabel.Location = new System.Drawing.Point(197, 153);
-            this.winnerLabel.Name = "winnerLabel";
-            this.winnerLabel.Size = new System.Drawing.Size(0, 20);
-            this.winnerLabel.TabIndex = 12;
+            // Hash
+            // 
+            this.Hash.Location = new System.Drawing.Point(4, 22);
+            this.Hash.Name = "Hash";
+            this.Hash.Size = new System.Drawing.Size(527, 444);
+            this.Hash.TabIndex = 5;
+            this.Hash.Text = "Hash";
+            this.Hash.UseVisualStyleBackColor = true;
+            // 
+            // Lists
+            // 
+            this.Lists.Controls.Add(this.tabControl3);
+            this.Lists.Location = new System.Drawing.Point(4, 22);
+            this.Lists.Name = "Lists";
+            this.Lists.Size = new System.Drawing.Size(527, 444);
+            this.Lists.TabIndex = 6;
+            this.Lists.Text = "Lists";
+            this.Lists.UseVisualStyleBackColor = true;
             // 
             // tabControl3
             // 
@@ -1722,32 +1718,219 @@
             this.tabPage7.Text = "CirculairLinkedList";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // Iterator
             // 
-            this.button2.Location = new System.Drawing.Point(59, 73);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "test";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Iterator.Location = new System.Drawing.Point(4, 22);
+            this.Iterator.Name = "Iterator";
+            this.Iterator.Size = new System.Drawing.Size(527, 444);
+            this.Iterator.TabIndex = 7;
+            this.Iterator.Text = "Iterator";
+            this.Iterator.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // SearchTree
             // 
-            this.textBox1.Location = new System.Drawing.Point(59, 152);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.SearchTree.Controls.Add(this.label40);
+            this.SearchTree.Controls.Add(this.rangeButton);
+            this.SearchTree.Controls.Add(this.orderedTreeBox);
+            this.SearchTree.Controls.Add(this.postButton);
+            this.SearchTree.Controls.Add(this.preButton);
+            this.SearchTree.Controls.Add(this.inButton);
+            this.SearchTree.Controls.Add(this.rightNode);
+            this.SearchTree.Controls.Add(this.leftNode);
+            this.SearchTree.Controls.Add(this.treeMaxLabel);
+            this.SearchTree.Controls.Add(this.treeMinLabel);
+            this.SearchTree.Controls.Add(this.treeSearchLabel);
+            this.SearchTree.Controls.Add(this.label39);
+            this.SearchTree.Controls.Add(this.delButton);
+            this.SearchTree.Controls.Add(this.max);
+            this.SearchTree.Controls.Add(this.Min);
+            this.SearchTree.Controls.Add(this.treeBox);
+            this.SearchTree.Controls.Add(this.treeInput);
+            this.SearchTree.Controls.Add(this.searchButton);
+            this.SearchTree.Controls.Add(this.Insert);
+            this.SearchTree.Location = new System.Drawing.Point(4, 22);
+            this.SearchTree.Name = "SearchTree";
+            this.SearchTree.Size = new System.Drawing.Size(527, 444);
+            this.SearchTree.TabIndex = 8;
+            this.SearchTree.Text = "SearchTree";
+            this.SearchTree.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // label40
             // 
-            this.button3.Location = new System.Drawing.Point(59, 192);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(122, 249);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(286, 13);
+            this.label40.TabIndex = 20;
+            this.label40.Text = "Select a item in the list box to show it\'s left or right sub node";
+            // 
+            // rangeButton
+            // 
+            this.rangeButton.Location = new System.Drawing.Point(7, 216);
+            this.rangeButton.Name = "rangeButton";
+            this.rangeButton.Size = new System.Drawing.Size(101, 23);
+            this.rangeButton.TabIndex = 19;
+            this.rangeButton.Text = "add test data";
+            this.rangeButton.UseVisualStyleBackColor = true;
+            this.rangeButton.Click += new System.EventHandler(this.rangeButton_Click);
+            // 
+            // orderedTreeBox
+            // 
+            this.orderedTreeBox.FormattingEnabled = true;
+            this.orderedTreeBox.Location = new System.Drawing.Point(362, 9);
+            this.orderedTreeBox.Name = "orderedTreeBox";
+            this.orderedTreeBox.Size = new System.Drawing.Size(145, 212);
+            this.orderedTreeBox.TabIndex = 18;
+            // 
+            // postButton
+            // 
+            this.postButton.Location = new System.Drawing.Point(305, 280);
+            this.postButton.Name = "postButton";
+            this.postButton.Size = new System.Drawing.Size(75, 23);
+            this.postButton.TabIndex = 17;
+            this.postButton.Text = "PostOrder";
+            this.postButton.UseVisualStyleBackColor = true;
+            this.postButton.Click += new System.EventHandler(this.postButton_Click);
+            // 
+            // preButton
+            // 
+            this.preButton.Location = new System.Drawing.Point(224, 280);
+            this.preButton.Name = "preButton";
+            this.preButton.Size = new System.Drawing.Size(75, 23);
+            this.preButton.TabIndex = 16;
+            this.preButton.Text = "PreOrder";
+            this.preButton.UseVisualStyleBackColor = true;
+            this.preButton.Click += new System.EventHandler(this.preButton_Click);
+            // 
+            // inButton
+            // 
+            this.inButton.Location = new System.Drawing.Point(143, 281);
+            this.inButton.Name = "inButton";
+            this.inButton.Size = new System.Drawing.Size(75, 23);
+            this.inButton.TabIndex = 15;
+            this.inButton.Text = "InOrder ";
+            this.inButton.UseVisualStyleBackColor = true;
+            this.inButton.Click += new System.EventHandler(this.inButton_Click);
+            // 
+            // rightNode
+            // 
+            this.rightNode.Location = new System.Drawing.Point(269, 226);
+            this.rightNode.Name = "rightNode";
+            this.rightNode.Size = new System.Drawing.Size(75, 23);
+            this.rightNode.TabIndex = 14;
+            this.rightNode.Text = "Right node";
+            this.rightNode.UseVisualStyleBackColor = true;
+            this.rightNode.Click += new System.EventHandler(this.rightNode_Click);
+            // 
+            // leftNode
+            // 
+            this.leftNode.Location = new System.Drawing.Point(169, 226);
+            this.leftNode.Name = "leftNode";
+            this.leftNode.Size = new System.Drawing.Size(75, 23);
+            this.leftNode.TabIndex = 13;
+            this.leftNode.Text = "Left node";
+            this.leftNode.UseVisualStyleBackColor = true;
+            this.leftNode.Click += new System.EventHandler(this.leftNode_Click);
+            // 
+            // treeMaxLabel
+            // 
+            this.treeMaxLabel.AutoSize = true;
+            this.treeMaxLabel.Location = new System.Drawing.Point(108, 178);
+            this.treeMaxLabel.Name = "treeMaxLabel";
+            this.treeMaxLabel.Size = new System.Drawing.Size(0, 13);
+            this.treeMaxLabel.TabIndex = 12;
+            // 
+            // treeMinLabel
+            // 
+            this.treeMinLabel.AutoSize = true;
+            this.treeMinLabel.Location = new System.Drawing.Point(108, 148);
+            this.treeMinLabel.Name = "treeMinLabel";
+            this.treeMinLabel.Size = new System.Drawing.Size(0, 13);
+            this.treeMinLabel.TabIndex = 11;
+            // 
+            // treeSearchLabel
+            // 
+            this.treeSearchLabel.AutoSize = true;
+            this.treeSearchLabel.Location = new System.Drawing.Point(107, 90);
+            this.treeSearchLabel.Name = "treeSearchLabel";
+            this.treeSearchLabel.Size = new System.Drawing.Size(0, 13);
+            this.treeSearchLabel.TabIndex = 10;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(8, 9);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(31, 13);
+            this.label39.TabIndex = 9;
+            this.label39.Text = "Input";
+            // 
+            // delButton
+            // 
+            this.delButton.Location = new System.Drawing.Point(7, 112);
+            this.delButton.Name = "delButton";
+            this.delButton.Size = new System.Drawing.Size(75, 23);
+            this.delButton.TabIndex = 8;
+            this.delButton.Text = "Delete";
+            this.delButton.UseVisualStyleBackColor = true;
+            this.delButton.Click += new System.EventHandler(this.delButton_Click);
+            // 
+            // max
+            // 
+            this.max.Location = new System.Drawing.Point(7, 171);
+            this.max.Name = "max";
+            this.max.Size = new System.Drawing.Size(75, 23);
+            this.max.TabIndex = 6;
+            this.max.Text = "Max";
+            this.max.UseVisualStyleBackColor = true;
+            this.max.Click += new System.EventHandler(this.max_Click);
+            // 
+            // Min
+            // 
+            this.Min.Location = new System.Drawing.Point(7, 141);
+            this.Min.Name = "Min";
+            this.Min.Size = new System.Drawing.Size(75, 23);
+            this.Min.TabIndex = 5;
+            this.Min.Text = "Min";
+            this.Min.UseVisualStyleBackColor = true;
+            this.Min.Click += new System.EventHandler(this.Min_Click);
+            // 
+            // treeBox
+            // 
+            this.treeBox.FormattingEnabled = true;
+            this.treeBox.Location = new System.Drawing.Point(169, 9);
+            this.treeBox.Name = "treeBox";
+            this.treeBox.Size = new System.Drawing.Size(175, 212);
+            this.treeBox.TabIndex = 4;
+            this.treeBox.SelectedIndexChanged += new System.EventHandler(this.treeBox_SelectedIndexChanged);
+            // 
+            // treeInput
+            // 
+            this.treeInput.Location = new System.Drawing.Point(7, 28);
+            this.treeInput.Name = "treeInput";
+            this.treeInput.Size = new System.Drawing.Size(100, 20);
+            this.treeInput.TabIndex = 3;
+            // 
+            // searchButton
+            // 
+            this.searchButton.Location = new System.Drawing.Point(7, 83);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(75, 23);
+            this.searchButton.TabIndex = 2;
+            this.searchButton.Text = "Search";
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
+            // Insert
+            // 
+            this.Insert.Location = new System.Drawing.Point(7, 54);
+            this.Insert.Name = "Insert";
+            this.Insert.Size = new System.Drawing.Size(75, 23);
+            this.Insert.TabIndex = 0;
+            this.Insert.Text = "Insert";
+            this.Insert.UseVisualStyleBackColor = true;
+            this.Insert.Click += new System.EventHandler(this.Insert_Click);
             // 
             // Main
             // 
@@ -1761,16 +1944,6 @@
             this.ArrayList.ResumeLayout(false);
             this.ArrayList.PerformLayout();
             this.Sort.ResumeLayout(false);
-            this.Search.ResumeLayout(false);
-            this.Search.PerformLayout();
-            this.Queue.ResumeLayout(false);
-            this.Queue.PerformLayout();
-            this.Stack.ResumeLayout(false);
-            this.Stack.PerformLayout();
-            this.Lists.ResumeLayout(false);
-            this.SearchTree.ResumeLayout(false);
-            this.SearchTree.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pPriority)).EndInit();
             this.tabControl2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -1781,7 +1954,17 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.execCount)).EndInit();
+            this.Search.ResumeLayout(false);
+            this.Search.PerformLayout();
+            this.Queue.ResumeLayout(false);
+            this.Queue.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pPriority)).EndInit();
+            this.Stack.ResumeLayout(false);
+            this.Stack.PerformLayout();
+            this.Lists.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
+            this.SearchTree.ResumeLayout(false);
+            this.SearchTree.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1938,9 +2121,25 @@
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage7;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button Insert;
+        private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.Button max;
+        private System.Windows.Forms.Button Min;
+        private System.Windows.Forms.ListBox treeBox;
+        private System.Windows.Forms.TextBox treeInput;
+        private System.Windows.Forms.Button delButton;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label treeMaxLabel;
+        private System.Windows.Forms.Label treeMinLabel;
+        private System.Windows.Forms.Label treeSearchLabel;
+        private System.Windows.Forms.Button rightNode;
+        private System.Windows.Forms.Button leftNode;
+        private System.Windows.Forms.Button postButton;
+        private System.Windows.Forms.Button preButton;
+        private System.Windows.Forms.Button inButton;
+        private System.Windows.Forms.ListBox orderedTreeBox;
+        private System.Windows.Forms.Button rangeButton;
+        private System.Windows.Forms.Label label40;
     }
 }
 
