@@ -69,7 +69,7 @@ namespace Eindopdracht
         public void InsertBefore(T theElement) {
             Node<T> newNode = new Node<T>(theElement);
 
-            if (current.previousNode == null)
+            if (previous == null)
             {
                 throw new Exception("Inserting before the header");
             }
@@ -97,6 +97,7 @@ namespace Eindopdracht
         /// </summary>
         public void remove() {
             previous.nextNode = current.nextNode;
+            current = previous.nextNode;
         }
 
         /// <summary>

@@ -14,6 +14,7 @@ namespace Eindopdracht
 
         public _LinkedList()
         {
+
         }
 
         /// <summary>
@@ -39,31 +40,23 @@ namespace Eindopdracht
         {
             Node<T> activeNode = header;
             Node<T> p = Find(n);
-
-            int counterTotal = 0;
-
-            //loop and count elements in linkedList
-            while (!(activeNode.nextNode == null))
+            if (p.Element != null)
             {
-                counterTotal++;
-                activeNode = activeNode.nextNode;
-            }
+                if (p.Element.Equals(n))
+                {
+                    while (!activeNode.nextNode.Element.Equals(n) && !activeNode.nextNode.Equals(null))
+                    {
+                        activeNode = activeNode.nextNode;
+                    }
+                    //temp var to keep the new next node
+                    Node<T> temp = activeNode.nextNode.nextNode;
 
-            //reset activeNode
-            activeNode = header;
-            int counter = 0;
+                    //clear the old next node
+                    activeNode.nextNode.nextNode = null;
 
-            while (!(activeNode.nextNode.Equals(n)) && ((counter + 1) != counterTotal))
-            {
-                activeNode = activeNode.nextNode;
-                counter++;
-            }
-
-            //if the element after the removed element not is null, assign it.
-            if (activeNode.nextNode.nextNode != null)
-            {
-                activeNode.nextNode = activeNode.nextNode.nextNode;
-                activeNode.nextNode.nextNode = null;
+                    //set the new next node
+                    activeNode.nextNode = temp;
+                }
             }
         }
 
@@ -72,15 +65,31 @@ namespace Eindopdracht
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
-        private Node<T> Find(T item)
+        public Node<T> Find(T item)
         {
-            Node<T> current = new Node<T>();
-            current = header;
-            while (!current.Element.Equals(item))
+            try
             {
-                current = current.nextNode;
+                Node<T> current = new Node<T>();
+                current = header;
+                if (current.nextNode != null)
+                {
+                    while (current.Element == null)
+                    {
+                        current = current.nextNode;
+                    }
+
+                    while (!current.Element.Equals(item))
+                    {
+                        current = current.nextNode;
+                    }
+                }
+                return current;
             }
-            return current;
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+                return header;
+            }
         }
 
         /// <summary>
@@ -88,7 +97,7 @@ namespace Eindopdracht
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
-        private Node<T> FindLast()
+        public Node<T> FindLast()
         {
             Node<T> current = new Node<T>();
             current = header;

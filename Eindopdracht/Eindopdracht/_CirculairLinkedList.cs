@@ -54,7 +54,17 @@ namespace Eindopdracht
             }
 
             //set the next of the last element to the header
-            FindLast().nextNode = header;
+            if(FindLast().Equals(header))
+            {
+                // reset header
+                header.nextNode = null;
+                header.previousNode = null;
+                header.Element = default(T);
+            }
+            else
+            {
+                FindLast().nextNode = header;
+            }
         }
 
         /// <summary>
@@ -62,15 +72,31 @@ namespace Eindopdracht
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
-        private Node<T> Find(T item)
+        public Node<T> Find(T item)
         {
             Node<T> current = new Node<T>();
             current = header;
-            while (!(current.Element.Equals(item)) && (current.nextNode != header))
+            try
             {
-                current = current.nextNode;
+                if (current.nextNode != null)
+                {
+                    while (current.Element == null)
+                    {
+                        current = current.nextNode;
+                    }
+
+                    while (!current.Element.Equals(item) && current.nextNode != header)
+                    {
+                        current = current.nextNode;
+                    }
+                }
+                return current;
             }
-            return current;
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return header;
+            }
         }
 
         /// <summary>
@@ -78,15 +104,32 @@ namespace Eindopdracht
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
-        private Node<T> FindLast()
+        public Node<T> FindLast()
         {
             Node<T> current = new Node<T>();
             current = header;
-            while (!(current.nextNode == header))
+                 //check if next node is header
+
+                 while (!(current.nextNode == null || current.nextNode == header))
+                 {
+                         current = current.nextNode;
+                 }
+
+                 return current;
+        }
+
+        public Node<T> GetFirst()
+        {
+            Node<T> current = new Node<T>();
+            current = header;
+            if (header.nextNode != null && current.nextNode != header)
             {
-                current = current.nextNode;
+                return header.nextNode;
             }
-            return current;
+            else
+            {
+                return header;
+            }
         }
     }
 }

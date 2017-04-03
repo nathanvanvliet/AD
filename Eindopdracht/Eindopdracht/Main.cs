@@ -35,11 +35,21 @@ namespace Eindopdracht
         // binary search tree
         BinarySearchTree<string> stringTree = new BinarySearchTree<string>();
 
+        //Lists 
+        _LinkedList<string> linkList = new _LinkedList<string>();
+        _DoublyLinkedList<string> dLinkList = new _DoublyLinkedList<string>();
+        _CirculairLinkedList<string> cLinkList = new _CirculairLinkedList<string>();
+
+        // iterator 
+        ListIter<string> iterator;
+        _LinkedList<string> iterList = new _LinkedList<string>();
+
         public Main()
         {
             //set the priority of the program to the highest
             System.Diagnostics.Process.GetCurrentProcess().PriorityClass = System.Diagnostics.ProcessPriorityClass.RealTime;
             InitializeComponent();
+            fillIterList();
         }
  
 
@@ -1126,22 +1136,19 @@ namespace Eindopdracht
 
         private void rangeButton_Click(object sender, EventArgs e)
         {
-            /*
-            stringTree.Insert(23.ToString());
-            stringTree.Insert(45.ToString());
-            stringTree.Insert(16.ToString());
-            stringTree.Insert(13.ToString());
-            stringTree.Insert(37.ToString());
-            stringTree.Insert(99.ToString());
-            stringTree.Insert(22.ToString());
-            */
+         
             stringTree.Insert("a");
             stringTree.Insert("d");
             stringTree.Insert("v");
             stringTree.Insert("q");
             stringTree.Insert("b");
             stringTree.Insert("z");
-            stringTree.Insert("s");
+            stringTree.Insert("j");
+            stringTree.Insert("k");
+            stringTree.Insert("m");
+            stringTree.Insert("e");
+            stringTree.Insert("f");
+            stringTree.Insert("g");
             refreshTree();
         }
 
@@ -1207,6 +1214,8 @@ namespace Eindopdracht
             }
         }
 
+       
+
         private void searchButton_Click(object sender, EventArgs e)
         {
             if (treeInput.Text != "")
@@ -1214,7 +1223,7 @@ namespace Eindopdracht
                 TreeNode<string> found = stringTree.find(treeInput.Text);
                 if (found != null)
                 {
-                    treeSearchLabel.Text = found.data.ToString();
+                    treeBox.SelectedItem = found.data.ToString();
                 }
                 else
                 {
@@ -1237,7 +1246,507 @@ namespace Eindopdracht
             }
         }
 
+
+
         #endregion
+
+        // form actions for lists
+
+        // linkedlist
+        #region LinkedList
+        private void lListInsert_Click(object sender, EventArgs e)
+        {
+            string t = lListInput.Text;
+            if (t != "")
+            {
+                linkList.Insert(t);
+                refreshLinkList();
+                lListInput.Clear();
+            }
+        }
+
+        private void lListFirst_Click(object sender, EventArgs e)
+        {
+            Node<string> t = linkList.GetFirst();
+            if (t != null)
+            {
+                linkedList.SelectedItem = t.Element;
+            }
+        }
+
+        private void lListLast_Click(object sender, EventArgs e)
+        {
+            Node<string> t = linkList.FindLast();
+            if (t != null)
+            {
+                linkedList.SelectedItem = t.Element;
+            }
+        }
+
+        private void lListNext_Click(object sender, EventArgs e)
+        {
+
+            if (linkedList.SelectedItem != null)
+            {
+                string temp = linkedList.SelectedItem.ToString();
+                Node<string> t = linkList.Find(temp);
+                if (t != null)
+                {
+                    if (t.nextNode != null)
+                    {
+                        linkedList.SelectedItem = t.nextNode.Element;
+                    }
+                }
+            }
+        }
+
+        private void lListSearch_Click(object sender, EventArgs e)
+        {
+            string t = lListInput.Text;
+            if (t != "")
+            {
+                Node<string> temp = linkList.Find(t);
+                linkedList.SelectedItem = temp.Element;
+            }
+        }
+
+        private void lListAddRange_Click(object sender, EventArgs e)
+        {
+            linkList.Insert("32");
+            linkList.Insert("45");
+            linkList.Insert("75");
+            linkList.Insert("234");
+            linkList.Insert("67");
+            linkList.Insert("34");
+            linkList.Insert("435");
+            linkList.Insert("57");
+            linkList.Insert("213");
+            linkList.Insert("54");
+            refreshLinkList();
+        }
+
+
+        private void refreshLinkList()
+        {
+            linkedList.Items.Clear();
+            Node<string> temp = linkList.GetFirst();
+            if (temp.Element != null)
+            {
+                linkedList.Items.Add(temp.Element);
+                while (temp.nextNode != null)
+                {
+                    temp = temp.nextNode;
+                    linkedList.Items.Add(temp.Element);
+                }
+            }
+        }
+
+        private void lListDelButton_Click(object sender, EventArgs e)
+        {
+            string t = lListInput.Text;
+            if (t != "")
+            {
+                linkList.Remove(t);
+                refreshLinkList();
+                lListInput.Clear();
+            }
+        }
+        #endregion
+
+        // doublyLinkedList
+        #region DoubleLinkedList
+        private void dListDel_Click(object sender, EventArgs e)
+        {
+            string t = dListInput.Text;
+            if (t != "")
+            {
+                dLinkList.Remove(t);
+                refreshDLinkList();
+                dListInput.Clear();
+            }
+        }
+
+        private void dListInsertAfter_Click(object sender, EventArgs e)
+        {
+            string t = dListInput.Text;
+            if (t != "")
+            {
+                if (dLinkedList.SelectedItem != null)
+                {
+                    Node<string> temp = dLinkList.Find(dLinkedList.SelectedItem.ToString());
+                    dLinkList.Insert(t, temp.Element);
+                    refreshDLinkList();
+                    dListInput.Clear();
+                }
+            }
+        }
+
+        private void dListAddRange_Click(object sender, EventArgs e)
+        {
+            Node<string> temp = dLinkList.FindLast();
+            dLinkList.Insert("32", temp.Element);
+            dLinkList.Insert("45", "32");
+            dLinkList.Insert("75", "45");
+            dLinkList.Insert("234", "75");
+            dLinkList.Insert("67", "234");
+            dLinkList.Insert("34", "67");
+            dLinkList.Insert("435", "34");
+            dLinkList.Insert("57", "435");
+            dLinkList.Insert("213", "57");
+            dLinkList.Insert("54", "213");
+            refreshDLinkList();
+        }
+
+        private void dListSearch_Click(object sender, EventArgs e)
+        {
+            string t = dListInput.Text;
+            if (t != "")
+            {
+                Node<string> temp = dLinkList.Find(t);
+                dLinkedList.SelectedItem = temp.Element;
+            }
+        }
+
+        private void dListfirst_Click(object sender, EventArgs e)
+        {
+            Node<string> t = dLinkList.GetFirst();
+            if (t != null)
+            {
+                dLinkedList.SelectedItem = t.Element;
+            }
+        }
+
+        private void dListLast_Click(object sender, EventArgs e)
+        {
+            Node<string> t = dLinkList.FindLast();
+            if (t != null)
+            {
+                dLinkedList.SelectedItem = t.Element;
+            }
+        }
+
+        private void dListPrev_Click(object sender, EventArgs e)
+        {
+            if (dLinkedList.SelectedItem != null)
+            {
+                string temp = dLinkedList.SelectedItem.ToString();
+                Node<string> t = dLinkList.Find(temp);
+                if (t != null)
+                {
+                    if (t.previousNode != null)
+                    {
+                        dLinkedList.SelectedItem = t.previousNode.Element;
+                    }
+                }
+            }
+        }
+
+        private void dListNext_Click(object sender, EventArgs e)
+        {
+            if (dLinkedList.SelectedItem != null)
+            {
+                string temp = dLinkedList.SelectedItem.ToString();
+                Node<string> t = dLinkList.Find(temp);
+                if (t != null)
+                {
+                    if (t.nextNode != null)
+                    {
+                        dLinkedList.SelectedItem = t.nextNode.Element;
+                    }
+                }
+            }
+        }
+
+      
+
+        private void dListInsert_Click(object sender, EventArgs e)
+        {
+            string t = dListInput.Text;
+            if (t != "")
+            {
+                Node<string> temp = dLinkList.FindLast();
+                dLinkList.Insert(t, temp.Element);
+                refreshDLinkList();
+                dListInput.Clear();
+            }
+        }
+
+        private void refreshDLinkList()
+        {
+            dLinkedList.Items.Clear();
+            Node<string> temp = dLinkList.GetFirst();
+            if (temp.Element != null)
+            {
+                dLinkedList.Items.Add(temp.Element);
+                while (temp.nextNode != null)
+                {
+                    temp = temp.nextNode;
+                    dLinkedList.Items.Add(temp.Element);
+                }
+            }
+        }
+
+
+        #endregion
+
+        // CirculairLinkedList
+        #region CircularLinkedList
+        private void cListInsert_Click(object sender, EventArgs e)
+        {
+            string t = cListInput.Text;
+            if (t != "")
+            {
+                Node<string> temp = cLinkList.FindLast();
+                cLinkList.Insert(t, temp.Element);
+                refreshCLinkList();
+                cListInput.Clear();
+            }
+        }
+
+        private void refreshCLinkList()
+        {
+            cLinkedList.Items.Clear();
+            Node<string> temp = cLinkList.GetFirst();
+            if (temp.Element != null)
+            {
+                cLinkedList.Items.Add(temp.Element);
+                while (temp.nextNode.Element != null)
+                {
+                    temp = temp.nextNode;
+                    cLinkedList.Items.Add(temp.Element);
+                }
+            }
+        }
+
+        private void cListAddRange_Click(object sender, EventArgs e)
+        {
+            Node<string> temp = cLinkList.FindLast();
+            cLinkList.Insert("32", temp.Element);
+            cLinkList.Insert("45", "32");
+            cLinkList.Insert("75", "45");
+            cLinkList.Insert("234", "75");
+            cLinkList.Insert("67", "234");
+            cLinkList.Insert("34", "67");
+            cLinkList.Insert("435", "34");
+            cLinkList.Insert("57", "435");
+            cLinkList.Insert("213", "57");
+            cLinkList.Insert("54", "213");
+            refreshCLinkList();
+        }
+
+        private void cListInsertAfter_Click(object sender, EventArgs e)
+        {
+            string t = cListInput.Text;
+            if (t != "")
+            {
+                if (cLinkedList.SelectedItem != null)
+                {
+                    Node<string> temp = cLinkList.Find(cLinkedList.SelectedItem.ToString());
+                    cLinkList.Insert(t, temp.Element);
+                    refreshCLinkList();
+                    cListInput.Clear();
+                }
+            }
+        }
+
+        private void cListFirst_Click(object sender, EventArgs e)
+        {
+            Node<string> t = cLinkList.GetFirst();
+            if (t != null)
+            {
+                cLinkedList.SelectedItem = t.Element;
+            }
+        }
+
+        private void cListLast_Click(object sender, EventArgs e)
+        {
+            Node<string> t = cLinkList.FindLast();
+            if (t != null)
+            {
+                cLinkedList.SelectedItem = t.Element;
+            }
+        }
+
+        private void cListPrev_Click(object sender, EventArgs e)
+        {
+            if (cLinkedList.SelectedItem != null)
+            {
+                string temp = cLinkedList.SelectedItem.ToString();
+                Node<string> t = cLinkList.Find(temp);
+                if (t != null)
+                {
+                    if (t.previousNode != null)
+                    {
+                        cLinkedList.SelectedItem = t.previousNode.Element;
+                    }
+                }
+            }
+        }
+
+        private void cListNext_Click(object sender, EventArgs e)
+        {
+            if (cLinkedList.SelectedItem != null)
+            {
+                string temp = cLinkedList.SelectedItem.ToString();
+                Node<string> t = cLinkList.Find(temp);
+                if (t != null)
+                {
+                    if (t.nextNode.Element != null)
+                    {
+                        cLinkedList.SelectedItem = t.nextNode.Element;
+                    }
+                    else
+                    {
+                        // skip header
+                        t.nextNode = t.nextNode.nextNode;
+                        cLinkedList.SelectedItem = t.nextNode.Element;
+                    }
+                }
+            }
+        }
+
+        private void cListDelete_Click(object sender, EventArgs e)
+        {
+            string t = cListInput.Text;
+            if (t != "")
+            {
+                cLinkList.Remove(t);
+                refreshCLinkList();
+                cListInput.Clear();
+            }
+        }
+
+        private void cListSearch_Click(object sender, EventArgs e)
+        {
+            string t = cListInput.Text;
+            if (t != "")
+            {
+                Node<string> temp = cLinkList.Find(t);
+                cLinkedList.SelectedItem = temp.Element;
+            }
+        }
+
+
+
+        #endregion
+
+        // form actions for iterator 
+        #region Iterator
+        public void fillIterList()
+        {
+            iterList.Insert("32");
+            iterList.Insert("45");
+            iterList.Insert("75");
+            iterList.Insert("234");
+            iterList.Insert("67");
+            iterList.Insert("34");
+            iterList.Insert("435");
+            iterList.Insert("57");
+            iterList.Insert("213");
+            iterList.Insert("54");
+            iterator = new ListIter<string>(iterList);
+
+        }
+
+        private void nextIter_Click(object sender, EventArgs e)
+        {
+            iterator.NextLink();
+            Node<string> temp = iterator.GetCurrent();
+            if (temp != null)
+            {
+                listIter.SelectedItem = temp.Element;
+            }
+        }
+
+        private void reset_Click(object sender, EventArgs e)
+        {
+            iterator.reset();
+            Node<string> temp = iterator.GetCurrent();
+            if (temp != null)
+            {
+                listIter.SelectedItem = temp.Element;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Node<string> temp = iterator.GetCurrent();
+            if (temp != null)
+            {
+                currentLabel.Text = temp.Element;
+            }
+        }
+
+        private void iterRemove_Click(object sender, EventArgs e)
+        {
+            iterator.remove();
+            refreshIterBox();
+            Node<string> temp = iterator.GetCurrent();
+            if (temp != null)
+            {
+                listIter.SelectedItem = temp.Element;
+            }
+        }
+
+        private void iterBefore_Click(object sender, EventArgs e)
+        {
+            string s = iterInput.Text;
+            if (s != "")
+            {
+                iterator.InsertBefore(s);
+                refreshIterBox();
+                Node<string> temp = iterator.GetCurrent();
+                if (temp != null)
+                {
+                    listIter.SelectedItem = temp.Element;
+                }
+            }
+        }
+
+        private void iterAfter_Click(object sender, EventArgs e)
+        {
+            string s = iterInput.Text;
+            if (s != "")
+            {
+                iterator.InsertAfter(s);
+                refreshIterBox();
+                Node<string> temp = iterator.GetCurrent();
+                if (temp != null)
+                {
+                    listIter.SelectedItem = temp.Element;
+                }
+            }
+        }
+
+        private void refreshIterBox()
+        {
+            listIter.Items.Clear();
+            Node<string> temp = iterator.theList.GetFirst();
+
+            if (temp.Element != null)
+            {
+                listIter.Items.Add(temp.Element);
+                while (temp.nextNode != null)
+                {
+                    temp = temp.nextNode;
+                    listIter.Items.Add(temp.Element);
+                }
+            }
+        }
+
+        private void addList_Click(object sender, EventArgs e)
+        {
+            refreshIterBox();
+            Node<string> temp = iterator.GetCurrent();
+            if (temp != null)
+            {
+                listIter.SelectedItem = temp.Element;
+            }
+        }
+
+        #endregion
+
+        // form actions for hash
 
     }
 }

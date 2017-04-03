@@ -23,8 +23,15 @@ namespace Eindopdracht
         public void Insert(T element, T after) {
             Node<T> tempNode = new Node<T>();
             Node<T> newNode = new Node<T>(element);
-
-            tempNode = Find(after);
+            if(after == null)
+            {
+                tempNode = header;
+            }
+            else
+            {
+                tempNode = Find(after);
+            }
+          
 
             newNode.nextNode = tempNode.nextNode;
             newNode.previousNode = tempNode;
@@ -38,7 +45,7 @@ namespace Eindopdracht
         public void Remove(T n) {
             Node<T> p = Find(n);
 
-            if (!(p.nextNode == null))
+            if (!(p.nextNode == null || p.previousNode == null))
             {
                 p.previousNode.nextNode = p.nextNode;
                 p.nextNode.previousNode = p.previousNode;
@@ -53,14 +60,30 @@ namespace Eindopdracht
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
-        private Node<T> Find(T item) {
+        public Node<T> Find(T item) {
             Node<T> current = new Node<T>();
             current = header;
-            while (!current.Element.Equals(item))
+            try
             {
-                current = current.nextNode;
+                if (current.nextNode != null)
+                {
+                    while (current.Element == null)
+                    {
+                        current = current.nextNode;
+                    }
+
+                    while (!current.Element.Equals(item))
+                    {
+                        current = current.nextNode;
+                    }
+                }
+                return current;
             }
-            return current;
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+                return header;
+            }
         }
 
         /// <summary>
@@ -68,7 +91,7 @@ namespace Eindopdracht
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
-        private Node<T> FindLast()
+        public Node<T> FindLast()
         {
             Node<T> current = new Node<T>();
             current = header;
@@ -78,5 +101,20 @@ namespace Eindopdracht
             }
             return current;
         }
+
+        public Node<T> GetFirst()
+        {
+            Node<T> current = new Node<T>();
+            current = header;
+            if (header.nextNode != null)
+            {
+                return header.nextNode;
+            }
+            else
+            {
+                return header;
+            }
+        }
+
     }
 }

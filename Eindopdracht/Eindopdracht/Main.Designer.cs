@@ -174,9 +174,50 @@
             this.Lists = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.lListAddRange = new System.Windows.Forms.Button();
+            this.lListSearch = new System.Windows.Forms.Button();
+            this.lListLast = new System.Windows.Forms.Button();
+            this.lListFirst = new System.Windows.Forms.Button();
+            this.lListNext = new System.Windows.Forms.Button();
+            this.lListInput = new System.Windows.Forms.TextBox();
+            this.lListDelButton = new System.Windows.Forms.Button();
+            this.lListInsert = new System.Windows.Forms.Button();
+            this.linkedList = new System.Windows.Forms.ListBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.dListPrev = new System.Windows.Forms.Button();
+            this.dListInsertAfter = new System.Windows.Forms.Button();
+            this.dListAddRange = new System.Windows.Forms.Button();
+            this.dListSearch = new System.Windows.Forms.Button();
+            this.dListLast = new System.Windows.Forms.Button();
+            this.dListfirst = new System.Windows.Forms.Button();
+            this.dListNext = new System.Windows.Forms.Button();
+            this.dListInput = new System.Windows.Forms.TextBox();
+            this.dListDel = new System.Windows.Forms.Button();
+            this.dListInsert = new System.Windows.Forms.Button();
+            this.dLinkedList = new System.Windows.Forms.ListBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.cListPrev = new System.Windows.Forms.Button();
+            this.cListInsertAfter = new System.Windows.Forms.Button();
+            this.cListAddRange = new System.Windows.Forms.Button();
+            this.cListSearch = new System.Windows.Forms.Button();
+            this.cListLast = new System.Windows.Forms.Button();
+            this.cListFirst = new System.Windows.Forms.Button();
+            this.cListNext = new System.Windows.Forms.Button();
+            this.cListInput = new System.Windows.Forms.TextBox();
+            this.cListDelete = new System.Windows.Forms.Button();
+            this.cListInsert = new System.Windows.Forms.Button();
+            this.cLinkedList = new System.Windows.Forms.ListBox();
             this.Iterator = new System.Windows.Forms.TabPage();
+            this.currentLabel = new System.Windows.Forms.Label();
+            this.reset = new System.Windows.Forms.Button();
+            this.iterRemove = new System.Windows.Forms.Button();
+            this.iterAfter = new System.Windows.Forms.Button();
+            this.iterInput = new System.Windows.Forms.TextBox();
+            this.iterBefore = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.nextIter = new System.Windows.Forms.Button();
+            this.addList = new System.Windows.Forms.Button();
+            this.listIter = new System.Windows.Forms.ListBox();
             this.SearchTree = new System.Windows.Forms.TabPage();
             this.label40 = new System.Windows.Forms.Label();
             this.rangeButton = new System.Windows.Forms.Button();
@@ -212,6 +253,10 @@
             this.Stack.SuspendLayout();
             this.Lists.SuspendLayout();
             this.tabControl3.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            this.Iterator.SuspendLayout();
             this.SearchTree.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1691,6 +1736,15 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.lListAddRange);
+            this.tabPage5.Controls.Add(this.lListSearch);
+            this.tabPage5.Controls.Add(this.lListLast);
+            this.tabPage5.Controls.Add(this.lListFirst);
+            this.tabPage5.Controls.Add(this.lListNext);
+            this.tabPage5.Controls.Add(this.lListInput);
+            this.tabPage5.Controls.Add(this.lListDelButton);
+            this.tabPage5.Controls.Add(this.lListInsert);
+            this.tabPage5.Controls.Add(this.linkedList);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -1699,8 +1753,104 @@
             this.tabPage5.Text = "LinkedList";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // lListAddRange
+            // 
+            this.lListAddRange.Location = new System.Drawing.Point(44, 109);
+            this.lListAddRange.Name = "lListAddRange";
+            this.lListAddRange.Size = new System.Drawing.Size(162, 23);
+            this.lListAddRange.TabIndex = 9;
+            this.lListAddRange.Text = "Add test data";
+            this.lListAddRange.UseVisualStyleBackColor = true;
+            this.lListAddRange.Click += new System.EventHandler(this.lListAddRange_Click);
+            // 
+            // lListSearch
+            // 
+            this.lListSearch.Location = new System.Drawing.Point(169, 57);
+            this.lListSearch.Name = "lListSearch";
+            this.lListSearch.Size = new System.Drawing.Size(75, 23);
+            this.lListSearch.TabIndex = 8;
+            this.lListSearch.Text = "Search";
+            this.lListSearch.UseVisualStyleBackColor = true;
+            this.lListSearch.Click += new System.EventHandler(this.lListSearch_Click);
+            // 
+            // lListLast
+            // 
+            this.lListLast.Location = new System.Drawing.Point(167, 259);
+            this.lListLast.Name = "lListLast";
+            this.lListLast.Size = new System.Drawing.Size(75, 23);
+            this.lListLast.TabIndex = 7;
+            this.lListLast.Text = "Last";
+            this.lListLast.UseVisualStyleBackColor = true;
+            this.lListLast.Click += new System.EventHandler(this.lListLast_Click);
+            // 
+            // lListFirst
+            // 
+            this.lListFirst.Location = new System.Drawing.Point(167, 182);
+            this.lListFirst.Name = "lListFirst";
+            this.lListFirst.Size = new System.Drawing.Size(75, 23);
+            this.lListFirst.TabIndex = 6;
+            this.lListFirst.Text = "First";
+            this.lListFirst.UseVisualStyleBackColor = true;
+            this.lListFirst.Click += new System.EventHandler(this.lListFirst_Click);
+            // 
+            // lListNext
+            // 
+            this.lListNext.Location = new System.Drawing.Point(167, 220);
+            this.lListNext.Name = "lListNext";
+            this.lListNext.Size = new System.Drawing.Size(75, 23);
+            this.lListNext.TabIndex = 4;
+            this.lListNext.Text = "Next ";
+            this.lListNext.UseVisualStyleBackColor = true;
+            this.lListNext.Click += new System.EventHandler(this.lListNext_Click);
+            // 
+            // lListInput
+            // 
+            this.lListInput.Location = new System.Drawing.Point(71, 31);
+            this.lListInput.Name = "lListInput";
+            this.lListInput.Size = new System.Drawing.Size(100, 20);
+            this.lListInput.TabIndex = 3;
+            // 
+            // lListDelButton
+            // 
+            this.lListDelButton.Location = new System.Drawing.Point(87, 57);
+            this.lListDelButton.Name = "lListDelButton";
+            this.lListDelButton.Size = new System.Drawing.Size(75, 23);
+            this.lListDelButton.TabIndex = 2;
+            this.lListDelButton.Text = "Delete";
+            this.lListDelButton.UseVisualStyleBackColor = true;
+            this.lListDelButton.Click += new System.EventHandler(this.lListDelButton_Click);
+            // 
+            // lListInsert
+            // 
+            this.lListInsert.Location = new System.Drawing.Point(6, 57);
+            this.lListInsert.Name = "lListInsert";
+            this.lListInsert.Size = new System.Drawing.Size(75, 23);
+            this.lListInsert.TabIndex = 1;
+            this.lListInsert.Text = "Insert";
+            this.lListInsert.UseVisualStyleBackColor = true;
+            this.lListInsert.Click += new System.EventHandler(this.lListInsert_Click);
+            // 
+            // linkedList
+            // 
+            this.linkedList.FormattingEnabled = true;
+            this.linkedList.Location = new System.Drawing.Point(257, 6);
+            this.linkedList.Name = "linkedList";
+            this.linkedList.Size = new System.Drawing.Size(181, 277);
+            this.linkedList.TabIndex = 0;
+            // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.dListPrev);
+            this.tabPage6.Controls.Add(this.dListInsertAfter);
+            this.tabPage6.Controls.Add(this.dListAddRange);
+            this.tabPage6.Controls.Add(this.dListSearch);
+            this.tabPage6.Controls.Add(this.dListLast);
+            this.tabPage6.Controls.Add(this.dListfirst);
+            this.tabPage6.Controls.Add(this.dListNext);
+            this.tabPage6.Controls.Add(this.dListInput);
+            this.tabPage6.Controls.Add(this.dListDel);
+            this.tabPage6.Controls.Add(this.dListInsert);
+            this.tabPage6.Controls.Add(this.dLinkedList);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
@@ -1709,8 +1859,124 @@
             this.tabPage6.Text = "DoublyLinkedList";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
+            // dListPrev
+            // 
+            this.dListPrev.Location = new System.Drawing.Point(54, 221);
+            this.dListPrev.Name = "dListPrev";
+            this.dListPrev.Size = new System.Drawing.Size(75, 23);
+            this.dListPrev.TabIndex = 20;
+            this.dListPrev.Text = "Previous";
+            this.dListPrev.UseVisualStyleBackColor = true;
+            this.dListPrev.Click += new System.EventHandler(this.dListPrev_Click);
+            // 
+            // dListInsertAfter
+            // 
+            this.dListInsertAfter.Location = new System.Drawing.Point(6, 86);
+            this.dListInsertAfter.Name = "dListInsertAfter";
+            this.dListInsertAfter.Size = new System.Drawing.Size(128, 23);
+            this.dListInsertAfter.TabIndex = 19;
+            this.dListInsertAfter.Text = "Insert after (selected)";
+            this.dListInsertAfter.UseVisualStyleBackColor = true;
+            this.dListInsertAfter.Click += new System.EventHandler(this.dListInsertAfter_Click);
+            // 
+            // dListAddRange
+            // 
+            this.dListAddRange.Location = new System.Drawing.Point(8, 115);
+            this.dListAddRange.Name = "dListAddRange";
+            this.dListAddRange.Size = new System.Drawing.Size(126, 23);
+            this.dListAddRange.TabIndex = 18;
+            this.dListAddRange.Text = "Add test data";
+            this.dListAddRange.UseVisualStyleBackColor = true;
+            this.dListAddRange.Click += new System.EventHandler(this.dListAddRange_Click);
+            // 
+            // dListSearch
+            // 
+            this.dListSearch.Location = new System.Drawing.Point(168, 57);
+            this.dListSearch.Name = "dListSearch";
+            this.dListSearch.Size = new System.Drawing.Size(75, 23);
+            this.dListSearch.TabIndex = 17;
+            this.dListSearch.Text = "Search";
+            this.dListSearch.UseVisualStyleBackColor = true;
+            this.dListSearch.Click += new System.EventHandler(this.dListSearch_Click);
+            // 
+            // dListLast
+            // 
+            this.dListLast.Location = new System.Drawing.Point(95, 260);
+            this.dListLast.Name = "dListLast";
+            this.dListLast.Size = new System.Drawing.Size(75, 23);
+            this.dListLast.TabIndex = 16;
+            this.dListLast.Text = "Last";
+            this.dListLast.UseVisualStyleBackColor = true;
+            this.dListLast.Click += new System.EventHandler(this.dListLast_Click);
+            // 
+            // dListfirst
+            // 
+            this.dListfirst.Location = new System.Drawing.Point(95, 182);
+            this.dListfirst.Name = "dListfirst";
+            this.dListfirst.Size = new System.Drawing.Size(75, 23);
+            this.dListfirst.TabIndex = 15;
+            this.dListfirst.Text = "First";
+            this.dListfirst.UseVisualStyleBackColor = true;
+            this.dListfirst.Click += new System.EventHandler(this.dListfirst_Click);
+            // 
+            // dListNext
+            // 
+            this.dListNext.Location = new System.Drawing.Point(146, 221);
+            this.dListNext.Name = "dListNext";
+            this.dListNext.Size = new System.Drawing.Size(75, 23);
+            this.dListNext.TabIndex = 14;
+            this.dListNext.Text = "Next ";
+            this.dListNext.UseVisualStyleBackColor = true;
+            this.dListNext.Click += new System.EventHandler(this.dListNext_Click);
+            // 
+            // dListInput
+            // 
+            this.dListInput.Location = new System.Drawing.Point(70, 31);
+            this.dListInput.Name = "dListInput";
+            this.dListInput.Size = new System.Drawing.Size(100, 20);
+            this.dListInput.TabIndex = 13;
+            // 
+            // dListDel
+            // 
+            this.dListDel.Location = new System.Drawing.Point(86, 57);
+            this.dListDel.Name = "dListDel";
+            this.dListDel.Size = new System.Drawing.Size(75, 23);
+            this.dListDel.TabIndex = 12;
+            this.dListDel.Text = "Delete";
+            this.dListDel.UseVisualStyleBackColor = true;
+            this.dListDel.Click += new System.EventHandler(this.dListDel_Click);
+            // 
+            // dListInsert
+            // 
+            this.dListInsert.Location = new System.Drawing.Point(5, 57);
+            this.dListInsert.Name = "dListInsert";
+            this.dListInsert.Size = new System.Drawing.Size(75, 23);
+            this.dListInsert.TabIndex = 11;
+            this.dListInsert.Text = "Insert";
+            this.dListInsert.UseVisualStyleBackColor = true;
+            this.dListInsert.Click += new System.EventHandler(this.dListInsert_Click);
+            // 
+            // dLinkedList
+            // 
+            this.dLinkedList.FormattingEnabled = true;
+            this.dLinkedList.Location = new System.Drawing.Point(256, 6);
+            this.dLinkedList.Name = "dLinkedList";
+            this.dLinkedList.Size = new System.Drawing.Size(181, 277);
+            this.dLinkedList.TabIndex = 10;
+            // 
             // tabPage7
             // 
+            this.tabPage7.Controls.Add(this.cListPrev);
+            this.tabPage7.Controls.Add(this.cListInsertAfter);
+            this.tabPage7.Controls.Add(this.cListAddRange);
+            this.tabPage7.Controls.Add(this.cListSearch);
+            this.tabPage7.Controls.Add(this.cListLast);
+            this.tabPage7.Controls.Add(this.cListFirst);
+            this.tabPage7.Controls.Add(this.cListNext);
+            this.tabPage7.Controls.Add(this.cListInput);
+            this.tabPage7.Controls.Add(this.cListDelete);
+            this.tabPage7.Controls.Add(this.cListInsert);
+            this.tabPage7.Controls.Add(this.cLinkedList);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Size = new System.Drawing.Size(523, 422);
@@ -1718,14 +1984,222 @@
             this.tabPage7.Text = "CirculairLinkedList";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
+            // cListPrev
+            // 
+            this.cListPrev.Location = new System.Drawing.Point(54, 220);
+            this.cListPrev.Name = "cListPrev";
+            this.cListPrev.Size = new System.Drawing.Size(75, 23);
+            this.cListPrev.TabIndex = 31;
+            this.cListPrev.Text = "Previous";
+            this.cListPrev.UseVisualStyleBackColor = true;
+            this.cListPrev.Click += new System.EventHandler(this.cListPrev_Click);
+            // 
+            // cListInsertAfter
+            // 
+            this.cListInsertAfter.Location = new System.Drawing.Point(6, 85);
+            this.cListInsertAfter.Name = "cListInsertAfter";
+            this.cListInsertAfter.Size = new System.Drawing.Size(128, 23);
+            this.cListInsertAfter.TabIndex = 30;
+            this.cListInsertAfter.Text = "Insert after (selected)";
+            this.cListInsertAfter.UseVisualStyleBackColor = true;
+            this.cListInsertAfter.Click += new System.EventHandler(this.cListInsertAfter_Click);
+            // 
+            // cListAddRange
+            // 
+            this.cListAddRange.Location = new System.Drawing.Point(8, 114);
+            this.cListAddRange.Name = "cListAddRange";
+            this.cListAddRange.Size = new System.Drawing.Size(126, 23);
+            this.cListAddRange.TabIndex = 29;
+            this.cListAddRange.Text = "Add test data";
+            this.cListAddRange.UseVisualStyleBackColor = true;
+            this.cListAddRange.Click += new System.EventHandler(this.cListAddRange_Click);
+            // 
+            // cListSearch
+            // 
+            this.cListSearch.Location = new System.Drawing.Point(168, 56);
+            this.cListSearch.Name = "cListSearch";
+            this.cListSearch.Size = new System.Drawing.Size(75, 23);
+            this.cListSearch.TabIndex = 28;
+            this.cListSearch.Text = "Search";
+            this.cListSearch.UseVisualStyleBackColor = true;
+            this.cListSearch.Click += new System.EventHandler(this.cListSearch_Click);
+            // 
+            // cListLast
+            // 
+            this.cListLast.Location = new System.Drawing.Point(95, 259);
+            this.cListLast.Name = "cListLast";
+            this.cListLast.Size = new System.Drawing.Size(75, 23);
+            this.cListLast.TabIndex = 27;
+            this.cListLast.Text = "Last";
+            this.cListLast.UseVisualStyleBackColor = true;
+            this.cListLast.Click += new System.EventHandler(this.cListLast_Click);
+            // 
+            // cListFirst
+            // 
+            this.cListFirst.Location = new System.Drawing.Point(95, 181);
+            this.cListFirst.Name = "cListFirst";
+            this.cListFirst.Size = new System.Drawing.Size(75, 23);
+            this.cListFirst.TabIndex = 26;
+            this.cListFirst.Text = "First";
+            this.cListFirst.UseVisualStyleBackColor = true;
+            this.cListFirst.Click += new System.EventHandler(this.cListFirst_Click);
+            // 
+            // cListNext
+            // 
+            this.cListNext.Location = new System.Drawing.Point(146, 220);
+            this.cListNext.Name = "cListNext";
+            this.cListNext.Size = new System.Drawing.Size(75, 23);
+            this.cListNext.TabIndex = 25;
+            this.cListNext.Text = "Next ";
+            this.cListNext.UseVisualStyleBackColor = true;
+            this.cListNext.Click += new System.EventHandler(this.cListNext_Click);
+            // 
+            // cListInput
+            // 
+            this.cListInput.Location = new System.Drawing.Point(70, 30);
+            this.cListInput.Name = "cListInput";
+            this.cListInput.Size = new System.Drawing.Size(100, 20);
+            this.cListInput.TabIndex = 24;
+            // 
+            // cListDelete
+            // 
+            this.cListDelete.Location = new System.Drawing.Point(86, 56);
+            this.cListDelete.Name = "cListDelete";
+            this.cListDelete.Size = new System.Drawing.Size(75, 23);
+            this.cListDelete.TabIndex = 23;
+            this.cListDelete.Text = "Delete";
+            this.cListDelete.UseVisualStyleBackColor = true;
+            this.cListDelete.Click += new System.EventHandler(this.cListDelete_Click);
+            // 
+            // cListInsert
+            // 
+            this.cListInsert.Location = new System.Drawing.Point(5, 56);
+            this.cListInsert.Name = "cListInsert";
+            this.cListInsert.Size = new System.Drawing.Size(75, 23);
+            this.cListInsert.TabIndex = 22;
+            this.cListInsert.Text = "Insert";
+            this.cListInsert.UseVisualStyleBackColor = true;
+            this.cListInsert.Click += new System.EventHandler(this.cListInsert_Click);
+            // 
+            // cLinkedList
+            // 
+            this.cLinkedList.FormattingEnabled = true;
+            this.cLinkedList.Location = new System.Drawing.Point(256, 5);
+            this.cLinkedList.Name = "cLinkedList";
+            this.cLinkedList.Size = new System.Drawing.Size(181, 277);
+            this.cLinkedList.TabIndex = 21;
+            // 
             // Iterator
             // 
+            this.Iterator.Controls.Add(this.currentLabel);
+            this.Iterator.Controls.Add(this.reset);
+            this.Iterator.Controls.Add(this.iterRemove);
+            this.Iterator.Controls.Add(this.iterAfter);
+            this.Iterator.Controls.Add(this.iterInput);
+            this.Iterator.Controls.Add(this.iterBefore);
+            this.Iterator.Controls.Add(this.button2);
+            this.Iterator.Controls.Add(this.nextIter);
+            this.Iterator.Controls.Add(this.addList);
+            this.Iterator.Controls.Add(this.listIter);
             this.Iterator.Location = new System.Drawing.Point(4, 22);
             this.Iterator.Name = "Iterator";
             this.Iterator.Size = new System.Drawing.Size(527, 444);
             this.Iterator.TabIndex = 7;
             this.Iterator.Text = "Iterator";
             this.Iterator.UseVisualStyleBackColor = true;
+            // 
+            // currentLabel
+            // 
+            this.currentLabel.AutoSize = true;
+            this.currentLabel.Location = new System.Drawing.Point(357, 185);
+            this.currentLabel.Name = "currentLabel";
+            this.currentLabel.Size = new System.Drawing.Size(0, 13);
+            this.currentLabel.TabIndex = 9;
+            // 
+            // reset
+            // 
+            this.reset.Location = new System.Drawing.Point(360, 93);
+            this.reset.Name = "reset";
+            this.reset.Size = new System.Drawing.Size(75, 23);
+            this.reset.TabIndex = 8;
+            this.reset.Text = "reset";
+            this.reset.UseVisualStyleBackColor = true;
+            this.reset.Click += new System.EventHandler(this.reset_Click);
+            // 
+            // iterRemove
+            // 
+            this.iterRemove.Location = new System.Drawing.Point(17, 132);
+            this.iterRemove.Name = "iterRemove";
+            this.iterRemove.Size = new System.Drawing.Size(75, 23);
+            this.iterRemove.TabIndex = 7;
+            this.iterRemove.Text = "remove";
+            this.iterRemove.UseVisualStyleBackColor = true;
+            this.iterRemove.Click += new System.EventHandler(this.iterRemove_Click);
+            // 
+            // iterAfter
+            // 
+            this.iterAfter.Location = new System.Drawing.Point(17, 234);
+            this.iterAfter.Name = "iterAfter";
+            this.iterAfter.Size = new System.Drawing.Size(75, 23);
+            this.iterAfter.TabIndex = 6;
+            this.iterAfter.Text = "insert after";
+            this.iterAfter.UseVisualStyleBackColor = true;
+            this.iterAfter.Click += new System.EventHandler(this.iterAfter_Click);
+            // 
+            // iterInput
+            // 
+            this.iterInput.Location = new System.Drawing.Point(17, 178);
+            this.iterInput.Name = "iterInput";
+            this.iterInput.Size = new System.Drawing.Size(100, 20);
+            this.iterInput.TabIndex = 5;
+            // 
+            // iterBefore
+            // 
+            this.iterBefore.Location = new System.Drawing.Point(17, 204);
+            this.iterBefore.Name = "iterBefore";
+            this.iterBefore.Size = new System.Drawing.Size(75, 23);
+            this.iterBefore.TabIndex = 4;
+            this.iterBefore.Text = "insert before";
+            this.iterBefore.UseVisualStyleBackColor = true;
+            this.iterBefore.Click += new System.EventHandler(this.iterBefore_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(360, 132);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "get current";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // nextIter
+            // 
+            this.nextIter.Location = new System.Drawing.Point(17, 93);
+            this.nextIter.Name = "nextIter";
+            this.nextIter.Size = new System.Drawing.Size(75, 23);
+            this.nextIter.TabIndex = 2;
+            this.nextIter.Text = "Next";
+            this.nextIter.UseVisualStyleBackColor = true;
+            this.nextIter.Click += new System.EventHandler(this.nextIter_Click);
+            // 
+            // addList
+            // 
+            this.addList.Location = new System.Drawing.Point(17, 18);
+            this.addList.Name = "addList";
+            this.addList.Size = new System.Drawing.Size(75, 23);
+            this.addList.TabIndex = 1;
+            this.addList.Text = "load list";
+            this.addList.UseVisualStyleBackColor = true;
+            this.addList.Click += new System.EventHandler(this.addList_Click);
+            // 
+            // listIter
+            // 
+            this.listIter.FormattingEnabled = true;
+            this.listIter.Location = new System.Drawing.Point(153, 18);
+            this.listIter.Name = "listIter";
+            this.listIter.Size = new System.Drawing.Size(173, 264);
+            this.listIter.TabIndex = 0;
             // 
             // SearchTree
             // 
@@ -1963,6 +2437,14 @@
             this.Stack.PerformLayout();
             this.Lists.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
+            this.Iterator.ResumeLayout(false);
+            this.Iterator.PerformLayout();
             this.SearchTree.ResumeLayout(false);
             this.SearchTree.PerformLayout();
             this.ResumeLayout(false);
@@ -2140,6 +2622,47 @@
         private System.Windows.Forms.ListBox orderedTreeBox;
         private System.Windows.Forms.Button rangeButton;
         private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Button lListNext;
+        private System.Windows.Forms.TextBox lListInput;
+        private System.Windows.Forms.Button lListDelButton;
+        private System.Windows.Forms.Button lListInsert;
+        private System.Windows.Forms.ListBox linkedList;
+        private System.Windows.Forms.Button lListLast;
+        private System.Windows.Forms.Button lListFirst;
+        private System.Windows.Forms.Button lListSearch;
+        private System.Windows.Forms.Button lListAddRange;
+        private System.Windows.Forms.Button dListAddRange;
+        private System.Windows.Forms.Button dListSearch;
+        private System.Windows.Forms.Button dListLast;
+        private System.Windows.Forms.Button dListfirst;
+        private System.Windows.Forms.Button dListNext;
+        private System.Windows.Forms.TextBox dListInput;
+        private System.Windows.Forms.Button dListDel;
+        private System.Windows.Forms.Button dListInsert;
+        private System.Windows.Forms.ListBox dLinkedList;
+        private System.Windows.Forms.Button dListInsertAfter;
+        private System.Windows.Forms.Button dListPrev;
+        private System.Windows.Forms.Button cListPrev;
+        private System.Windows.Forms.Button cListInsertAfter;
+        private System.Windows.Forms.Button cListAddRange;
+        private System.Windows.Forms.Button cListSearch;
+        private System.Windows.Forms.Button cListLast;
+        private System.Windows.Forms.Button cListFirst;
+        private System.Windows.Forms.Button cListNext;
+        private System.Windows.Forms.TextBox cListInput;
+        private System.Windows.Forms.Button cListDelete;
+        private System.Windows.Forms.Button cListInsert;
+        private System.Windows.Forms.ListBox cLinkedList;
+        private System.Windows.Forms.Button addList;
+        private System.Windows.Forms.ListBox listIter;
+        private System.Windows.Forms.Button nextIter;
+        private System.Windows.Forms.Button iterBefore;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox iterInput;
+        private System.Windows.Forms.Button iterAfter;
+        private System.Windows.Forms.Button reset;
+        private System.Windows.Forms.Button iterRemove;
+        private System.Windows.Forms.Label currentLabel;
     }
 }
 
