@@ -58,7 +58,7 @@ namespace Eindopdracht
             catch (Exception ex)
             {
                 Debug.WriteLine(ex);
-                return null;
+                return default(Node<T>);
             }
         }
 
@@ -67,16 +67,24 @@ namespace Eindopdracht
         /// </summary>
         /// <param name="theElement"></param>
         public void InsertBefore(T theElement) {
-            Node<T> newNode = new Node<T>(theElement);
-
-            if (previous == null)
+            try
             {
-                throw new Exception("Inserting before the header");
+                Node<T> newNode = new Node<T>(theElement);
+
+                if (previous == null)
+                {
+                    throw new Exception("Inserting before the header");
+                }
+                else
+                {
+                    newNode.nextNode = previous.nextNode;
+                    previous.nextNode = newNode;
+                    current = newNode;
+                }
             }
-            else {
-                newNode.nextNode = previous.nextNode;
-                previous.nextNode = newNode;
-                current = newNode;
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
             }
         }
 
@@ -85,27 +93,48 @@ namespace Eindopdracht
         /// </summary>
         /// <param name="theElement"></param>
         public void InsertAfter(T theElement) {
-            Node<T> newNode = new Node<T>(theElement);
+            try
+            {
+                Node<T> newNode = new Node<T>(theElement);
 
-            newNode.nextNode = current.nextNode;
-            current.nextNode = newNode;
-            NextLink();
+                newNode.nextNode = current.nextNode;
+                current.nextNode = newNode;
+                NextLink();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
         }
 
         /// <summary>
         /// remove the current node
         /// </summary>
         public void remove() {
-            previous.nextNode = current.nextNode;
-            current = previous.nextNode;
+            try
+            {
+                previous.nextNode = current.nextNode;
+                current = previous.nextNode;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
         }
 
         /// <summary>
         /// reset the list
         /// </summary>
         public void reset() {
-            current = theList.GetFirst();
-            previous = null;
+            try
+            {
+                current = theList.GetFirst();
+                previous = null;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
         }
 
         /// <summary>
@@ -113,7 +142,15 @@ namespace Eindopdracht
         /// </summary>
         /// <returns></returns>
         public bool AtEnd() {
-            return (current.nextNode == null);
+            try
+            {
+                return (current.nextNode == null);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return default(bool);
+            }
         }
     }
 }

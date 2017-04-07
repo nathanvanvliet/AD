@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,14 @@ namespace Eindopdracht
         /// <param name="item"></param>
         public void EnQueue(T item)
         {
-            list.Insert(0, item);
+            try
+            {
+                list.Insert(0, item);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
         }
 
         /// <summary>
@@ -59,7 +67,7 @@ namespace Eindopdracht
             }
             catch(Exception e)
             {
-                Console.WriteLine(e);
+                Debug.WriteLine(e);
                 return fail;
             }
         }
@@ -76,7 +84,7 @@ namespace Eindopdracht
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                Debug.WriteLine(e);
                 return fail;
             }
         }
@@ -88,7 +96,7 @@ namespace Eindopdracht
         {
             for (int i = 0; i < (list.Count - 1); i++)
             {
-                Console.WriteLine(list[i]);
+                Debug.WriteLine(list[i]);
             }
         }
 

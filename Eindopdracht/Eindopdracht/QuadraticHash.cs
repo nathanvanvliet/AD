@@ -24,19 +24,23 @@ namespace Eindopdracht
 
                 for (int i = 0; i < somenames.Count(); i++)
                 {
-                    string name = somenames[i];
-                    //hash the value
-                    int hash_value  = BetterHash(name, names);
-
-                    //if the spot is filled, get the next
-                    while (names[hash_value] != null)
+                    if (somenames[i] != null)
                     {
-                        hash_value = (hash_value / 2 + 1);
-                    }
+                        string name = somenames[i];
+                        //hash the value
+                        int hash_value = BetterHash(name, names);
 
-                    names[hash_value] = name;
+                        //if the spot is filled, get the next
+                        while (names[hash_value] != null)
+                        {
+                            hash_value = (hash_value + names.Length);
+                        }
+
+                        names[hash_value] = name;
+                    }                    
                 }
                 //Showing all the names that are hashed and put into the array "names" with the keys and the values
+               // Array.Resize(ref names, somenames.Length);
                 return names;
             }
             catch (Exception ex)
@@ -68,7 +72,7 @@ namespace Eindopdracht
             catch (Exception ex)
             {
                 Debug.WriteLine(ex);
-                return 0;
+                return default(int);
             }
         }
 
@@ -97,7 +101,7 @@ namespace Eindopdracht
             catch (Exception ex)
             {
                 Debug.WriteLine(ex);
-                return 0;
+                return default(int);
             }
         }
 
@@ -145,7 +149,7 @@ namespace Eindopdracht
             catch (Exception ex)
             {
                 Debug.WriteLine(ex);
-                return false;
+                return default(bool);
             }
         }
     }

@@ -63,9 +63,10 @@ namespace Eindopdracht
                 returnArray.Add(arr);
                 return returnArray;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Debug.WriteLine(ex);
+                return null;
             }
         }
 
@@ -116,49 +117,17 @@ namespace Eindopdracht
                         checkArray = arr;
                     }
                 }
-
-
-
-
-
-
-
-
-                /*
-                //loop through the array until there are no changes
-                for (int i = 0; i < arrLength && !done; i++)
-                {
-                    // set done to false everytime the loop starts again
-                    done = false;
-                    for (int j = 0; j < arrLength - 1; j++)
-                    {
-                        if (arr[j].CompareTo(arr[j + 1]) > 0)
-                        {
-                            //Swap the 2 values
-                            T t = arr[j];
-                            arr[j] = arr[j + 1];
-                            arr[j + 1] = t;
-
-                            //if the array has been changed set the done flag to true so it executes again
-                            done = true;
-                        }
-                        //if thefre are no changes the flag will be false and stop the loop
-                    }
-                }
-
-                //log the result
-                watch.stop();
-                */
-
+                
                 //return the ticks
                 ArrayList returnArray = new ArrayList();
                 returnArray.Add(watch.elapseTime());
                 returnArray.Add(arr);
                 return returnArray;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Debug.WriteLine(ex);
+                return null;
             }
         }
 
@@ -202,10 +171,10 @@ namespace Eindopdracht
                 returnArray.Add(arr);
                 return returnArray;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                Debug.WriteLine(ex);
+                return null;
             }
         }
     }

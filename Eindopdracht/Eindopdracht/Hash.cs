@@ -30,7 +30,7 @@ namespace Eindopdracht
             catch (Exception ex)
             {
                 Debug.WriteLine(ex);
-                return 0;
+                return default(int);
             }
         }
 
@@ -60,7 +60,7 @@ namespace Eindopdracht
             catch (Exception ex)
             {
                 Debug.WriteLine(ex);
-                return 0;
+                return default(int);
             }
         }
 

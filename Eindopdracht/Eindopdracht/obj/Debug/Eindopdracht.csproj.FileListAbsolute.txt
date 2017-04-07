@@ -25,3 +25,12 @@ D:\Users\Natha\Documents\GitHub\AD-eindopdracht\AD\Eindopdracht\Eindopdracht\obj
 D:\Users\Natha\Documents\GitHub\AD-eindopdracht\AD\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csproj.GenerateResource.Cache
 D:\Users\Natha\Documents\GitHub\AD-eindopdracht\AD\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.exe
 D:\Users\Natha\Documents\GitHub\AD-eindopdracht\AD\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.pdb
+C:\Users\Henk\Google Drive\AD\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.exe.config
+C:\Users\Henk\Google Drive\AD\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.exe
+C:\Users\Henk\Google Drive\AD\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.pdb
+C:\Users\Henk\Google Drive\AD\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.exe
+C:\Users\Henk\Google Drive\AD\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.pdb
+C:\Users\Henk\Google Drive\AD\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csprojResolveAssemblyReference.cache
+C:\Users\Henk\Google Drive\AD\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Main.resources
+C:\Users\Henk\Google Drive\AD\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Properties.Resources.resources
+C:\Users\Henk\Google Drive\AD\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csproj.GenerateResource.Cache

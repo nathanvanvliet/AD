@@ -44,6 +44,11 @@ namespace Eindopdracht
         ListIter<string> iterator;
         _LinkedList<string> iterList = new _LinkedList<string>();
 
+        //hash
+        BucketHash bHash = new BucketHash();
+        LinearHash lHash = new LinearHash();
+        string[] data = new string[9];
+
         public Main()
         {
             //set the priority of the program to the highest
@@ -66,16 +71,23 @@ namespace Eindopdracht
 
         private void refresh()
         {
-            arrayBox.Items.Clear();
-            int n = stringArray.Count();
-            for (int i = 0; i < n; i++)
+            try
             {
-                var a = stringArray.getIndex(i);
-                if (a != null)
+                arrayBox.Items.Clear();
+                int n = stringArray.Count();
+                for (int i = 0; i < n; i++)
                 {
-                    arrayBox.Items.Add(a);
-                }
+                    var a = stringArray.getIndex(i);
+                    if (a != null)
+                    {
+                        arrayBox.Items.Add(a);
+                    }
 
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
@@ -309,16 +321,23 @@ namespace Eindopdracht
 
         private void refreshQueue()
         {
-            queueList.Items.Clear();
-            int n = stringQueue.Count();
-            for (int i = 0; i < n; i++)
+            try
             {
-                var a = stringQueue.getIndex(i);
-                if (a != null)
+                queueList.Items.Clear();
+                int n = stringQueue.Count();
+                for (int i = 0; i < n; i++)
                 {
-                    queueList.Items.Add(a);
-                }
+                    var a = stringQueue.getIndex(i);
+                    if (a != null)
+                    {
+                        queueList.Items.Add(a);
+                    }
 
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
@@ -354,16 +373,23 @@ namespace Eindopdracht
 
         private void refreshPQueue()
         {
-            pQueueList.Items.Clear();
-            int n = pQueue.Count();
-            for (int i = 0; i < n; i++)
+            try
             {
-                var a = pQueue.getIndex(i);
-                if (a != null)
+                pQueueList.Items.Clear();
+                int n = pQueue.Count();
+                for (int i = 0; i < n; i++)
                 {
-                    pQueueList.Items.Add(a);
-                }
+                    var a = pQueue.getIndex(i);
+                    if (a != null)
+                    {
+                        pQueueList.Items.Add(a);
+                    }
 
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
@@ -401,17 +427,25 @@ namespace Eindopdracht
 
         private void refreshStack()
         {
-            stackList.Items.Clear();
-            int n = stringStack.getLength();
-            for (int i = 0; i < n; i++)
+            try
             {
-                var a = stringStack.getIndex(i);
-                if (a != null)
+                stackList.Items.Clear();
+                int n = stringStack.getLength();
+                for (int i = 0; i < n; i++)
                 {
-                    stackList.Items.Add(a);
-                }
+                    var a = stringStack.getIndex(i);
+                    if (a != null)
+                    {
+                        stackList.Items.Add(a);
+                    }
 
+                }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            
         }
 
         private void stackPop_Click(object sender, EventArgs e)
@@ -469,9 +503,9 @@ namespace Eindopdracht
                     selectSortBox.Items.Add(sorted[i]);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Console.WriteLine(ex);
             }
         }
 
@@ -511,31 +545,31 @@ namespace Eindopdracht
                     selectSortBox.Items.Add(sorted[i]);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Console.WriteLine(ex);
             }
         }
 
         private void selectSortInt_Click(object sender, EventArgs e)
         {
-            clearSortLists();
-            //create an array of ints
-            int[] numbers = new int[1000];
-            //fill the array
-            int temp = 0;
-            Random rnd = new Random();
-
-            int max = numbers.Length;
-            while (temp < max)
-            {
-                numbers[temp] = rnd.Next(1, 5000);
-                temp++;
-            }
-
-            //start the selection sorter
             try
             {
+                clearSortLists();
+                //create an array of ints
+                int[] numbers = new int[1000];
+                //fill the array
+                int temp = 0;
+                Random rnd = new Random();
+
+                int max = numbers.Length;
+                while (temp < max)
+                {
+                    numbers[temp] = rnd.Next(1, 5000);
+                    temp++;
+                }
+
+                ////start the selection sorter
                 //copy of the array to sort
                 int[] tempArray = numbers;
                 int n = tempArray.Length;
@@ -556,9 +590,9 @@ namespace Eindopdracht
                     selectSortBox.Items.Add(sorted[i]);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Console.WriteLine(ex);
             }
         }
         #endregion
@@ -574,12 +608,13 @@ namespace Eindopdracht
 
         private void bubbleArray_Click(object sender, EventArgs e)
         {
-            clearSortLists();
-            //Array of 100 strings
-            String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
-            //start the Bubble sorter
             try
             {
+                clearSortLists();
+                //Array of 100 strings
+                String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
+                //start the Bubble sorter
+            
                 //copy of the array to sort
                 String[] tempArray = array;
                 int n = tempArray.Length;
@@ -600,23 +635,24 @@ namespace Eindopdracht
                     bubbleSorted.Items.Add(sorted[i]);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Console.WriteLine(ex);
             }
         }
 
         private void bubbleReverse_Click(object sender, EventArgs e)
         {
-            clearSortLists();
-            //Array of 100 strings
-            String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
-            _Sort.Insertion(array);
-            Array.Reverse(array);
-
             //start the Bubble sorter
             try
             {
+                clearSortLists();
+                //Array of 100 strings
+                String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
+                _Sort.Insertion(array);
+                Array.Reverse(array);
+
+            
                 //copy of the array to sort
                 String[] tempArray = array;
                 int n = tempArray.Length;
@@ -637,31 +673,31 @@ namespace Eindopdracht
                     bubbleSorted.Items.Add(sorted[i]);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Console.WriteLine(ex);
             }
         }
 
         private void bubbleInt_Click(object sender, EventArgs e)
-        {
-            clearSortLists();
-            //create an array of ints
-            int[] array = new int[1000];
-            //fill the array
-            int temp = 0;
-            Random rnd = new Random();
-
-            int max = array.Length;
-            while (temp < max)
-            {
-                array[temp] = rnd.Next(1, 5000);
-                temp++;
-            }
-
+        { 
             //start the Bubble sorter
             try
             {
+                clearSortLists();
+                //create an array of ints
+                int[] array = new int[1000];
+                //fill the array
+                int temp = 0;
+                Random rnd = new Random();
+
+                int max = array.Length;
+                while (temp < max)
+                {
+                    array[temp] = rnd.Next(1, 5000);
+                    temp++;
+                }
+
                 //copy of the array to sort
                 int[] tempArray = array;
                 int n = tempArray.Length;
@@ -682,9 +718,9 @@ namespace Eindopdracht
                     bubbleSorted.Items.Add(sorted[i]);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Console.WriteLine(ex);
             }
         }
 
@@ -700,12 +736,13 @@ namespace Eindopdracht
 
         private void insertString_Click(object sender, EventArgs e)
         {
-            clearSortLists();
-            //Array of 100 strings
-            String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
             //start the insertion sorter
             try
             {
+                clearSortLists();
+                //Array of 100 strings
+                String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
+            
                 //copy of the array to sort
                 String[] tempArray = array;
                 int n = tempArray.Length;
@@ -726,23 +763,24 @@ namespace Eindopdracht
                     insertSorted.Items.Add(sorted[i]);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Console.WriteLine(ex);
             }
         }
 
         private void insertReverse_Click(object sender, EventArgs e)
         {
-            clearSortLists();
-            //Array of 100 strings
-            String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
-            _Sort.Insertion(array);
-            Array.Reverse(array);
-
             //start the insertion sorter
             try
             {
+                clearSortLists();
+                //Array of 100 strings
+                String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
+                _Sort.Insertion(array);
+                Array.Reverse(array);
+
+           
                 //copy of the array to sort
                 String[] tempArray = array;
                 int n = tempArray.Length;
@@ -763,31 +801,32 @@ namespace Eindopdracht
                     insertSorted.Items.Add(sorted[i]);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Console.WriteLine(ex);
             }
         }
 
         private void insertInt_Click(object sender, EventArgs e)
-        {
-            clearSortLists();
-            //create an array of ints
-            int[] array = new int[1000];
-            //fill the array
-            int temp = 0;
-            Random rnd = new Random();
-
-            int max = array.Length;
-            while (temp < max)
-            {
-                array[temp] = rnd.Next(1, 5000);
-                temp++;
-            }
-
+        { 
             //start the insertion sorter
             try
             {
+                clearSortLists();
+                //create an array of ints
+                int[] array = new int[1000];
+                //fill the array
+                int temp = 0;
+                Random rnd = new Random();
+
+                int max = array.Length;
+                while (temp < max)
+                {
+                    array[temp] = rnd.Next(1, 5000);
+                    temp++;
+                }
+
+           
                 //copy of the array to sort
                 int[] tempArray = array;
                 int n = tempArray.Length;
@@ -808,9 +847,9 @@ namespace Eindopdracht
                     insertSorted.Items.Add(sorted[i]);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Console.WriteLine(ex);
             }
         }
 
@@ -835,251 +874,274 @@ namespace Eindopdracht
         #region Compare sort methods
         private void sortReverse_Click(object sender, EventArgs e)
         {
-            time_bubble = long.MaxValue;
-            time_insertion = long.MaxValue;
-            time_selection = long.MaxValue;
-            //Array of 100 strings
-            String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
-            _Sort.Insertion(array);
-            Array.Reverse(array);
-
-
-
-            //set the counter to 0 and check if the numberfield is a int. if not set it to 1
-            int executionCount = 0, requiredExecutions = (Convert.ToInt32(execCount.Value) > 0) ? Convert.ToInt32(execCount.Value) : 1;
-
-            //execute fr the times given by the user
-            while (executionCount != requiredExecutions)
+            try
             {
-                //start the Bubble sorter
-                try
-                {
-                    //copy the array
-                    String[] tempArray = array;
+                time_bubble = long.MaxValue;
+                time_insertion = long.MaxValue;
+                time_selection = long.MaxValue;
+                //Array of 100 strings
+                String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
+                _Sort.Insertion(array);
+                Array.Reverse(array);
 
-                    //start the sorting
-                    ArrayList a = _Sort.Bubble(tempArray);
-                    long temp = (long)a[0];
-                    time_bubble = (temp < time_bubble) ? temp : time_bubble; //if the new value is smaller as the old, save the new value
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
 
-                //start the selection sorter
-                try
-                {
-                    //copy the array
-                    String[] tempArray = array;
 
-                    //start the sorting
-                    ArrayList a = _Sort.Selection(tempArray);
-                    long temp = (long)a[0];
-                    time_selection = (temp < time_selection) ? temp : time_selection; //if the new value is smaller as the old, save the new value
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                //set the counter to 0 and check if the numberfield is a int. if not set it to 1
+                int executionCount = 0, requiredExecutions = (Convert.ToInt32(execCount.Value) > 0) ? Convert.ToInt32(execCount.Value) : 1;
 
-                //start the insertion sorter
-                try
+                //execute fr the times given by the user
+                while (executionCount != requiredExecutions)
                 {
-                    //copy the array
-                    String[] tempArray = array;
+                    //start the Bubble sorter
+                    try
+                    {
+                        //copy the array
+                        String[] tempArray = array;
 
-                    //start the sorting
-                    ArrayList a = _Sort.Insertion(tempArray);
-                    long temp = (long)a[0];
-                    time_insertion = (temp < time_insertion) ? temp : time_insertion; //if the new value is smaller as the old, save the new value
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                        //start the sorting
+                        ArrayList a = _Sort.Bubble(tempArray);
+                        long temp = (long)a[0];
+                        time_bubble = (temp < time_bubble) ? temp : time_bubble; //if the new value is smaller as the old, save the new value
+                    }
+                    catch (Exception)
+                    {
+                        throw;
+                    }
 
-                executionCount++;
+                    //start the selection sorter
+                    try
+                    {
+                        //copy the array
+                        String[] tempArray = array;
+
+                        //start the sorting
+                        ArrayList a = _Sort.Selection(tempArray);
+                        long temp = (long)a[0];
+                        time_selection = (temp < time_selection) ? temp : time_selection; //if the new value is smaller as the old, save the new value
+                    }
+                    catch (Exception)
+                    {
+                        throw;
+                    }
+
+                    //start the insertion sorter
+                    try
+                    {
+                        //copy the array
+                        String[] tempArray = array;
+
+                        //start the sorting
+                        ArrayList a = _Sort.Insertion(tempArray);
+                        long temp = (long)a[0];
+                        time_insertion = (temp < time_insertion) ? temp : time_insertion; //if the new value is smaller as the old, save the new value
+                    }
+                    catch (Exception)
+                    {
+                        throw;
+                    }
+
+                    executionCount++;
+                }
+                //Compare times and decalre a winner
+                callWinner();
             }
-            //Compare times and decalre a winner
-            callWinner();
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         private void sortInt_Click(object sender, EventArgs e)
         {
-            time_bubble = long.MaxValue;
-            time_insertion = long.MaxValue;
-            time_selection = long.MaxValue;
-            //create an array of ints
-            int[] numbers = new int[1000];
-            //fill the array
-            int temp = 0;
-            Random rnd = new Random();
-
-            int max = numbers.Length;
-            while (temp < max)
+            try
             {
-                numbers[temp] = rnd.Next(1, 5000);
-                temp++;
+                time_bubble = long.MaxValue;
+                time_insertion = long.MaxValue;
+                time_selection = long.MaxValue;
+                //create an array of ints
+                int[] numbers = new int[1000];
+                //fill the array
+                int temp = 0;
+                Random rnd = new Random();
+
+                int max = numbers.Length;
+                while (temp < max)
+                {
+                    numbers[temp] = rnd.Next(1, 5000);
+                    temp++;
+                }
+
+                //set the counter to 0 and check if the numberfield is a int. if not set it to 1
+                int executionCount = 0, requiredExecutions = (Convert.ToInt32(execCount.Value) > 0) ? Convert.ToInt32(execCount.Value) : 1;
+
+                //execute fr the times given by the user
+                while (executionCount != requiredExecutions)
+                {
+
+                    //start the Bubble sorter
+                    try
+                    {
+                        // copy of the int array.
+                        int[] array = numbers;
+                        ArrayList a = _Sort.Bubble(array);
+                        time_bubble = (long)a[0];
+                    }
+                    catch (Exception)
+                    {
+                        throw;
+                    }
+
+                    //start the selection sorter
+                    try
+                    {
+                        // copy of the int array.
+                        int[] array = numbers;
+                        ArrayList a = _Sort.Selection(array);
+                        time_selection = (long)a[0];
+                    }
+                    catch (Exception)
+                    {
+                        throw;
+                    }
+
+                    //start the insertion sorter
+                    try
+                    {
+                        // copy of the int array.
+                        int[] array = numbers;
+                        ArrayList a = _Sort.Insertion(array);
+                        time_insertion = (long)a[0];
+                    }
+                    catch (Exception)
+                    {
+                        throw;
+                    }
+                    executionCount++;
+                }
+                //Compare times and decalre a winner
+                callWinner();
             }
-
-            //set the counter to 0 and check if the numberfield is a int. if not set it to 1
-            int executionCount = 0, requiredExecutions = (Convert.ToInt32(execCount.Value) > 0) ? Convert.ToInt32(execCount.Value) : 1;
-
-            //execute fr the times given by the user
-            while (executionCount != requiredExecutions)
+            catch (Exception ex)
             {
-
-                //start the Bubble sorter
-                try
-                {
-                    // copy of the int array.
-                    int[] array = numbers;
-                    ArrayList a = _Sort.Bubble(array);
-                    time_bubble = (long)a[0];
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-
-                //start the selection sorter
-                try
-                {
-                    // copy of the int array.
-                    int[] array = numbers;
-                    ArrayList a = _Sort.Selection(array);
-                    time_selection = (long)a[0];
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-
-                //start the insertion sorter
-                try
-                {
-                    // copy of the int array.
-                    int[] array = numbers;
-                    ArrayList a = _Sort.Insertion(array);
-                    time_insertion = (long)a[0];
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-                executionCount++;
+                Console.WriteLine(ex);
             }
-            //Compare times and decalre a winner
-            callWinner();
         }
 
        
 
         private void sortString_Click(object sender, EventArgs e)
         {
-            time_bubble = long.MaxValue;
-            time_insertion = long.MaxValue;
-            time_selection = long.MaxValue;
-            //set the counter to 0 and check if the numberfield is a int. if not set it to 1
-            int executionCount = 0, requiredExecutions = (Convert.ToInt32(execCount.Value) > 0) ? Convert.ToInt32(execCount.Value) : 1;
-
-            //Array of 100 strings
-            String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
-
-            //execute fr the times given by the user
-            while (executionCount != requiredExecutions)
+            try
             {
-                //start the Bubble sorter
-                try
-                {
-                    //copy of the array to sort
-                    String[] tempArray = array;
+                time_bubble = long.MaxValue;
+                time_insertion = long.MaxValue;
+                time_selection = long.MaxValue;
+                //set the counter to 0 and check if the numberfield is a int. if not set it to 1
+                int executionCount = 0, requiredExecutions = (Convert.ToInt32(execCount.Value) > 0) ? Convert.ToInt32(execCount.Value) : 1;
 
-                    //start the sorting
-                    ArrayList a = _Sort.Bubble(tempArray);
-                    long temp = (long)a[0];
-                    time_bubble = (temp < time_bubble) ? temp : time_bubble; //if the new value is smaller as the old, save the new value
-                }
-                catch (Exception)
+                //Array of 100 strings
+                String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
+
+                //execute fr the times given by the user
+                while (executionCount != requiredExecutions)
                 {
-                    throw;
+                    //start the Bubble sorter
+                    try
+                    {
+                        //copy of the array to sort
+                        String[] tempArray = array;
+
+                        //start the sorting
+                        ArrayList a = _Sort.Bubble(tempArray);
+                        long temp = (long)a[0];
+                        time_bubble = (temp < time_bubble) ? temp : time_bubble; //if the new value is smaller as the old, save the new value
+                    }
+                    catch (Exception)
+                    {
+                        throw;
+                    }
+
+                    //start the selection sorter
+                    try
+                    {
+                        //copy of the array to sort
+                        String[] tempArray = array;
+
+                        //start the sorting
+                        ArrayList a = _Sort.Selection(tempArray);
+                        long temp = (long)a[0];
+                        time_selection = (temp < time_selection) ? temp : time_selection; //if the new value is smaller as the old, save the new value
+                    }
+                    catch (Exception)
+                    {
+                        throw;
+                    }
+
+                    //start the insertion sorter
+                    try
+                    {
+                        //copy of the array to sort
+                        String[] tempArray = array;
+
+                        //start the sorting
+                        ArrayList a = _Sort.Insertion(tempArray);
+                        long temp = (long)a[0];
+                        time_insertion = (temp < time_insertion) ? temp : time_insertion; //if the new value is smaller as the old, save the new value
+                    }
+                    catch (Exception)
+                    {
+                        throw;
+                    }
+
+                    executionCount++;
                 }
 
-                //start the selection sorter
-                try
-                {
-                    //copy of the array to sort
-                    String[] tempArray = array;
-
-                    //start the sorting
-                    ArrayList a = _Sort.Selection(tempArray);
-                    long temp = (long)a[0];
-                    time_selection = (temp < time_selection) ? temp : time_selection; //if the new value is smaller as the old, save the new value
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-
-                //start the insertion sorter
-                try
-                {
-                    //copy of the array to sort
-                    String[] tempArray = array;
-
-                    //start the sorting
-                    ArrayList a = _Sort.Insertion(tempArray);
-                    long temp = (long)a[0];
-                    time_insertion = (temp < time_insertion) ? temp : time_insertion; //if the new value is smaller as the old, save the new value
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-
-                executionCount++;
+                //Compare times and decalre a winner
+                callWinner();
             }
-
-            //Compare times and decalre a winner
-            callWinner();
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
 
         private void callWinner()
         {
-            String Winner = null;
-            if (time_bubble < time_selection)
+            try
             {
-                if (time_bubble < time_insertion)
+                String Winner = null;
+                if (time_bubble < time_selection)
                 {
-                    Winner = "Bubble Sort";
+                    if (time_bubble < time_insertion)
+                    {
+                        Winner = "Bubble Sort";
+                    }
+                    else
+                    {
+                        Winner = "Insertion Sort";
+                    }
                 }
                 else
                 {
-                    Winner = "Insertion Sort";
+                    if (time_selection < time_insertion)
+                    {
+                        Winner = "Selection Sort";
+                    }
+                    else
+                    {
+                        Winner = "Insertion Sort";
+                    }
                 }
+
+                selectTickLabel.Text = time_selection.ToString();
+                bubbleTickLabel.Text = time_bubble.ToString();
+                insertionTickLabel.Text = time_insertion.ToString();
             }
-            else
+            catch (Exception ex)
             {
-                if (time_selection < time_insertion)
-                {
-                    Winner = "Selection Sort";
-                }
-                else
-                {
-                    Winner = "Insertion Sort";
-                }
+                Console.WriteLine(ex);
             }
-
-            selectTickLabel.Text = time_selection.ToString();
-            bubbleTickLabel.Text = time_bubble.ToString();
-            insertionTickLabel.Text = time_insertion.ToString();
-        }
-
-        private void treeBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
         #endregion
 
@@ -1087,13 +1149,21 @@ namespace Eindopdracht
         #region BinarySearchTree
         private void Insert_Click(object sender, EventArgs e)
         {
-            string a = treeInput.Text;
-            if (a != "")
+            try
             {
-                stringTree.Insert(a);
-                refreshTree();
-                treeInput.Clear();
+                string a = treeInput.Text;
+                if (a != "")
+                {
+                    stringTree.Insert(a);
+                    refreshTree();
+                    treeInput.Clear();
+                }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            
         }
 
         private void Min_Click(object sender, EventArgs e)
@@ -1109,28 +1179,41 @@ namespace Eindopdracht
 
         private void delButton_Click(object sender, EventArgs e)
         {
-            string a = treeInput.Text;
-            if (a != "")
+            try
             {
-                stringTree.delete(a);
-                refreshTree();
-                treeInput.Clear();
+                string a = treeInput.Text;
+                if (a != "")
+                {
+                    stringTree.delete(a);
+                    refreshTree();
+                    treeInput.Clear();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
         private void leftNode_Click(object sender, EventArgs e)
         {
-            if(treeBox.SelectedItem != null)
+            try
             {
-                string temp = treeBox.SelectedItem.ToString();
-                TreeNode<string> selected = stringTree.find(temp);
-                if (selected != null && selected.left != null)
+                if(treeBox.SelectedItem != null)
                 {
-                    string left = selected.left.data;
-                    treeBox.SelectedItem = left;
+                    string temp = treeBox.SelectedItem.ToString();
+                    TreeNode<string> selected = stringTree.find(temp);
+                    if (selected != null && selected.left != null)
+                    {
+                        string left = selected.left.data;
+                        treeBox.SelectedItem = left;
+                    }
                 }
             }
-           
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
 
@@ -1154,63 +1237,105 @@ namespace Eindopdracht
 
         private void rightNode_Click(object sender, EventArgs e)
         {
-            if(treeBox.SelectedItem != null)
+            try
             {
-                string temp = treeBox.SelectedItem.ToString();
-                TreeNode<string> selected = stringTree.find(temp);
-                if (selected != null && selected.right != null)
+                if(treeBox.SelectedItem != null)
                 {
-                    string right = selected.right.data;
-                    treeBox.SelectedItem = right;
+                    string temp = treeBox.SelectedItem.ToString();
+                    TreeNode<string> selected = stringTree.find(temp);
+                    if (selected != null && selected.right != null)
+                    {
+                        string right = selected.right.data;
+                        treeBox.SelectedItem = right;
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
 
         private void inButton_Click(object sender, EventArgs e)
         {
-            orderedTreeBox.Items.Clear();
-            stringTree.clearList();
-            TreeNode<string> root = stringTree.returnRoot();
-            stringTree.inOrder(root);
-            List<TreeNode<string>> list = stringTree.getList();
-            foreach (TreeNode<string> node in list)
+            try
             {
-                orderedTreeBox.Items.Add(node.data);
+                orderedTreeBox.Items.Clear();
+                stringTree.clearList();
+                TreeNode<string> root = stringTree.returnRoot();
+                stringTree.inOrder(root);
+                List<TreeNode<string>> list = stringTree.getList();
+                foreach (TreeNode<string> node in list)
+                {
+                    orderedTreeBox.Items.Add(node.data);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
         private void preButton_Click(object sender, EventArgs e)
         {
-            orderedTreeBox.Items.Clear();
-            stringTree.clearList();
-            TreeNode<string> root = stringTree.returnRoot();
-            stringTree.preOrder(root);
-            List<TreeNode<string>> list = stringTree.getList();
-            foreach (TreeNode<string> node in list)
+            try
             {
-                orderedTreeBox.Items.Add(node.data);
+                orderedTreeBox.Items.Clear();
+                stringTree.clearList();
+                TreeNode<string> root = stringTree.returnRoot();
+                stringTree.preOrder(root);
+                List<TreeNode<string>> list = stringTree.getList();
+                foreach (TreeNode<string> node in list)
+                {
+                    orderedTreeBox.Items.Add(node.data);
+                }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            
         }
 
         private void postButton_Click(object sender, EventArgs e)
         {
-            orderedTreeBox.Items.Clear();
-            stringTree.clearList();
-            TreeNode<string> root = stringTree.returnRoot();
-            stringTree.postOrder(root);
-            List<TreeNode<string>> list = stringTree.getList();
-            foreach (TreeNode<string> node in list)
+            try
             {
-                orderedTreeBox.Items.Add(node.data);
+                orderedTreeBox.Items.Clear();
+                stringTree.clearList();
+                TreeNode<string> root = stringTree.returnRoot();
+                stringTree.postOrder(root);
+                List<TreeNode<string>> list = stringTree.getList();
+                foreach (TreeNode<string> node in list)
+                {
+                    orderedTreeBox.Items.Add(node.data);
+                }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            
         }
 
+        /// <summary>
+        /// if the user unfocused the textbox, fill it with a space. this is a failsafe for null exceptions
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void stringBox_Leave(object sender, EventArgs e)
         {
-            if(stringBox.Text == "")
+            try
             {
-                stringBox.Text = " ";
+                if (stringBox.Text == "" || stringBox.Text == string.Empty || stringBox.Text == null)
+                {
+                    stringBox.Text = " ";
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
@@ -1218,31 +1343,45 @@ namespace Eindopdracht
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            if (treeInput.Text != "")
+            try
             {
-                TreeNode<string> found = stringTree.find(treeInput.Text);
-                if (found != null)
+                if (treeInput.Text != "")
                 {
-                    treeBox.SelectedItem = found.data.ToString();
+                    TreeNode<string> found = stringTree.find(treeInput.Text);
+                    if (found != null)
+                    {
+                        treeBox.SelectedItem = found.data.ToString();
+                    }
+                    else
+                    {
+                        treeSearchLabel.Text = "no results";
+                    }
+                    treeInput.Clear();
                 }
-                else
-                {
-                    treeSearchLabel.Text = "no results";
-                }
-                treeInput.Clear();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
         private void refreshTree()
         {
-            treeBox.Items.Clear();
-            stringTree.clearList();
-            TreeNode<string> root = stringTree.returnRoot();
-            stringTree.getNodes(root);
-            List<TreeNode<string>> list = stringTree.getList();
-            foreach (TreeNode<string> node in list)
+            try
             {
-                treeBox.Items.Add(node.data);
+                treeBox.Items.Clear();
+                stringTree.clearList();
+                TreeNode<string> root = stringTree.returnRoot();
+                stringTree.getNodes(root);
+                List<TreeNode<string>> list = stringTree.getList();
+                foreach (TreeNode<string> node in list)
+                {
+                    treeBox.Items.Add(node.data);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
@@ -1357,103 +1496,195 @@ namespace Eindopdracht
         #region DoubleLinkedList
         private void dListDel_Click(object sender, EventArgs e)
         {
-            string t = dListInput.Text;
-            if (t != "")
+            try
             {
-                dLinkList.Remove(t);
-                refreshDLinkList();
-                dListInput.Clear();
-            }
-        }
-
-        private void dListInsertAfter_Click(object sender, EventArgs e)
-        {
-            string t = dListInput.Text;
-            if (t != "")
-            {
-                if (dLinkedList.SelectedItem != null)
+                string t = dListInput.Text;
+                if (t != "")
                 {
-                    Node<string> temp = dLinkList.Find(dLinkedList.SelectedItem.ToString());
-                    dLinkList.Insert(t, temp.Element);
+                    dLinkList.Remove(t);
                     refreshDLinkList();
                     dListInput.Clear();
                 }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            
+        }
+
+
+        /***************************
+         ***      EASTER EGG     ***
+         ***************************
+         * Het is bijna pasen, dus een easter egg!
+         * 
+         * Jeroen, heb je het document al gelezen?
+         *  Groetjes, Henk Lambeck
+         ***************************/
+
+
+
+
+
+        private void dListInsertAfter_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string t = dListInput.Text;
+                if (t != "")
+                {
+                    if (dLinkedList.SelectedItem != null)
+                    {
+                        Node<string> temp = dLinkList.Find(dLinkedList.SelectedItem.ToString());
+                        dLinkList.Insert(t, temp.Element);
+                        refreshDLinkList();
+                        dListInput.Clear();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
         private void dListAddRange_Click(object sender, EventArgs e)
         {
-            Node<string> temp = dLinkList.FindLast();
-            dLinkList.Insert("32", temp.Element);
-            dLinkList.Insert("45", "32");
-            dLinkList.Insert("75", "45");
-            dLinkList.Insert("234", "75");
-            dLinkList.Insert("67", "234");
-            dLinkList.Insert("34", "67");
-            dLinkList.Insert("435", "34");
-            dLinkList.Insert("57", "435");
-            dLinkList.Insert("213", "57");
-            dLinkList.Insert("54", "213");
-            refreshDLinkList();
+            try
+            {
+                Node<string> temp = dLinkList.FindLast();
+                dLinkList.Insert("32", temp.Element);
+                dLinkList.Insert("45", "32");
+                dLinkList.Insert("75", "45");
+                dLinkList.Insert("234", "75");
+                dLinkList.Insert("67", "234");
+                dLinkList.Insert("34", "67");
+                dLinkList.Insert("435", "34");
+                dLinkList.Insert("57", "435");
+                dLinkList.Insert("213", "57");
+                dLinkList.Insert("54", "213");
+                refreshDLinkList();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         private void dListSearch_Click(object sender, EventArgs e)
         {
-            string t = dListInput.Text;
-            if (t != "")
+            try
             {
-                Node<string> temp = dLinkList.Find(t);
-                dLinkedList.SelectedItem = temp.Element;
+                string t = dListInput.Text;
+                if (t != "")
+                {
+                    Node<string> temp = dLinkList.Find(t);
+                    dLinkedList.SelectedItem = temp.Element;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
         private void dListfirst_Click(object sender, EventArgs e)
         {
-            Node<string> t = dLinkList.GetFirst();
-            if (t != null)
+            try
             {
-                dLinkedList.SelectedItem = t.Element;
+                Node<string> t = dLinkList.GetFirst();
+                if (t != null)
+                {
+                    dLinkedList.SelectedItem = t.Element;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
         private void dListLast_Click(object sender, EventArgs e)
         {
-            Node<string> t = dLinkList.FindLast();
-            if (t != null)
+            try
             {
-                dLinkedList.SelectedItem = t.Element;
+                Node<string> t = dLinkList.FindLast();
+                if (t != null)
+                {
+                    dLinkedList.SelectedItem = t.Element;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
         private void dListPrev_Click(object sender, EventArgs e)
         {
-            if (dLinkedList.SelectedItem != null)
+            try
             {
-                string temp = dLinkedList.SelectedItem.ToString();
-                Node<string> t = dLinkList.Find(temp);
-                if (t != null)
+                if (dLinkedList.SelectedItem != null)
                 {
-                    if (t.previousNode != null)
+                    string temp = dLinkedList.SelectedItem.ToString();
+                    Node<string> t = dLinkList.Find(temp);
+                    if (t != null)
                     {
-                        dLinkedList.SelectedItem = t.previousNode.Element;
+                        if (t.previousNode != null)
+                        {
+                            //its the header
+                            if (t.previousNode.Element == null)
+                            {
+                                //select the element before the header
+                                dLinkedList.SelectedItem = t.previousNode.previousNode.Element;
+                            }
+                            else
+                            {
+                                //select the element before
+                                dLinkedList.SelectedItem = t.previousNode.Element;
+                            }
+                        }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
         private void dListNext_Click(object sender, EventArgs e)
         {
-            if (dLinkedList.SelectedItem != null)
+            try
             {
-                string temp = dLinkedList.SelectedItem.ToString();
-                Node<string> t = dLinkList.Find(temp);
-                if (t != null)
+                if (dLinkedList.SelectedItem != null)
                 {
-                    if (t.nextNode != null)
+                    string temp = dLinkedList.SelectedItem.ToString();
+                    Node<string> t = dLinkList.Find(temp);
+                    if (t != null)
                     {
-                        dLinkedList.SelectedItem = t.nextNode.Element;
+                        if (t.nextNode != null)
+                        {
+                            //its the header
+                            if (t.nextNode.Element == null)
+                            {
+                                //select the element after the header
+                                dLinkedList.SelectedItem = t.nextNode.nextNode.Element;
+                            }
+                            else
+                            {
+                                //select the element after the current element
+                                dLinkedList.SelectedItem = t.nextNode.Element;
+                            }
+                        }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
@@ -1461,28 +1692,43 @@ namespace Eindopdracht
 
         private void dListInsert_Click(object sender, EventArgs e)
         {
-            string t = dListInput.Text;
-            if (t != "")
+            try
             {
-                Node<string> temp = dLinkList.FindLast();
-                dLinkList.Insert(t, temp.Element);
-                refreshDLinkList();
-                dListInput.Clear();
+                string t = dListInput.Text;
+                if (t != "")
+                {
+                    Node<string> temp = dLinkList.FindLast();
+                    dLinkList.Insert(t, temp.Element);
+                    refreshDLinkList();
+                    dListInput.Clear();
+                }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            
         }
 
         private void refreshDLinkList()
         {
-            dLinkedList.Items.Clear();
-            Node<string> temp = dLinkList.GetFirst();
-            if (temp.Element != null)
+            try
             {
-                dLinkedList.Items.Add(temp.Element);
-                while (temp.nextNode != null)
+                dLinkedList.Items.Clear();
+                Node<string> temp = dLinkList.GetFirst();
+                if (temp.Element != null)
                 {
-                    temp = temp.nextNode;
                     dLinkedList.Items.Add(temp.Element);
+                    while (temp.nextNode != null && temp.nextNode != dLinkList.GetFirst().previousNode)
+                    {
+                        temp = temp.nextNode;
+                        dLinkedList.Items.Add(temp.Element);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
@@ -1493,136 +1739,208 @@ namespace Eindopdracht
         #region CircularLinkedList
         private void cListInsert_Click(object sender, EventArgs e)
         {
-            string t = cListInput.Text;
-            if (t != "")
+            try
             {
-                Node<string> temp = cLinkList.FindLast();
-                cLinkList.Insert(t, temp.Element);
-                refreshCLinkList();
-                cListInput.Clear();
-            }
-        }
-
-        private void refreshCLinkList()
-        {
-            cLinkedList.Items.Clear();
-            Node<string> temp = cLinkList.GetFirst();
-            if (temp.Element != null)
-            {
-                cLinkedList.Items.Add(temp.Element);
-                while (temp.nextNode.Element != null)
+                string t = cListInput.Text;
+                if (t != "")
                 {
-                    temp = temp.nextNode;
-                    cLinkedList.Items.Add(temp.Element);
-                }
-            }
-        }
-
-        private void cListAddRange_Click(object sender, EventArgs e)
-        {
-            Node<string> temp = cLinkList.FindLast();
-            cLinkList.Insert("32", temp.Element);
-            cLinkList.Insert("45", "32");
-            cLinkList.Insert("75", "45");
-            cLinkList.Insert("234", "75");
-            cLinkList.Insert("67", "234");
-            cLinkList.Insert("34", "67");
-            cLinkList.Insert("435", "34");
-            cLinkList.Insert("57", "435");
-            cLinkList.Insert("213", "57");
-            cLinkList.Insert("54", "213");
-            refreshCLinkList();
-        }
-
-        private void cListInsertAfter_Click(object sender, EventArgs e)
-        {
-            string t = cListInput.Text;
-            if (t != "")
-            {
-                if (cLinkedList.SelectedItem != null)
-                {
-                    Node<string> temp = cLinkList.Find(cLinkedList.SelectedItem.ToString());
+                    Node<string> temp = cLinkList.FindLast();
                     cLinkList.Insert(t, temp.Element);
                     refreshCLinkList();
                     cListInput.Clear();
                 }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+        private void refreshCLinkList()
+        {
+            try
+            {
+                cLinkedList.Items.Clear();
+                Node<string> temp = cLinkList.GetFirst();
+                if (temp.Element != null)
+                {
+                    cLinkedList.Items.Add(temp.Element);
+                    while (temp.nextNode.Element != null)
+                    {
+                        temp = temp.nextNode;
+                        cLinkedList.Items.Add(temp.Element);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+        private void cListAddRange_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Node<string> temp = cLinkList.FindLast();
+                cLinkList.Insert("32", temp.Element);
+                cLinkList.Insert("45", "32");
+                cLinkList.Insert("75", "45");
+                cLinkList.Insert("234", "75");
+                cLinkList.Insert("67", "234");
+                cLinkList.Insert("34", "67");
+                cLinkList.Insert("435", "34");
+                cLinkList.Insert("57", "435");
+                cLinkList.Insert("213", "57");
+                cLinkList.Insert("54", "213");
+                refreshCLinkList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+        private void cListInsertAfter_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string t = cListInput.Text;
+                if (t != "")
+                {
+                    if (cLinkedList.SelectedItem != null)
+                    {
+                        Node<string> temp = cLinkList.Find(cLinkedList.SelectedItem.ToString());
+                        cLinkList.Insert(t, temp.Element);
+                        refreshCLinkList();
+                        cListInput.Clear();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         private void cListFirst_Click(object sender, EventArgs e)
         {
-            Node<string> t = cLinkList.GetFirst();
-            if (t != null)
+            try
             {
-                cLinkedList.SelectedItem = t.Element;
+                Node<string> t = cLinkList.GetFirst();
+                if (t != null)
+                {
+                    cLinkedList.SelectedItem = t.Element;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
         private void cListLast_Click(object sender, EventArgs e)
         {
-            Node<string> t = cLinkList.FindLast();
-            if (t != null)
+            try
             {
-                cLinkedList.SelectedItem = t.Element;
+                Node<string> t = cLinkList.FindLast();
+                if (t != null)
+                {
+                    cLinkedList.SelectedItem = t.Element;
+                }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
         }
 
         private void cListPrev_Click(object sender, EventArgs e)
         {
-            if (cLinkedList.SelectedItem != null)
+            try
             {
-                string temp = cLinkedList.SelectedItem.ToString();
-                Node<string> t = cLinkList.Find(temp);
-                if (t != null)
+                if (cLinkedList.SelectedItem != null)
                 {
-                    if (t.previousNode != null)
+                    string temp = cLinkedList.SelectedItem.ToString();
+                    Node<string> t = cLinkList.Find(temp);
+                    if (t != null)
                     {
-                        cLinkedList.SelectedItem = t.previousNode.Element;
+                        if (t.previousNode != null)
+                        {
+                            cLinkedList.SelectedItem = t.previousNode.Element;
+                        }
                     }
                 }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
         }
 
         private void cListNext_Click(object sender, EventArgs e)
         {
-            if (cLinkedList.SelectedItem != null)
+            try
             {
-                string temp = cLinkedList.SelectedItem.ToString();
-                Node<string> t = cLinkList.Find(temp);
-                if (t != null)
+                if (cLinkedList.SelectedItem != null)
                 {
-                    if (t.nextNode.Element != null)
+                    string temp = cLinkedList.SelectedItem.ToString();
+                    Node<string> t = cLinkList.Find(temp);
+                    if (t != null)
                     {
-                        cLinkedList.SelectedItem = t.nextNode.Element;
-                    }
-                    else
-                    {
-                        // skip header
-                        t.nextNode = t.nextNode.nextNode;
-                        cLinkedList.SelectedItem = t.nextNode.Element;
+                        if (t.nextNode.Element != null)
+                        {
+                            cLinkedList.SelectedItem = t.nextNode.Element;
+                        }
+                        else
+                        {
+                            // skip header
+                            t.nextNode = t.nextNode.nextNode;
+                            cLinkedList.SelectedItem = t.nextNode.Element;
+                        }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
         private void cListDelete_Click(object sender, EventArgs e)
         {
-            string t = cListInput.Text;
-            if (t != "")
+            try
             {
-                cLinkList.Remove(t);
-                refreshCLinkList();
-                cListInput.Clear();
+                string t = cListInput.Text;
+                if (t != "")
+                {
+                    cLinkList.Remove(t);
+                    refreshCLinkList();
+                    cListInput.Clear();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
         private void cListSearch_Click(object sender, EventArgs e)
         {
-            string t = cListInput.Text;
-            if (t != "")
+            try
             {
-                Node<string> temp = cLinkList.Find(t);
-                cLinkedList.SelectedItem = temp.Element;
+                string t = cListInput.Text;
+                if (t != "")
+                {
+                    Node<string> temp = cLinkList.Find(t);
+                    cLinkedList.SelectedItem = temp.Element;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
@@ -1634,81 +1952,167 @@ namespace Eindopdracht
         #region Iterator
         public void fillIterList()
         {
-            iterList.Insert("32");
-            iterList.Insert("45");
-            iterList.Insert("75");
-            iterList.Insert("234");
-            iterList.Insert("67");
-            iterList.Insert("34");
-            iterList.Insert("435");
-            iterList.Insert("57");
-            iterList.Insert("213");
-            iterList.Insert("54");
-            iterator = new ListIter<string>(iterList);
-
+            try
+            {
+                iterList.Insert("32");
+                iterList.Insert("45");
+                iterList.Insert("75");
+                iterList.Insert("234");
+                iterList.Insert("67");
+                iterList.Insert("34");
+                iterList.Insert("435");
+                iterList.Insert("57");
+                iterList.Insert("213");
+                iterList.Insert("54");
+                iterator = new ListIter<string>(iterList);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         private void nextIter_Click(object sender, EventArgs e)
         {
-            iterator.NextLink();
-            Node<string> temp = iterator.GetCurrent();
-            if (temp != null)
+            try
             {
-                listIter.SelectedItem = temp.Element;
+                iterator.NextLink();
+                Node<string> temp = iterator.GetCurrent();
+                if (temp != null)
+                {
+                    listIter.SelectedItem = temp.Element;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
         private void reset_Click(object sender, EventArgs e)
         {
-            iterator.reset();
-            Node<string> temp = iterator.GetCurrent();
-            if (temp != null)
+            try
             {
-                listIter.SelectedItem = temp.Element;
+                iterator.reset();
+                Node<string> temp = iterator.GetCurrent();
+                if (temp != null)
+                {
+                    listIter.SelectedItem = temp.Element;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Node<string> temp = iterator.GetCurrent();
-            if (temp != null)
+            try
             {
-                currentLabel.Text = temp.Element;
+                Node<string> temp = iterator.GetCurrent();
+                if (temp != null)
+                {
+                    currentLabel.Text = temp.Element;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
         private void iterRemove_Click(object sender, EventArgs e)
         {
-            iterator.remove();
-            refreshIterBox();
-            Node<string> temp = iterator.GetCurrent();
-            if (temp != null)
+            try
             {
-                listIter.SelectedItem = temp.Element;
+                iterator.remove();
+                refreshIterBox();
+                Node<string> temp = iterator.GetCurrent();
+                if (temp != null)
+                {
+                    listIter.SelectedItem = temp.Element;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
         private void iterBefore_Click(object sender, EventArgs e)
         {
-            string s = iterInput.Text;
-            if (s != "")
+            try
             {
-                iterator.InsertBefore(s);
-                refreshIterBox();
-                Node<string> temp = iterator.GetCurrent();
-                if (temp != null)
+                string s = iterInput.Text;
+                if (s != "")
                 {
-                    listIter.SelectedItem = temp.Element;
+                    iterator.InsertBefore(s);
+                    refreshIterBox();
+                    Node<string> temp = iterator.GetCurrent();
+                    if (temp != null)
+                    {
+                        listIter.SelectedItem = temp.Element;
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
         private void iterAfter_Click(object sender, EventArgs e)
         {
-            string s = iterInput.Text;
-            if (s != "")
+            try
             {
-                iterator.InsertAfter(s);
+                string s = iterInput.Text;
+                if (s != "")
+                {
+                    iterator.InsertAfter(s);
+                    refreshIterBox();
+                    Node<string> temp = iterator.GetCurrent();
+                    if (temp != null)
+                    {
+                        listIter.SelectedItem = temp.Element;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+    
+
+        private void refreshIterBox()
+        {
+            try
+            {
+                listIter.Items.Clear();
+                Node<string> temp = iterator.theList.GetFirst();
+
+                if (temp.Element != null)
+                {
+                    listIter.Items.Add(temp.Element);
+                    while (temp.nextNode != null)
+                    {
+                        temp = temp.nextNode;
+                        listIter.Items.Add(temp.Element);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+        private void addList_Click(object sender, EventArgs e)
+        {
+            try
+            {
                 refreshIterBox();
                 Node<string> temp = iterator.GetCurrent();
                 if (temp != null)
@@ -1716,37 +2120,235 @@ namespace Eindopdracht
                     listIter.SelectedItem = temp.Element;
                 }
             }
-        }
-
-        private void refreshIterBox()
-        {
-            listIter.Items.Clear();
-            Node<string> temp = iterator.theList.GetFirst();
-
-            if (temp.Element != null)
+            catch (Exception ex)
             {
-                listIter.Items.Add(temp.Element);
-                while (temp.nextNode != null)
-                {
-                    temp = temp.nextNode;
-                    listIter.Items.Add(temp.Element);
-                }
+                Console.WriteLine(ex);
             }
         }
 
-        private void addList_Click(object sender, EventArgs e)
-        {
-            refreshIterBox();
-            Node<string> temp = iterator.GetCurrent();
-            if (temp != null)
-            {
-                listIter.SelectedItem = temp.Element;
-            }
-        }
+    
 
         #endregion
 
         // form actions for hash
 
+        //buckethash
+        private void bHashAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String value = bHashInput.Text;
+
+                //add to Bucket hash
+                bHash.Insert(value);
+
+                //reload all the items in the list
+                reload_items();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+        private void bHashSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String value = bHashInput.Text;
+
+                //add to Bucket hash
+                bHashLabel.Text = (bHash.InHash(value, bHash.data)).ToString();
+
+                //reload all the items in the list
+                reload_items();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+       
+
+        private void reload_items()
+        {
+            try
+            {
+                //clear the listview
+                bHashBox.Items.Clear();
+
+                //for every array in the data array
+                foreach (ArrayList item in bHash.data)
+                {
+                    //for every value in the array
+                    foreach (String value in item)
+                    {
+                        bHashBox.Items.Add("[" + bHash.Hash(value) + "] - " + value);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+       
+
+        private void bHashRemove_Click(object sender, EventArgs e)
+        {
+                try
+                {
+                    String value = bHashInput.Text;
+
+                    //remove item in bucket hash
+                    bHash.Remove(value);
+
+                    //reload all the items in the list
+                    reload_lHash();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+            }
+
+        //linear
+
+        private void reload_lHash()
+        {
+            try
+            {
+                lHashBox.Items.Clear();
+
+                //load all items
+                foreach (string item in data)
+                {
+                    lHashBox.Items.Add("[" + LinearHash.BetterHash(item, data) + "] - " + item);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+      
+
+        private void lHashLoad_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                lHashBox.Items.Clear();
+                data = new string[9];
+                data[0] = "Harry";
+                data[1] = "Karel";
+                data[2] = "REINIER";
+                data[3] = "Bernard";
+                data[4] = "Henk";
+                data[5] = "Hasan";
+                data[6] = "Igor";
+                data[7] = "Nathan";
+                data[8] = "Ellen";
+
+                //load all items
+                foreach (string item in data)
+                {
+                    lHashBox.Items.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+    
+        private void lHashTransform_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //load the transformed items
+                data = LinearHash._LinearHash(data);
+                //reload all the items in the list
+                reload_lHash();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+        //quadratic
+        private void qHashLoad_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                qHashBox.Items.Clear();
+                data = new string[9];
+                data[0] = "Harry";
+                data[1] = "Karel";
+                data[2] = "REINIER";
+                data[3] = "Bernard";
+                data[4] = "Henk";
+                data[5] = "Hasan";
+                data[6] = "Igor";
+                data[7] = "Nathan";
+                data[8] = "Ellen";
+
+                //load all items
+                foreach (string item in data)
+                {
+                    if (item != null)
+                    {
+                        qHashBox.Items.Add(item);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+        private void qHashTransform_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //load the transformed items
+                data = QuadraticHash._QuadraticHash(data);
+                //reload all the items in the list
+                reload_qHash();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+        public void reload_qHash()
+        {
+            try
+            {
+                qHashBox.Items.Clear();
+
+                //load all items
+                foreach (string item in data)
+                {
+                    if (item != null)
+                    {
+                        qHashBox.Items.Add("[" + QuadraticHash.BetterHash(item, data) + "] - " + item);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
     }
 }
+

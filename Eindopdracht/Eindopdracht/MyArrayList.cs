@@ -124,7 +124,15 @@ namespace Eindopdracht
         /// <returns> the array length </returns>
         public int Count()
         {
-            return array.Length;
+            try
+            {
+                return array.Length;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return default(int);
+            }
         }
 
         /// <summary>
@@ -144,7 +152,7 @@ namespace Eindopdracht
             catch(Exception e)
             {
                 Console.WriteLine(e);
-                throw;
+                return default(T);
             }
         }
 
@@ -173,7 +181,15 @@ namespace Eindopdracht
         /// <returns> the capacity of the array</returns>
         public int Capacity()
         {
-            return array.Length;
+            try
+            {
+                return array.Length;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return default(int);
+            }
         }
 
 
@@ -201,7 +217,7 @@ namespace Eindopdracht
             catch(Exception e)
             {
                 Console.WriteLine(e);
-                throw;
+                return default(bool);
             }
         }
 
@@ -212,8 +228,16 @@ namespace Eindopdracht
         /// <returns> new array </returns>
         public T[] CopyTo(T[] newArray)
         {
-            newArray = array;
-            return newArray;
+            try
+            {
+                newArray = array;
+                return newArray;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return default(T[]);
+            }
         }
 
 
@@ -243,17 +267,29 @@ namespace Eindopdracht
             catch(Exception e)
             {
                 Console.WriteLine(e);
-                throw;
+                return default(int);
             }
         }
 
-        // size up the array with 1
+        /// <summary>
+        /// size the array up by 1
+        /// </summary>
         public void sizeUpArray()
         {
-            Array.Resize(ref array, array.Length + 1);
+            try
+            {
+                Array.Resize(ref array, array.Length + 1);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
-
+        /// <summary>
+        /// automatically cast the IEnumerable so you can use it in loops
+        /// </summary>
+        /// <returns></returns>
         IEnumerator IEnumerable.GetEnumerator()
         {
             return (IEnumerator)GetEnumerator();
@@ -261,13 +297,24 @@ namespace Eindopdracht
 
         public MyEnum<T> GetEnumerator()
         {
-            return new MyEnum<T>(array);
+            try
+            {
+                return new MyEnum<T>(array);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return default(MyEnum<T>);
+            }
         }
 
 
     }
 
-    // IEnumerator class for foreach loop
+    /// <summary>
+    /// enum class for the IEnumerator
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class MyEnum<T> : IEnumerator
     {
 

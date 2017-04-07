@@ -19,7 +19,7 @@ namespace Eindopdracht
             try
             {
                 //Creates an Array with the optimal size of 10007
-                string[] names = new string[10007];
+                string[] names = new string[somenames.Length];
 
                 //loop through all items in the names array
                 for (int i = 0; i < somenames.Count(); i++)
@@ -69,7 +69,7 @@ namespace Eindopdracht
             catch (Exception ex)
             {
                 Debug.WriteLine(ex);
-                return 0;
+                return default(int);
             }
         }
 
@@ -98,7 +98,7 @@ namespace Eindopdracht
             catch (Exception ex)
             {
                 Debug.WriteLine(ex);
-                return 0;
+                return default(int);
             }
         }
 

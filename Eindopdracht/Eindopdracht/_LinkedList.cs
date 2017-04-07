@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,12 +25,21 @@ namespace Eindopdracht
         /// <param name="after"></param>
         public void Insert(T element)
         {
-            Node<T> tempNode = new Node<T>();
-            Node<T> newNode = new Node<T>(element);
+            try
+            {
+                Node<T> tempNode = new Node<T>();
+                Node<T> newNode = new Node<T>(element);
 
-            tempNode = FindLast();
+                tempNode = FindLast();
             
-            tempNode.nextNode = newNode;
+                tempNode.nextNode = newNode;
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+            
         }
 
         /// <summary>
@@ -38,26 +48,34 @@ namespace Eindopdracht
         /// <param name="n"></param>
         public void Remove(T n)
         {
-            Node<T> activeNode = header;
-            Node<T> p = Find(n);
-            if (p.Element != null)
+            try
             {
-                if (p.Element.Equals(n))
+                Node<T> activeNode = header;
+                Node<T> p = Find(n);
+                if (p.Element != null)
                 {
-                    while (!activeNode.nextNode.Element.Equals(n) && !activeNode.nextNode.Equals(null))
+                    if (p.Element.Equals(n))
                     {
-                        activeNode = activeNode.nextNode;
+                        while (!activeNode.nextNode.Element.Equals(n) && !activeNode.nextNode.Equals(null))
+                        {
+                            activeNode = activeNode.nextNode;
+                        }
+                        //temp var to keep the new next node
+                        Node<T> temp = activeNode.nextNode.nextNode;
+
+                        //clear the old next node
+                        activeNode.nextNode.nextNode = null;
+
+                        //set the new next node
+                        activeNode.nextNode = temp;
                     }
-                    //temp var to keep the new next node
-                    Node<T> temp = activeNode.nextNode.nextNode;
-
-                    //clear the old next node
-                    activeNode.nextNode.nextNode = null;
-
-                    //set the new next node
-                    activeNode.nextNode = temp;
                 }
             }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+            
         }
 
         /// <summary>
@@ -99,13 +117,22 @@ namespace Eindopdracht
         /// <returns></returns>
         public Node<T> FindLast()
         {
-            Node<T> current = new Node<T>();
-            current = header;
-            while (!(current.nextNode == null))
+            try
             {
-                current = current.nextNode;
+                Node<T> current = new Node<T>();
+                current = header;
+                while (!(current.nextNode == null))
+                {
+                    current = current.nextNode;
+                }
+                return current;
             }
-            return current;
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return header;
+            }
+            
         }
 
         /// <summary>
@@ -115,15 +142,24 @@ namespace Eindopdracht
         /// <returns></returns>
         public Node<T> GetFirst()
         {
-            Node<T> current = new Node<T>();
-            current = header;
-            if (header.nextNode != null)
+            try
             {
-                return header.nextNode;
+                Node<T> current = new Node<T>();
+                current = header;
+                if (header.nextNode != null)
+                {
+                    return header.nextNode;
+                }else
+                {
+                    return header;
+                }
             }
-            else {
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
                 return header;
             }
+            
         }
     }
 }

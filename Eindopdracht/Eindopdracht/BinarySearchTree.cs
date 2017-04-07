@@ -14,7 +14,8 @@ namespace Eindopdracht
         public TreeNode<T> left;
         // stores the node on the right
         public TreeNode<T> right;
-       
+
+
 
         /// <summary>
         /// Writes the data of this node to the console.
@@ -39,6 +40,8 @@ namespace Eindopdracht
         public TreeNode<T> root;
 
         List<TreeNode<T>> nodes = new List<TreeNode<T>>();
+        //fallback for catches with a T return
+        T fail = default(T);
         public BinarySearchTree()
         {
             // default root is null (nothing) until a node is made
@@ -113,11 +116,18 @@ namespace Eindopdracht
         /// <param name="theRoot"> the root node of the search tree </param>
         public void inOrder(TreeNode<T> theRoot)
         {
-            if (theRoot != null)
+            try
             {
-                inOrder(theRoot.left);
-                nodes.Add(theRoot);
-                inOrder(theRoot.right);
+                if (theRoot != null)
+                {
+                    inOrder(theRoot.left);
+                    nodes.Add(theRoot);
+                    inOrder(theRoot.right);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 
@@ -128,12 +138,20 @@ namespace Eindopdracht
         /// <param name="theRoot"> the root node of the search tree </param>
         public void preOrder(TreeNode<T> theRoot)
         {
-            if (theRoot != null)
+            try
             {
-                nodes.Add(theRoot);
-                inOrder(theRoot.left);
-                inOrder(theRoot.right);
+                if (theRoot != null)
+                {
+                    nodes.Add(theRoot);
+                    inOrder(theRoot.left);
+                    inOrder(theRoot.right);
+                }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            
         }
 
         /// <summary>
@@ -143,12 +161,20 @@ namespace Eindopdracht
         /// <param name="theRoot"> the root node of the search tree </param>
         public void postOrder(TreeNode<T> theRoot)
         {
-            if (theRoot != null)
+            try
             {
-                inOrder(theRoot.left);
-                inOrder(theRoot.right);
-                nodes.Add(theRoot);
+                if (theRoot != null)
+                {
+                    inOrder(theRoot.left);
+                    inOrder(theRoot.right);
+                    nodes.Add(theRoot);
+                }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            
         }
 
         /// <summary>
@@ -157,24 +183,29 @@ namespace Eindopdracht
         /// <returns>the lowest data</returns>
         public T findMin()
         {
-            // return this when there is no root. 
-            T fail = default(T);
-            // start at the root
-            TreeNode<T> current = root;
-            if (current != null)
+            try
             {
-                // keep selecting the left node while it exists, this will always be the lowest
-                while (current.left != null)
+                // start at the root
+                TreeNode<T> current = root;
+                if (current != null)
                 {
-                    current = current.left;
+                    // keep selecting the left node while it exists, this will always be the lowest
+                    while (current.left != null)
+                    {
+                        current = current.left;
+                    }
+                    return current.data;
                 }
-                return current.data;
+                else
+                {
+                    return fail;
+                }
             }
-            else
+            catch (Exception ex)
             {
+                Console.WriteLine(ex);
                 return fail;
             }
-           
         }
 
         /// <summary>
@@ -183,22 +214,30 @@ namespace Eindopdracht
         /// <returns>the highest data</returns>
         public T findMax()
         {
-            //start at the root
-            T fail = default(T);
-            TreeNode<T> current = root;
-            if (current != null)
+            try
             {
-                // keep selecting the right node while it exists, this will always be the highest
-                while (current.right != null)
+                //start at the root
+                TreeNode<T> current = root;
+                if (current != null)
                 {
-                    current = current.right;
+                    // keep selecting the right node while it exists, this will always be the highest
+                    while (current.right != null)
+                    {
+                        current = current.right;
+                    }
+                    return current.data;
                 }
-                return current.data;
+                else
+                {
+                    return fail; 
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return fail; 
+                Console.WriteLine(ex);
+                return fail;
             }
+            
         }
 
         /// <summary>
@@ -241,7 +280,6 @@ namespace Eindopdracht
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                throw;
             }
         }
 
@@ -342,7 +380,6 @@ namespace Eindopdracht
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                throw;
             }
         }
 
@@ -375,7 +412,6 @@ namespace Eindopdracht
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                throw;
             }
         }
 
@@ -388,7 +424,15 @@ namespace Eindopdracht
         /// <returns>the root node</returns>
         public TreeNode<T> returnRoot()
         {
-            return root;
+            try
+            {
+                return root;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return default(TreeNode<T>);
+            }
         }
 
 
@@ -406,19 +450,26 @@ namespace Eindopdracht
         /// <param name="node"> root node</param>
         public void getNodes(TreeNode<T> node)
         {
-           
-            if (node != null)
+            try
             {
-                nodes.Add(node);
+                if (node != null)
+                {
+                    nodes.Add(node);
+                }
+                if (node.left != null)
+                {
+                    getNodes(node.left);
+                }
+                if(node.right != null)
+                {
+                    getNodes(node.right);
+                }
             }
-            if (node.left != null)
+            catch (Exception ex)
             {
-                getNodes(node.left);
+                Console.WriteLine(ex);
             }
-            if(node.right != null)
-            {
-                getNodes(node.right);
-            }
+            
         }
 
         /// <summary>
@@ -427,7 +478,15 @@ namespace Eindopdracht
         /// <returns> the node list </returns>
         public List<TreeNode<T>> getList()
         {
-            return nodes;
+            try
+            {
+                return nodes;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return default(List<TreeNode<T>>);
+            }
         }
     }
 }

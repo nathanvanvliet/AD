@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ * Waarom Stopwatch()?
+ * We hebben gekozen voor stopwatch omdat we er achter kwamen dat stopwatch de queryPerformanceTimer gebruikt
+ * om de tijd te bepalen.
+ * deze heeft zelfs als voordeel dat je de tijd in Ticks kan laten weergeven.
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,9 +43,9 @@ namespace Eindopdracht
                     Debug.WriteLine("There is already a measurment ongoing.");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Debug.WriteLine(ex);
             }
         }
 
@@ -63,9 +70,9 @@ namespace Eindopdracht
                     Debug.WriteLine("There is already a measurment ongoing.");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Debug.WriteLine(ex);
             }
         }
 
@@ -75,7 +82,15 @@ namespace Eindopdracht
         /// <returns>amount of ticks</returns>
         public long elapseTime()
         {
-            return time.Ticks;
+            try
+            {
+                return time.Ticks;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return default(long);
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,12 +34,20 @@ namespace Eindopdracht
         /// <param name="item"></param>
         public void EnQueue(T item, int priority)
         {
-            //add the item to the list
-            list.Insert(0, new pqItem<T>(item, priority));
+            try
+            {
+                //add the item to the list
+                list.Insert(0, new pqItem<T>(item, priority));
 
-            //order the list for priority
-            list.Sort((x, y) =>
-                    x.priority.CompareTo(y.priority));
+                //order the list for priority
+                list.Sort((x, y) =>
+                        x.priority.CompareTo(y.priority));
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+            
         }
 
         /// <summary>
@@ -47,7 +56,15 @@ namespace Eindopdracht
         /// <returns>length of the queue</returns>
         public int Count()
         {
-            return list.Count;
+            try
+            {
+                return list.Count;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return default(int);
+            }
         }
 
         /// <summary>
@@ -77,7 +94,7 @@ namespace Eindopdracht
             }
             catch(Exception e)
             {
-                Console.WriteLine(e);
+                Debug.WriteLine(e);
                 return fail; 
             }
         }
@@ -94,7 +111,7 @@ namespace Eindopdracht
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                Debug.WriteLine(e);
                 return fail;
             }
         }
@@ -104,10 +121,18 @@ namespace Eindopdracht
         /// </summary>
         public void loop()
         {
-            for (int i = 0; i < (list.Count - 1); i++)
+            try
             {
-                Console.WriteLine(list[i]);
+                for (int i = 0; i < (list.Count - 1); i++)
+                {
+                    Debug.WriteLine(list[i]);
+                }
             }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+            
         }
         /// <summary>
         /// This method is only created to be able to get the content of the Pqueue 
@@ -117,8 +142,17 @@ namespace Eindopdracht
         /// <returns>the item at the given index number</returns>
         public T getIndex(int index)
         {
-            pqItem<T> temp = list[index];
-            return temp.value;
+            try
+            {
+                pqItem<T> temp = list[index];
+                return temp.value;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return default(T);
+            }
+            
         }
     }
 }

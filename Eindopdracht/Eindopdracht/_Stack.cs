@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,15 @@ namespace Eindopdracht
         /// <param name="item"></param>
         public void push(T item)
         {
-            list.Add(item);
+            try
+            {
+                list.Add(item);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+            
         }
 
         /// <summary>
@@ -29,7 +38,15 @@ namespace Eindopdracht
         /// <returns>length of the stack</returns>
         public int getLength()
         {
-            return list.Count;
+            try
+            {
+                return list.Count;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return default(int);
+            }
         }
 
         /// <summary>
@@ -59,7 +76,7 @@ namespace Eindopdracht
             }
             catch(Exception e)
             {
-                Console.WriteLine(e);
+                Debug.WriteLine(e);
                 return fail;
             }
         }
@@ -76,7 +93,7 @@ namespace Eindopdracht
             }
             catch(Exception e)
             {
-                Console.WriteLine(e);
+                Debug.WriteLine(e);
                 return fail;
             }
         }
@@ -86,9 +103,16 @@ namespace Eindopdracht
         /// </summary>
         public void loop()
         {
-            for (int i = 0; i < (list.Count - 1); i++)
+            try
             {
-                Console.WriteLine(list[i]);
+                for (int i = 0; i < (list.Count - 1); i++)
+                {
+                    Debug.WriteLine(list[i]);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
             }
         }
 
@@ -101,7 +125,15 @@ namespace Eindopdracht
         /// <returns>the item at the given index number</returns>
         public T getIndex(int index)
         {
-            return list[index];
+            try
+            {
+                return list[index];
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return fail;
+            }
         }
     }
 }

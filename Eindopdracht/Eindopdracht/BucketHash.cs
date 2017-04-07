@@ -13,9 +13,10 @@ namespace Eindopdracht
         private const int SIZE = 101;
         public ArrayList[] data;
 
-        public BucketHash() {
+        public BucketHash()
+        {
             data = new ArrayList[SIZE];
-            for (int i = 0; i <= (SIZE-1); i++)
+            for (int i = 0; i <= (SIZE - 1); i++)
                 data[i] = new ArrayList(4);
         }
 
@@ -24,7 +25,8 @@ namespace Eindopdracht
         /// </summary>
         /// <param name="s"></param>
         /// <returns></returns>
-        public int Hash(string s) {
+        public int Hash(string s)
+        {
             try
             {
                 long tot = 0;
@@ -50,15 +52,15 @@ namespace Eindopdracht
         /// insert the value with its hash in the collection
         /// </summary>
         /// <param name="item"></param>
-        public void Insert(string item) {
+        public void Insert(string item)
+        {
             try
             {
                 //hash the value
                 int hash_value = Hash(item);
 
                 //search if the array contains the item using the hash, if it does, add the new item to the same hash position
-                if (data[hash_value].Contains(item))
-                    data[hash_value].Add(item);
+                data[hash_value].Add(item);
             }
             catch (Exception ex)
             {
@@ -70,7 +72,8 @@ namespace Eindopdracht
         /// If the value excists, remove it from the collection
         /// </summary>
         /// <param name="item"></param>
-        public void Remove(string item) {
+        public void Remove(string item)
+        {
             try
             {
                 int hash_value = Hash(item);
@@ -83,6 +86,34 @@ namespace Eindopdracht
             catch (Exception ex)
             {
                 Debug.WriteLine(ex);
+            }
+        }
+
+        /// <summary>
+        /// search for a value in the array using the has of this value.
+        /// </summary>
+        /// <param name="s">the value</param>
+        /// <param name="arr">the array</param>
+        /// <returns>true/false</returns>
+        public bool InHash(string s, ArrayList[] arr)
+        {
+            try
+            {
+                //create the hash of the value you want to find
+                int hval = Hash(s);
+
+                //if the same hash is found...
+                if (arr[hval].Contains(s))
+                    //return true
+                    return true;
+
+                //if not, return false
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return false;
             }
         }
     }
