@@ -280,6 +280,7 @@ namespace Eindopdracht
             catch (Exception e)
             {
                 Console.WriteLine(e);
+                return default(TreeNode<T>);
             }
         }
 
@@ -380,6 +381,7 @@ namespace Eindopdracht
             catch (Exception e)
             {
                 Console.WriteLine(e);
+                return false;
             }
         }
 
@@ -412,6 +414,7 @@ namespace Eindopdracht
             catch (Exception e)
             {
                 Console.WriteLine(e);
+                return default(TreeNode<T>);
             }
         }
 

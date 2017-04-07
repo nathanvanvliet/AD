@@ -37,6 +37,7 @@ namespace Eindopdracht
             catch(Exception e)
             {
                 Console.WriteLine(e);
+                return default(int);
             }
         }
 
@@ -78,6 +79,7 @@ namespace Eindopdracht
             catch(Exception e)
             {
                 Console.WriteLine(e);
+                return default(int);
             }
         }
 
