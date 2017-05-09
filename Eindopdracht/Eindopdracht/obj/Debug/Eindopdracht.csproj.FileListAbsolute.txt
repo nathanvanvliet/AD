@@ -34,4 +34,39 @@ C:\Users\Henk\Google Drive\AD\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.c
 C:\Users\Henk\Google Drive\AD\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Main.resources
 C:\Users\Henk\Google Drive\AD\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Properties.Resources.resources
 C:\Users\Henk\Google Drive\AD\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csproj.GenerateResource.Cache
-D:\Users\Natha\Documents\GitHub\AD-eindopdracht\AD\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.xml
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Eindopdracht.csprojResolveAssemblyReference.cache
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Eindopdracht.Main.resources
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Eindopdracht.Properties.Resources.resources
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Eindopdracht.csproj.GenerateResource.Cache
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Eindopdracht.exe
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Eindopdracht.pdb
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Eindopdracht.csprojFakesResolveAssemblyReference.cache
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Fakes\ad\b\AD_dll.1.0.0.0.Fakes.dll
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Fakes\ad\b\AD_dll.1.0.0.0.Fakes.fakesconfig
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Fakes\ad\b\AD_dll.1.0.0.0.Fakes.pdb
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Fakes\ad\b\AD_dll.1.0.0.0.Fakes.xml
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Fakes\ad\b\AD_dll.dll
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Fakes\ad\b\Microsoft.QualityTools.Testing.Fakes.dll
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Fakes\ad\f.ah
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Fakes\ad\f.ch
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Fakes\ad\f.cs
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Fakes\ad\f.csproj
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Fakes\ad\f.fakes
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Fakes\ad\f.fakesconfig
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Fakes\ad\o\AD_dll.1.0.0.0.Fakes.dll
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Fakes\ad\o\AD_dll.1.0.0.0.Fakes.pdb
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Fakes\ad\o\CoreCompileInputs.cache
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Fakes\ad\o\f.csproj.FileListAbsolute.txt
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Fakes\ad\o\f.csprojResolveAssemblyReference.cache
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht - kopie\Eindopdracht\obj\Debug\Fakes\fakes.args
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.exe.config
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.exe
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\Eindopdracht\bin\Debug\Eindopdracht.pdb
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\Eindopdracht\bin\Debug\AlgoDLL.dll
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\Eindopdracht\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\Eindopdracht\bin\Debug\AlgoDLL.pdb
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Main.resources
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.Properties.Resources.resources
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.csproj.GenerateResource.Cache
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.exe
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\Eindopdracht\obj\Debug\Eindopdracht.pdb

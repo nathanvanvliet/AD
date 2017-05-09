@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AD_dll.1.0.0.0.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:Eindopdracht.Fakes.ShimMyEnum`1">
+            <summary>Shim type of Eindopdracht.MyEnum`1</summary>
+        </member>
+        <member name="M:Eindopdracht.Fakes.ShimMyEnum`1.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Eindopdracht.Fakes.ShimMyEnum`1.#ctor(Eindopdracht.MyEnum{`0})">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:Eindopdracht.Fakes.ShimMyEnum`1.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.ShimMyEnum`1.AllInstances.CurrentGet">
+            <summary>Sets the shim of MyEnum`1.get_Current()</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.ShimMyEnum`1.AllInstances.CurrentSystemCollectionsIEnumeratorget">
+            <summary>Sets the shim of MyEnum`1.System.Collections.IEnumerator.get_Current()</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.ShimMyEnum`1.AllInstances.MoveNext">
+            <summary>Sets the shim of MyEnum`1.MoveNext()</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.ShimMyEnum`1.AllInstances.Reset">
+            <summary>Sets the shim of MyEnum`1.Reset()</summary>
+        </member>
+        <member name="M:Eindopdracht.Fakes.ShimMyEnum`1.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Eindopdracht.Fakes.ShimMyEnum`1.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.ShimMyEnum`1.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Eindopdracht.Fakes.ShimMyEnum`1.Bind(System.Collections.IEnumerator)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.ShimMyEnum`1.ConstructorT0Array">
+            <summary>Sets the shim of MyEnum`1.MyEnum`1(!0[] list)</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.ShimMyEnum`1.CurrentGet">
+            <summary>Sets the shim of MyEnum`1.get_Current()</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.ShimMyEnum`1.CurrentSystemCollectionsIEnumeratorget">
+            <summary>Sets the shim of MyEnum`1.System.Collections.IEnumerator.get_Current()</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.ShimMyEnum`1.MoveNext">
+            <summary>Sets the shim of MyEnum`1.MoveNext()</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.ShimMyEnum`1.Reset">
+            <summary>Sets the shim of MyEnum`1.Reset()</summary>
+        </member>
+        <member name="T:Eindopdracht.Fakes.ShimTreeNode`1">
+            <summary>Shim type of Eindopdracht.TreeNode`1</summary>
+        </member>
+        <member name="M:Eindopdracht.Fakes.ShimTreeNode`1.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Eindopdracht.Fakes.ShimTreeNode`1.#ctor(Eindopdracht.TreeNode{`0})">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:Eindopdracht.Fakes.ShimTreeNode`1.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.ShimTreeNode`1.AllInstances.displayNode">
+            <summary>Sets the shim of TreeNode`1.displayNode()</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.ShimTreeNode`1.AllInstances.getData">
+            <summary>Sets the shim of TreeNode`1.getData()</summary>
+        </member>
+        <member name="M:Eindopdracht.Fakes.ShimTreeNode`1.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Eindopdracht.Fakes.ShimTreeNode`1.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.ShimTreeNode`1.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.ShimTreeNode`1.Constructor">
+            <summary>Sets the shim of TreeNode`1.TreeNode`1()</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.ShimTreeNode`1.displayNode">
+            <summary>Sets the shim of TreeNode`1.displayNode()</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.ShimTreeNode`1.getData">
+            <summary>Sets the shim of TreeNode`1.getData()</summary>
+        </member>
+        <member name="T:Eindopdracht.Fakes.ShimpqItem`1">
+            <summary>Shim type of Eindopdracht.pqItem`1</summary>
+        </member>
+        <member name="M:Eindopdracht.Fakes.ShimpqItem`1.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Eindopdracht.Fakes.ShimpqItem`1.#ctor(Eindopdracht.pqItem{`0})">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:Eindopdracht.Fakes.ShimpqItem`1.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="M:Eindopdracht.Fakes.ShimpqItem`1.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Eindopdracht.Fakes.ShimpqItem`1.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.ShimpqItem`1.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.ShimpqItem`1.ConstructorT0Int32">
+            <summary>Sets the shim of pqItem`1.pqItem`1(!0 value, Int32 priority)</summary>
+        </member>
+        <member name="T:Eindopdracht.Fakes.StubMyEnum`1">
+            <summary>Stub type of Eindopdracht.MyEnum`1</summary>
+        </member>
+        <member name="M:Eindopdracht.Fakes.StubMyEnum`1.#ctor(`0[])">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.StubMyEnum`1.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:Eindopdracht.Fakes.StubMyEnum`1.InitializeStub">
+            <summary>Initializes a new instance of type StubMyEnum</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.StubMyEnum`1.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.StubMyEnum`1.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:Eindopdracht.Fakes.StubTreeNode`1">
+            <summary>Stub type of Eindopdracht.TreeNode`1</summary>
+        </member>
+        <member name="M:Eindopdracht.Fakes.StubTreeNode`1.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.StubTreeNode`1.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:Eindopdracht.Fakes.StubTreeNode`1.InitializeStub">
+            <summary>Initializes a new instance of type StubTreeNode</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.StubTreeNode`1.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.StubTreeNode`1.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:Eindopdracht.Fakes.StubpqItem`1">
+            <summary>Stub type of Eindopdracht.pqItem`1</summary>
+        </member>
+        <member name="M:Eindopdracht.Fakes.StubpqItem`1.#ctor(`0,System.Int32)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.StubpqItem`1.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:Eindopdracht.Fakes.StubpqItem`1.InitializeStub">
+            <summary>Initializes a new instance of type StubpqItem</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.StubpqItem`1.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Eindopdracht.Fakes.StubpqItem`1.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+    </members>
+</doc>

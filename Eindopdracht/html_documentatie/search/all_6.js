@@ -1,8 +1,0 @@
-var searchData=
-[
-  ['find',['find',['../class_eindopdracht_1_1_binary_search_tree.html#abd45805545d1208517394e061e7aa9b3',1,'Eindopdracht.BinarySearchTree.find()'],['../class_eindopdracht_1_1___circulair_linked_list.html#a4910e19eac3798a88286d06e735bb420',1,'Eindopdracht._CirculairLinkedList.Find()'],['../class_eindopdracht_1_1___doubly_linked_list.html#a53a657460fb35d09732d94cfc9a6b481',1,'Eindopdracht._DoublyLinkedList.Find()'],['../class_eindopdracht_1_1___linked_list.html#aa3f1ab7cafe6df8bf52cf2dba091a20b',1,'Eindopdracht._LinkedList.Find()']]],
-  ['findlast',['FindLast',['../class_eindopdracht_1_1___circulair_linked_list.html#a58fc6e32d47c239fe8567d8a4355872b',1,'Eindopdracht._CirculairLinkedList.FindLast()'],['../class_eindopdracht_1_1___doubly_linked_list.html#a7482928859a0adadc63be824313cf793',1,'Eindopdracht._DoublyLinkedList.FindLast()'],['../class_eindopdracht_1_1___linked_list.html#a50722ae105e921a610950afbef7f6187',1,'Eindopdracht._LinkedList.FindLast()']]],
-  ['findmax',['FindMax',['../class_eindopdracht_1_1_search.html#a72918fd0662120a9a6d515451b9bc946',1,'Eindopdracht.Search.FindMax()'],['../class_eindopdracht_1_1_binary_search_tree.html#a1945f67dc9cd88e552e9047956f54f04',1,'Eindopdracht.BinarySearchTree.findMax()']]],
-  ['findmin',['FindMin',['../class_eindopdracht_1_1_search.html#ae1bf46c29ddb599b8dd14d2410334b66',1,'Eindopdracht.Search.FindMin()'],['../class_eindopdracht_1_1_binary_search_tree.html#af076977f9244ca5c4a507be90971a4be',1,'Eindopdracht.BinarySearchTree.findMin()']]],
-  ['firstseqsearch',['firstSeqSearch',['../class_eindopdracht_1_1_search.html#a1053c654b39096077ada19e9d4b5ef52',1,'Eindopdracht::Search']]]
-];

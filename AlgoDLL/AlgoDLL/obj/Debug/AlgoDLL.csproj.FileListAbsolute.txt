@@ -1,0 +1,5 @@
+D:\Users\Natha\Documents\Visual Studio 2017\Projects\AlgoDLL\AlgoDLL\bin\Debug\AlgoDLL.dll
+D:\Users\Natha\Documents\Visual Studio 2017\Projects\AlgoDLL\AlgoDLL\bin\Debug\AlgoDLL.pdb
+D:\Users\Natha\Documents\Visual Studio 2017\Projects\AlgoDLL\AlgoDLL\obj\Debug\AlgoDLL.csprojResolveAssemblyReference.cache
+D:\Users\Natha\Documents\Visual Studio 2017\Projects\AlgoDLL\AlgoDLL\obj\Debug\AlgoDLL.dll
+D:\Users\Natha\Documents\Visual Studio 2017\Projects\AlgoDLL\AlgoDLL\obj\Debug\AlgoDLL.pdb

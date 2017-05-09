@@ -1,13 +1,12 @@
 ﻿using System;
+/*
+ *      AUTEUR: Nathan van Vliet 
+ */
 using System.Collections.Generic;
 using System.Collections;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using AlgoDLL;
 
 namespace Eindopdracht
 {
@@ -51,8 +50,9 @@ namespace Eindopdracht
 
         public Main()
         {
-            //set the priority of the program to the highest
-            System.Diagnostics.Process.GetCurrentProcess().PriorityClass = System.Diagnostics.ProcessPriorityClass.RealTime;
+       
+    //set the priority of the program to the highest
+    System.Diagnostics.Process.GetCurrentProcess().PriorityClass = System.Diagnostics.ProcessPriorityClass.RealTime;
             InitializeComponent();
             fillIterList();
         }
