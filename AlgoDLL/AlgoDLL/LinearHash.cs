@@ -94,11 +94,14 @@ namespace AlgoDLL
             try
             {
                 long tot = 0;
+				//Convert the string to characters
                 char[] cname = s.ToCharArray();
 
+				//for every character add the value to the total
                 for (int i = 0; i <= cname.GetUpperBound(0); i++)
                     tot += 37 * tot + (int)cname[i];
 
+				//add the int (total modulus data length/upperbound)
                 tot = tot % arr.GetUpperBound(0);
                 if (tot < 0)
                     tot += arr.GetUpperBound(0);
