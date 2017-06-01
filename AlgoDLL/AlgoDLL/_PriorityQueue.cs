@@ -1,5 +1,6 @@
 ﻿/*
- *      AUTEUR: Nathan van Vliet
+ *      AUTEUR: Henk Lambeck
+ *      SOURCE: McMillan, M. (2007). Data Structures and Algorithms Using C#. Cambridge, Groot-Brittannië: Cambridge University Press
  */
 
 using System;
@@ -13,6 +14,7 @@ namespace AlgoDLL
 {
     public class pqItem<T> where T : IComparable
     {
+        //same as normal _Queue item but added priority
         public int priority = 0;
         public T value;
        
@@ -62,6 +64,7 @@ namespace AlgoDLL
         {
             try
             {
+                //return the amount of items in the list
                 return list.Count;
             }
             catch (Exception ex)
@@ -76,6 +79,7 @@ namespace AlgoDLL
         /// </summary>
         public void clear()
         {
+            //clear the list
             list = new List<pqItem<T>>();
         }
 
@@ -111,6 +115,7 @@ namespace AlgoDLL
         {
             try
             {
+                //return the first item in the queue
                 return list.First().value;
             }
             catch (Exception e)
@@ -127,8 +132,10 @@ namespace AlgoDLL
         {
             try
             {
+                //loop through all items in the queue
                 for (int i = 0; i < (list.Count - 1); i++)
                 {
+                    //print the item information
                     Debug.WriteLine(list[i]);
                 }
             }
@@ -148,6 +155,7 @@ namespace AlgoDLL
         {
             try
             {
+                //return the value of the item at the given index
                 pqItem<T> temp = list[index];
                 return temp.value;
             }

@@ -1,5 +1,6 @@
 ﻿/*
- *      AUTEUR: Nathan van Vliet
+ *      AUTEUR: Henk Lambeck
+ *      SOURCE: McMillan, M. (2007). Data Structures and Algorithms Using C#. Cambridge, Groot-Brittannië: Cambridge University Press
  */
 
 using System;
@@ -27,6 +28,7 @@ namespace AlgoDLL
         {
             try
             {
+                //insert the new item in the queue at the start
                 list.Insert(0, item);
             }
             catch (Exception ex)
@@ -41,6 +43,7 @@ namespace AlgoDLL
         /// <returns>length of the queue</returns>
         public int Count()
         {
+            //return the amount of items in the list
             return list.Count;
         }
 
@@ -49,6 +52,7 @@ namespace AlgoDLL
         /// </summary>
         public void clear()
         {
+            //clear the list
             list = new List<T>();
         }
 
@@ -84,6 +88,7 @@ namespace AlgoDLL
         {
             try
             {
+                //return the first item in the queue
                 return list.First();
             }
             catch (Exception e)
@@ -98,8 +103,10 @@ namespace AlgoDLL
         /// </summary>
         public void loop()
         {
+            //loop through all items in the queue
             for (int i = 0; i < (list.Count - 1); i++)
             {
+                //print the item information
                 Debug.WriteLine(list[i]);
             }
         }
@@ -112,6 +119,7 @@ namespace AlgoDLL
         /// <returns>the item at the given index number</returns>
         public T getIndex(int index)
         {
+            //return the value of the item at the given index
             return list[index];
         }
     }

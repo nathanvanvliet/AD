@@ -1,5 +1,6 @@
 ﻿/*
  *      AUTEUR: Nathan van Vliet 
+ *      SOURCE: McMillan, M. (2007). Data Structures and Algorithms Using C#. Cambridge, Groot-Brittannië: Cambridge University Press
  */
 using System;
 using System.Collections.Generic;
@@ -121,10 +122,14 @@ namespace AlgoDLL
         {
             try
             {
+                // if there is a root
                 if (theRoot != null)
                 {
+                    // print left
                     inOrder(theRoot.left);
+                    // print root
                     nodes.Add(theRoot);
+                    // print right
                     inOrder(theRoot.right);
                 }
             }
@@ -143,10 +148,14 @@ namespace AlgoDLL
         {
             try
             {
+                // if there is a root 
                 if (theRoot != null)
                 {
+                    // print root
                     nodes.Add(theRoot);
+                    // print left
                     inOrder(theRoot.left);
+                    // print right 
                     inOrder(theRoot.right);
                 }
             }
@@ -154,7 +163,7 @@ namespace AlgoDLL
             {
                 Console.WriteLine(ex);
             }
-            
+
         }
 
         /// <summary>
@@ -166,10 +175,14 @@ namespace AlgoDLL
         {
             try
             {
+                // if there is a root
                 if (theRoot != null)
                 {
+                    // print left
                     inOrder(theRoot.left);
+                    // print right
                     inOrder(theRoot.right);
+                    // print root
                     nodes.Add(theRoot);
                 }
             }
@@ -177,7 +190,7 @@ namespace AlgoDLL
             {
                 Console.WriteLine(ex);
             }
-            
+
         }
 
         /// <summary>
@@ -232,7 +245,7 @@ namespace AlgoDLL
                 }
                 else
                 {
-                    return fail; 
+                    return fail;
                 }
             }
             catch (Exception ex)
@@ -240,7 +253,7 @@ namespace AlgoDLL
                 Console.WriteLine(ex);
                 return fail;
             }
-            
+
         }
 
         /// <summary>
@@ -299,85 +312,88 @@ namespace AlgoDLL
             bool isLeftChild = true;
             try
             {
-                while (current.data.CompareTo(key) != 0)
+                while (current.data.CompareTo(key) != 0) //loop until the selected Node is found.
                 {
                     parent = current;
-                    if (current.data.CompareTo(key) > 0)
+                    if (current.data.CompareTo(key) > 0) // if the current node is a left node
                     {
                         isLeftChild = true;
                         current = current.right;
                     }
-                    else
+                    else // if it is a right node
                     {
                         isLeftChild = false;
                         current = current.right;
                     }
-                    if (current == null)
+                    if (current == null) // the end is reached, no more nodes to check and nothing found
                     {
                         return false;
                     }
                 }
-                if (current.left == null && current.right == null)
+                //the node is found.
+                if (current.left == null && current.right == null) // if there are no more node further down
                 {
-                    if (current == root)
+                    if (current == root) // + AND the current is the root. (only a root without other nodes.)
                     {
-                        root = null;
+                        root = null; //unset the root
                     }
-                    else if (isLeftChild)
+                    else if (isLeftChild) // if the node is a leftnode (child)
                     {
-                        parent.left = null;
+                        parent.left = null; //delete this node and all other node below
                     }
                     else
                     {
-                        parent.right = null;
+                        parent.right = null;  //delete this node and all other node below
                     }
                 }
-                else if (current.right == null)
+                //if the node is a left node and there is no right node.
+                else if (current.right == null) //if only the right node is empty
                 {
-                    if (current == root)
+                    if (current == root) // + AND the current is the root.
                     {
-                        root = current.left;
+                        root = current.left; // the left node of the current is the root
                     }
-                    else if (isLeftChild)
+                    else if (isLeftChild) //if the current is a left node
                     {
-                        parent.left = current.left;
+                        parent.left = current.left; //all children are assigned to the current node parent (unsetting the current)
                     }
-                    else
+                    else //if it is a right node of the parent
                     {
-                        parent.right = current.right;
+                        parent.right = current.right; //all children are assigned to the current node parent (unsetting the current)
                     }
                 }
-                else if (current.left == null)
+                //there is a right node but no left
+                else if (current.left == null) //if there is only a right node
                 {
-                    if (current == root)
+                    if (current == root) // + AND the current is also the root
                     {
-                        root = current.right;
+                        root = current.right; //unset the root by setting the right node as the root
                     }
-                    else if (isLeftChild)
+                    else if (isLeftChild) // if this is the left node of the parent
                     {
-                        parent.left = current.right;
+                        parent.left = current.right; // swap the parents left and current right (balance the tree)
                     }
                     else
                     {
-                        parent.right = current.right;
+                        parent.right = current.right; // unset the current by assigning the children of the current to the parent
                     }
                 }
                 else
                 {
-                    TreeNode<T> successor = GetSuccessor(current);
-                    if (current == root)
+                    TreeNode<T> successor = GetSuccessor(current); // get the successor of the current node
+                    if (current == root) // if the current is the root
                     {
-                        root = successor;
+                        root = successor; //replace the root with the successor
                     }
-                    else if (isLeftChild)
+                    else if (isLeftChild) // if the current is a left child of the parent
                     {
-                        parent.left = successor;
+                        parent.left = successor; // set the make the current the sucessor (unsetting the current)
                     }
                     else
                     {
-                        parent.right = successor;
+                        parent.right = successor; //if it is a right node of the parent, set the successor as the parent right node (unsetting the current)
                     }
-                    successor.left = current.left;
+                    successor.left = current.left; //set the left of the successor to the current left node
                 }
                 return true;
             }
@@ -388,9 +404,8 @@ namespace AlgoDLL
             }
         }
 
-
         /// <summary>
-        /// Find node to replace the node to be deleted 
+        /// Find node to replace the node to be deleted
         /// </summary>
         /// <param name="delNode"> node to be deleted </param>
         /// <returns>the node to replace the node to be deleted </returns>
@@ -401,18 +416,19 @@ namespace AlgoDLL
                 TreeNode<T> successorParent = delNode;
                 TreeNode<T> successor = delNode;
                 TreeNode<T> current = delNode.right;
-                while (current != null)
+                while (current != null)  //loop until the current is empty
+
                 {
-                    successorParent = current;
-                    successor = current;
-                    current = current.left;
+                    successorParent = current; //my parent is the current
+                    successor = current; // my successor is the current also
+                    current = current.left; // now my current is my left node
                 }
-                if (successor != delNode.right)
+                if (successor != delNode.right) //if my successor is not the right node of the parameter node
                 {
-                    successorParent.left = successor.right;
-                    successor.right = delNode.right;
+                    successorParent.left = successor.right; //set the left node of my parent as the successor right node
+                    successor.right = delNode.right; // the right node of my successor is the parameters node's right node
                 }
-                return successor;
+                return successor; //return the successor
             }
             catch (Exception e)
             {
@@ -437,6 +453,7 @@ namespace AlgoDLL
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
+                // returns defauls when a error occurs
                 return default(TreeNode<T>);
             }
         }
@@ -466,7 +483,7 @@ namespace AlgoDLL
                 {
                     getNodes(node.left);
                 }
-                if(node.right != null)
+                if (node.right != null)
                 {
                     getNodes(node.right);
                 }
@@ -475,7 +492,7 @@ namespace AlgoDLL
             {
                 Console.WriteLine(ex);
             }
-            
+
         }
 
         /// <summary>

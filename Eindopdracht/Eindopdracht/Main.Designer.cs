@@ -293,10 +293,9 @@
             this.tabControl1.Controls.Add(this.Iterator);
             this.tabControl1.Controls.Add(this.SearchTree);
             this.tabControl1.Location = new System.Drawing.Point(1, -2);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(713, 578);
+            this.tabControl1.Size = new System.Drawing.Size(535, 470);
             this.tabControl1.TabIndex = 0;
             // 
             // ArrayList
@@ -321,21 +320,19 @@
             this.ArrayList.Controls.Add(this.inputBox);
             this.ArrayList.Controls.Add(this.label1);
             this.ArrayList.Controls.Add(this.arrayBox);
-            this.ArrayList.Location = new System.Drawing.Point(4, 25);
-            this.ArrayList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ArrayList.Location = new System.Drawing.Point(4, 22);
             this.ArrayList.Name = "ArrayList";
-            this.ArrayList.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ArrayList.Size = new System.Drawing.Size(705, 549);
+            this.ArrayList.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.ArrayList.Size = new System.Drawing.Size(527, 444);
             this.ArrayList.TabIndex = 0;
             this.ArrayList.Text = "ArrayList";
             this.ArrayList.UseVisualStyleBackColor = true;
             // 
             // removeAtButton
             // 
-            this.removeAtButton.Location = new System.Drawing.Point(493, 286);
-            this.removeAtButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.removeAtButton.Location = new System.Drawing.Point(370, 232);
             this.removeAtButton.Name = "removeAtButton";
-            this.removeAtButton.Size = new System.Drawing.Size(141, 28);
+            this.removeAtButton.Size = new System.Drawing.Size(106, 23);
             this.removeAtButton.TabIndex = 19;
             this.removeAtButton.Text = "remove";
             this.removeAtButton.UseVisualStyleBackColor = true;
@@ -344,27 +341,24 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(493, 229);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(370, 186);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 17);
+            this.label4.Size = new System.Drawing.Size(104, 13);
             this.label4.TabIndex = 18;
             this.label4.Text = "remove with index nr";
             // 
             // indexBox
             // 
-            this.indexBox.Location = new System.Drawing.Point(493, 252);
-            this.indexBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.indexBox.Location = new System.Drawing.Point(370, 205);
             this.indexBox.Name = "indexBox";
-            this.indexBox.Size = new System.Drawing.Size(132, 22);
+            this.indexBox.Size = new System.Drawing.Size(100, 20);
             this.indexBox.TabIndex = 17;
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(493, 117);
-            this.clearButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clearButton.Location = new System.Drawing.Point(370, 95);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(141, 28);
+            this.clearButton.Size = new System.Drawing.Size(106, 23);
             this.clearButton.TabIndex = 16;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
@@ -372,10 +366,9 @@
             // 
             // refreshButton
             // 
-            this.refreshButton.Location = new System.Drawing.Point(493, 69);
-            this.refreshButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.refreshButton.Location = new System.Drawing.Point(370, 56);
             this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(141, 28);
+            this.refreshButton.Size = new System.Drawing.Size(106, 23);
             this.refreshButton.TabIndex = 15;
             this.refreshButton.Text = "refresh ListBox";
             this.refreshButton.UseVisualStyleBackColor = true;
@@ -384,18 +377,16 @@
             // capacityLabel
             // 
             this.capacityLabel.AutoSize = true;
-            this.capacityLabel.Location = new System.Drawing.Point(275, 385);
-            this.capacityLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.capacityLabel.Location = new System.Drawing.Point(206, 313);
             this.capacityLabel.Name = "capacityLabel";
-            this.capacityLabel.Size = new System.Drawing.Size(0, 17);
+            this.capacityLabel.Size = new System.Drawing.Size(0, 13);
             this.capacityLabel.TabIndex = 14;
             // 
             // capacityButton
             // 
-            this.capacityButton.Location = new System.Drawing.Point(227, 348);
-            this.capacityButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.capacityButton.Location = new System.Drawing.Point(170, 283);
             this.capacityButton.Name = "capacityButton";
-            this.capacityButton.Size = new System.Drawing.Size(228, 28);
+            this.capacityButton.Size = new System.Drawing.Size(171, 23);
             this.capacityButton.TabIndex = 13;
             this.capacityButton.Text = "What is the arraylist capacity?";
             this.capacityButton.UseVisualStyleBackColor = true;
@@ -404,18 +395,16 @@
             // indexLabel
             // 
             this.indexLabel.AutoSize = true;
-            this.indexLabel.Location = new System.Drawing.Point(28, 385);
-            this.indexLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.indexLabel.Location = new System.Drawing.Point(21, 313);
             this.indexLabel.Name = "indexLabel";
-            this.indexLabel.Size = new System.Drawing.Size(0, 17);
+            this.indexLabel.Size = new System.Drawing.Size(0, 13);
             this.indexLabel.TabIndex = 12;
             // 
             // indexButton
             // 
-            this.indexButton.Location = new System.Drawing.Point(28, 348);
-            this.indexButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.indexButton.Location = new System.Drawing.Point(21, 283);
             this.indexButton.Name = "indexButton";
-            this.indexButton.Size = new System.Drawing.Size(156, 28);
+            this.indexButton.Size = new System.Drawing.Size(117, 23);
             this.indexButton.TabIndex = 11;
             this.indexButton.Text = "At what index?";
             this.indexButton.UseVisualStyleBackColor = true;
@@ -424,26 +413,23 @@
             // inArrayLabel
             // 
             this.inArrayLabel.AutoSize = true;
-            this.inArrayLabel.Location = new System.Drawing.Point(32, 321);
-            this.inArrayLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.inArrayLabel.Location = new System.Drawing.Point(24, 261);
             this.inArrayLabel.Name = "inArrayLabel";
-            this.inArrayLabel.Size = new System.Drawing.Size(0, 17);
+            this.inArrayLabel.Size = new System.Drawing.Size(0, 13);
             this.inArrayLabel.TabIndex = 10;
             // 
             // searchBox
             // 
-            this.searchBox.Location = new System.Drawing.Point(32, 252);
-            this.searchBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchBox.Location = new System.Drawing.Point(24, 205);
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(132, 22);
+            this.searchBox.Size = new System.Drawing.Size(100, 20);
             this.searchBox.TabIndex = 9;
             // 
             // inArrayButton
             // 
-            this.inArrayButton.Location = new System.Drawing.Point(28, 284);
-            this.inArrayButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inArrayButton.Location = new System.Drawing.Point(21, 231);
             this.inArrayButton.Name = "inArrayButton";
-            this.inArrayButton.Size = new System.Drawing.Size(156, 28);
+            this.inArrayButton.Size = new System.Drawing.Size(117, 23);
             this.inArrayButton.TabIndex = 8;
             this.inArrayButton.Text = "content in arrray?";
             this.inArrayButton.UseVisualStyleBackColor = true;
@@ -452,19 +438,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 229);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(21, 186);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 17);
+            this.label3.Size = new System.Drawing.Size(94, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Find some content";
             // 
             // removeButton
             // 
-            this.removeButton.Location = new System.Drawing.Point(28, 177);
-            this.removeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.removeButton.Location = new System.Drawing.Point(21, 144);
             this.removeButton.Name = "removeButton";
-            this.removeButton.Size = new System.Drawing.Size(156, 28);
+            this.removeButton.Size = new System.Drawing.Size(117, 23);
             this.removeButton.TabIndex = 6;
             this.removeButton.Text = "Remove";
             this.removeButton.UseVisualStyleBackColor = true;
@@ -472,10 +456,9 @@
             // 
             // addRangeButton
             // 
-            this.addRangeButton.Location = new System.Drawing.Point(28, 140);
-            this.addRangeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addRangeButton.Location = new System.Drawing.Point(21, 114);
             this.addRangeButton.Name = "addRangeButton";
-            this.addRangeButton.Size = new System.Drawing.Size(156, 28);
+            this.addRangeButton.Size = new System.Drawing.Size(117, 23);
             this.addRangeButton.TabIndex = 5;
             this.addRangeButton.Text = "add range";
             this.addRangeButton.UseVisualStyleBackColor = true;
@@ -483,10 +466,9 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(28, 103);
-            this.addButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addButton.Location = new System.Drawing.Point(21, 84);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(156, 28);
+            this.addButton.Size = new System.Drawing.Size(117, 23);
             this.addButton.TabIndex = 4;
             this.addButton.Text = "Add to arraylist";
             this.addButton.UseVisualStyleBackColor = true;
@@ -495,49 +477,43 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 46);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(21, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 17);
+            this.label2.Size = new System.Drawing.Size(133, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Add/remove some content";
             // 
             // inputBox
             // 
-            this.inputBox.Location = new System.Drawing.Point(28, 70);
-            this.inputBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputBox.Location = new System.Drawing.Point(21, 57);
             this.inputBox.Name = "inputBox";
-            this.inputBox.Size = new System.Drawing.Size(132, 22);
+            this.inputBox.Size = new System.Drawing.Size(100, 20);
             this.inputBox.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(227, 46);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(170, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 17);
+            this.label1.Size = new System.Drawing.Size(112, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Content of the arraylist";
             // 
             // arrayBox
             // 
             this.arrayBox.FormattingEnabled = true;
-            this.arrayBox.ItemHeight = 16;
-            this.arrayBox.Location = new System.Drawing.Point(227, 69);
-            this.arrayBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.arrayBox.Location = new System.Drawing.Point(170, 56);
             this.arrayBox.Name = "arrayBox";
-            this.arrayBox.Size = new System.Drawing.Size(227, 260);
+            this.arrayBox.Size = new System.Drawing.Size(171, 212);
             this.arrayBox.TabIndex = 0;
             // 
             // Sort
             // 
             this.Sort.Controls.Add(this.tabControl2);
-            this.Sort.Location = new System.Drawing.Point(4, 25);
-            this.Sort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Sort.Location = new System.Drawing.Point(4, 22);
             this.Sort.Name = "Sort";
-            this.Sort.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Sort.Size = new System.Drawing.Size(705, 549);
+            this.Sort.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Sort.Size = new System.Drawing.Size(527, 444);
             this.Sort.TabIndex = 1;
             this.Sort.Text = "Sort";
             this.Sort.UseVisualStyleBackColor = true;
@@ -549,10 +525,9 @@
             this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Controls.Add(this.tabPage4);
             this.tabControl2.Location = new System.Drawing.Point(0, 0);
-            this.tabControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(703, 546);
+            this.tabControl2.Size = new System.Drawing.Size(527, 444);
             this.tabControl2.TabIndex = 0;
             // 
             // tabPage1
@@ -567,21 +542,19 @@
             this.tabPage1.Controls.Add(this.label21);
             this.tabPage1.Controls.Add(this.selectSortBox);
             this.tabPage1.Controls.Add(this.selectUnsortBox);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage1.Size = new System.Drawing.Size(695, 517);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Size = new System.Drawing.Size(519, 418);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Selection";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(512, 47);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(384, 38);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 9;
             this.button1.Text = "Clear";
             this.button1.UseVisualStyleBackColor = true;
@@ -591,29 +564,26 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(439, 366);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Location = new System.Drawing.Point(242, 295);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(65, 25);
+            this.label25.Size = new System.Drawing.Size(34, 20);
             this.label25.TabIndex = 8;
-            this.label25.Text = "Ticks:";
+            this.label25.Text = "Ms:";
             // 
             // timeLabelSelect
             // 
             this.timeLabelSelect.AutoSize = true;
             this.timeLabelSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeLabelSelect.Location = new System.Drawing.Point(529, 366);
-            this.timeLabelSelect.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.timeLabelSelect.Location = new System.Drawing.Point(310, 295);
             this.timeLabelSelect.Name = "timeLabelSelect";
-            this.timeLabelSelect.Size = new System.Drawing.Size(0, 25);
+            this.timeLabelSelect.Size = new System.Drawing.Size(0, 20);
             this.timeLabelSelect.TabIndex = 7;
             // 
             // selectReverse
             // 
-            this.selectReverse.Location = new System.Drawing.Point(499, 256);
-            this.selectReverse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.selectReverse.Location = new System.Drawing.Point(374, 208);
             this.selectReverse.Name = "selectReverse";
-            this.selectReverse.Size = new System.Drawing.Size(171, 28);
+            this.selectReverse.Size = new System.Drawing.Size(128, 23);
             this.selectReverse.TabIndex = 6;
             this.selectReverse.Text = "reverse sort string";
             this.selectReverse.UseVisualStyleBackColor = true;
@@ -621,10 +591,9 @@
             // 
             // selectSortInt
             // 
-            this.selectSortInt.Location = new System.Drawing.Point(499, 292);
-            this.selectSortInt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.selectSortInt.Location = new System.Drawing.Point(374, 237);
             this.selectSortInt.Name = "selectSortInt";
-            this.selectSortInt.Size = new System.Drawing.Size(171, 28);
+            this.selectSortInt.Size = new System.Drawing.Size(128, 23);
             this.selectSortInt.TabIndex = 5;
             this.selectSortInt.Text = "sort int array (1000)";
             this.selectSortInt.UseVisualStyleBackColor = true;
@@ -632,10 +601,9 @@
             // 
             // selectSortString
             // 
-            this.selectSortString.Location = new System.Drawing.Point(499, 220);
-            this.selectSortString.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.selectSortString.Location = new System.Drawing.Point(374, 179);
             this.selectSortString.Name = "selectSortString";
-            this.selectSortString.Size = new System.Drawing.Size(171, 28);
+            this.selectSortString.Size = new System.Drawing.Size(128, 23);
             this.selectSortString.TabIndex = 4;
             this.selectSortString.Text = "sort string array (100)";
             this.selectSortString.UseVisualStyleBackColor = true;
@@ -644,41 +612,35 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(285, 23);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Location = new System.Drawing.Point(214, 19);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(85, 17);
+            this.label22.Size = new System.Drawing.Size(62, 13);
             this.label22.TabIndex = 3;
             this.label22.Text = "sorted array";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(40, 23);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(30, 19);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(101, 17);
+            this.label21.Size = new System.Drawing.Size(74, 13);
             this.label21.TabIndex = 2;
             this.label21.Text = "unsorted array";
             // 
             // selectSortBox
             // 
             this.selectSortBox.FormattingEnabled = true;
-            this.selectSortBox.ItemHeight = 16;
-            this.selectSortBox.Location = new System.Drawing.Point(285, 47);
-            this.selectSortBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.selectSortBox.Location = new System.Drawing.Point(214, 38);
             this.selectSortBox.Name = "selectSortBox";
-            this.selectSortBox.Size = new System.Drawing.Size(189, 292);
+            this.selectSortBox.Size = new System.Drawing.Size(143, 238);
             this.selectSortBox.TabIndex = 1;
             // 
             // selectUnsortBox
             // 
             this.selectUnsortBox.FormattingEnabled = true;
-            this.selectUnsortBox.ItemHeight = 16;
-            this.selectUnsortBox.Location = new System.Drawing.Point(40, 47);
-            this.selectUnsortBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.selectUnsortBox.Location = new System.Drawing.Point(30, 38);
             this.selectUnsortBox.Name = "selectUnsortBox";
-            this.selectUnsortBox.Size = new System.Drawing.Size(188, 292);
+            this.selectUnsortBox.Size = new System.Drawing.Size(142, 238);
             this.selectUnsortBox.TabIndex = 0;
             // 
             // tabPage2
@@ -693,21 +655,19 @@
             this.tabPage2.Controls.Add(this.label29);
             this.tabPage2.Controls.Add(this.bubbleSorted);
             this.tabPage2.Controls.Add(this.bubbleUnsort);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage2.Size = new System.Drawing.Size(695, 517);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Size = new System.Drawing.Size(519, 418);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Bubble";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // bubbleClear
             // 
-            this.bubbleClear.Location = new System.Drawing.Point(503, 48);
-            this.bubbleClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bubbleClear.Location = new System.Drawing.Point(377, 39);
             this.bubbleClear.Name = "bubbleClear";
-            this.bubbleClear.Size = new System.Drawing.Size(100, 28);
+            this.bubbleClear.Size = new System.Drawing.Size(75, 23);
             this.bubbleClear.TabIndex = 19;
             this.bubbleClear.Text = "Clear";
             this.bubbleClear.UseVisualStyleBackColor = true;
@@ -717,29 +677,26 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(429, 367);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Location = new System.Drawing.Point(235, 298);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(65, 25);
+            this.label26.Size = new System.Drawing.Size(34, 20);
             this.label26.TabIndex = 18;
-            this.label26.Text = "Ticks:";
+            this.label26.Text = "Ms:";
             // 
             // bubbleTimeLabel
             // 
             this.bubbleTimeLabel.AutoSize = true;
             this.bubbleTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bubbleTimeLabel.Location = new System.Drawing.Point(520, 367);
-            this.bubbleTimeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bubbleTimeLabel.Location = new System.Drawing.Point(303, 298);
             this.bubbleTimeLabel.Name = "bubbleTimeLabel";
-            this.bubbleTimeLabel.Size = new System.Drawing.Size(0, 25);
+            this.bubbleTimeLabel.Size = new System.Drawing.Size(0, 20);
             this.bubbleTimeLabel.TabIndex = 17;
             // 
             // bubbleReverse
             // 
-            this.bubbleReverse.Location = new System.Drawing.Point(489, 257);
-            this.bubbleReverse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bubbleReverse.Location = new System.Drawing.Point(367, 209);
             this.bubbleReverse.Name = "bubbleReverse";
-            this.bubbleReverse.Size = new System.Drawing.Size(171, 28);
+            this.bubbleReverse.Size = new System.Drawing.Size(128, 23);
             this.bubbleReverse.TabIndex = 16;
             this.bubbleReverse.Text = "reverse sort string";
             this.bubbleReverse.UseVisualStyleBackColor = true;
@@ -747,10 +704,9 @@
             // 
             // bubbleInt
             // 
-            this.bubbleInt.Location = new System.Drawing.Point(489, 293);
-            this.bubbleInt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bubbleInt.Location = new System.Drawing.Point(367, 238);
             this.bubbleInt.Name = "bubbleInt";
-            this.bubbleInt.Size = new System.Drawing.Size(171, 28);
+            this.bubbleInt.Size = new System.Drawing.Size(128, 23);
             this.bubbleInt.TabIndex = 15;
             this.bubbleInt.Text = "sort int array (1000)";
             this.bubbleInt.UseVisualStyleBackColor = true;
@@ -758,10 +714,9 @@
             // 
             // bubbleArray
             // 
-            this.bubbleArray.Location = new System.Drawing.Point(489, 222);
-            this.bubbleArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bubbleArray.Location = new System.Drawing.Point(367, 180);
             this.bubbleArray.Name = "bubbleArray";
-            this.bubbleArray.Size = new System.Drawing.Size(171, 28);
+            this.bubbleArray.Size = new System.Drawing.Size(128, 23);
             this.bubbleArray.TabIndex = 14;
             this.bubbleArray.Text = "sort string array (100)";
             this.bubbleArray.UseVisualStyleBackColor = true;
@@ -770,41 +725,35 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(276, 25);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Location = new System.Drawing.Point(207, 20);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(85, 17);
+            this.label28.Size = new System.Drawing.Size(62, 13);
             this.label28.TabIndex = 13;
             this.label28.Text = "sorted array";
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(31, 25);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Location = new System.Drawing.Point(23, 20);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(101, 17);
+            this.label29.Size = new System.Drawing.Size(74, 13);
             this.label29.TabIndex = 12;
             this.label29.Text = "unsorted array";
             // 
             // bubbleSorted
             // 
             this.bubbleSorted.FormattingEnabled = true;
-            this.bubbleSorted.ItemHeight = 16;
-            this.bubbleSorted.Location = new System.Drawing.Point(276, 48);
-            this.bubbleSorted.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bubbleSorted.Location = new System.Drawing.Point(207, 39);
             this.bubbleSorted.Name = "bubbleSorted";
-            this.bubbleSorted.Size = new System.Drawing.Size(189, 292);
+            this.bubbleSorted.Size = new System.Drawing.Size(143, 238);
             this.bubbleSorted.TabIndex = 11;
             // 
             // bubbleUnsort
             // 
             this.bubbleUnsort.FormattingEnabled = true;
-            this.bubbleUnsort.ItemHeight = 16;
-            this.bubbleUnsort.Location = new System.Drawing.Point(31, 48);
-            this.bubbleUnsort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bubbleUnsort.Location = new System.Drawing.Point(23, 39);
             this.bubbleUnsort.Name = "bubbleUnsort";
-            this.bubbleUnsort.Size = new System.Drawing.Size(188, 292);
+            this.bubbleUnsort.Size = new System.Drawing.Size(142, 238);
             this.bubbleUnsort.TabIndex = 10;
             // 
             // tabPage3
@@ -819,20 +768,18 @@
             this.tabPage3.Controls.Add(this.label34);
             this.tabPage3.Controls.Add(this.insertSorted);
             this.tabPage3.Controls.Add(this.insertUnsort);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(695, 517);
+            this.tabPage3.Size = new System.Drawing.Size(519, 418);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Insertion";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // insertClear
             // 
-            this.insertClear.Location = new System.Drawing.Point(503, 97);
-            this.insertClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.insertClear.Location = new System.Drawing.Point(377, 79);
             this.insertClear.Name = "insertClear";
-            this.insertClear.Size = new System.Drawing.Size(100, 28);
+            this.insertClear.Size = new System.Drawing.Size(75, 23);
             this.insertClear.TabIndex = 29;
             this.insertClear.Text = "Clear";
             this.insertClear.UseVisualStyleBackColor = true;
@@ -842,29 +789,26 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(429, 416);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Location = new System.Drawing.Point(235, 338);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(65, 25);
+            this.label31.Size = new System.Drawing.Size(34, 20);
             this.label31.TabIndex = 28;
-            this.label31.Text = "Ticks:";
+            this.label31.Text = "Ms:";
             // 
             // insertTimeLabel
             // 
             this.insertTimeLabel.AutoSize = true;
             this.insertTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insertTimeLabel.Location = new System.Drawing.Point(520, 416);
-            this.insertTimeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.insertTimeLabel.Location = new System.Drawing.Point(303, 338);
             this.insertTimeLabel.Name = "insertTimeLabel";
-            this.insertTimeLabel.Size = new System.Drawing.Size(0, 25);
+            this.insertTimeLabel.Size = new System.Drawing.Size(0, 20);
             this.insertTimeLabel.TabIndex = 27;
             // 
             // insertReverse
             // 
-            this.insertReverse.Location = new System.Drawing.Point(489, 306);
-            this.insertReverse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.insertReverse.Location = new System.Drawing.Point(367, 249);
             this.insertReverse.Name = "insertReverse";
-            this.insertReverse.Size = new System.Drawing.Size(171, 28);
+            this.insertReverse.Size = new System.Drawing.Size(128, 23);
             this.insertReverse.TabIndex = 26;
             this.insertReverse.Text = "reverse sort string";
             this.insertReverse.UseVisualStyleBackColor = true;
@@ -872,10 +816,9 @@
             // 
             // insertInt
             // 
-            this.insertInt.Location = new System.Drawing.Point(489, 342);
-            this.insertInt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.insertInt.Location = new System.Drawing.Point(367, 278);
             this.insertInt.Name = "insertInt";
-            this.insertInt.Size = new System.Drawing.Size(171, 28);
+            this.insertInt.Size = new System.Drawing.Size(128, 23);
             this.insertInt.TabIndex = 25;
             this.insertInt.Text = "sort int array (1000)";
             this.insertInt.UseVisualStyleBackColor = true;
@@ -883,10 +826,9 @@
             // 
             // insertString
             // 
-            this.insertString.Location = new System.Drawing.Point(489, 271);
-            this.insertString.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.insertString.Location = new System.Drawing.Point(367, 220);
             this.insertString.Name = "insertString";
-            this.insertString.Size = new System.Drawing.Size(171, 28);
+            this.insertString.Size = new System.Drawing.Size(128, 23);
             this.insertString.TabIndex = 24;
             this.insertString.Text = "sort string array (100)";
             this.insertString.UseVisualStyleBackColor = true;
@@ -895,41 +837,35 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(276, 74);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Location = new System.Drawing.Point(207, 60);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(85, 17);
+            this.label33.Size = new System.Drawing.Size(62, 13);
             this.label33.TabIndex = 23;
             this.label33.Text = "sorted array";
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(31, 74);
-            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label34.Location = new System.Drawing.Point(23, 60);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(101, 17);
+            this.label34.Size = new System.Drawing.Size(74, 13);
             this.label34.TabIndex = 22;
             this.label34.Text = "unsorted array";
             // 
             // insertSorted
             // 
             this.insertSorted.FormattingEnabled = true;
-            this.insertSorted.ItemHeight = 16;
-            this.insertSorted.Location = new System.Drawing.Point(276, 97);
-            this.insertSorted.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.insertSorted.Location = new System.Drawing.Point(207, 79);
             this.insertSorted.Name = "insertSorted";
-            this.insertSorted.Size = new System.Drawing.Size(189, 292);
+            this.insertSorted.Size = new System.Drawing.Size(143, 238);
             this.insertSorted.TabIndex = 21;
             // 
             // insertUnsort
             // 
             this.insertUnsort.FormattingEnabled = true;
-            this.insertUnsort.ItemHeight = 16;
-            this.insertUnsort.Location = new System.Drawing.Point(31, 97);
-            this.insertUnsort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.insertUnsort.Location = new System.Drawing.Point(23, 79);
             this.insertUnsort.Name = "insertUnsort";
-            this.insertUnsort.Size = new System.Drawing.Size(188, 292);
+            this.insertUnsort.Size = new System.Drawing.Size(142, 238);
             this.insertUnsort.TabIndex = 20;
             // 
             // tabPage4
@@ -947,10 +883,9 @@
             this.tabPage4.Controls.Add(this.sortString);
             this.tabPage4.Controls.Add(this.label32);
             this.tabPage4.Controls.Add(this.execCount);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(695, 517);
+            this.tabPage4.Size = new System.Drawing.Size(519, 418);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Compare";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -959,61 +894,55 @@
             // 
             this.winnerLabel.AutoSize = true;
             this.winnerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.winnerLabel.Location = new System.Drawing.Point(263, 188);
-            this.winnerLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.winnerLabel.Location = new System.Drawing.Point(197, 153);
             this.winnerLabel.Name = "winnerLabel";
-            this.winnerLabel.Size = new System.Drawing.Size(0, 25);
+            this.winnerLabel.Size = new System.Drawing.Size(0, 20);
             this.winnerLabel.TabIndex = 12;
             // 
             // insertionTickLabel
             // 
             this.insertionTickLabel.AutoSize = true;
             this.insertionTickLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insertionTickLabel.Location = new System.Drawing.Point(511, 135);
-            this.insertionTickLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.insertionTickLabel.Location = new System.Drawing.Point(348, 110);
             this.insertionTickLabel.Name = "insertionTickLabel";
-            this.insertionTickLabel.Size = new System.Drawing.Size(0, 24);
+            this.insertionTickLabel.Size = new System.Drawing.Size(0, 18);
             this.insertionTickLabel.TabIndex = 11;
             // 
             // bubbleTickLabel
             // 
             this.bubbleTickLabel.AutoSize = true;
             this.bubbleTickLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bubbleTickLabel.Location = new System.Drawing.Point(511, 100);
-            this.bubbleTickLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bubbleTickLabel.Location = new System.Drawing.Point(348, 81);
             this.bubbleTickLabel.Name = "bubbleTickLabel";
-            this.bubbleTickLabel.Size = new System.Drawing.Size(0, 24);
+            this.bubbleTickLabel.Size = new System.Drawing.Size(0, 18);
             this.bubbleTickLabel.TabIndex = 10;
             // 
             // selectTickLabel
             // 
             this.selectTickLabel.AutoSize = true;
             this.selectTickLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectTickLabel.Location = new System.Drawing.Point(511, 63);
-            this.selectTickLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.selectTickLabel.Location = new System.Drawing.Point(348, 51);
             this.selectTickLabel.Name = "selectTickLabel";
-            this.selectTickLabel.Size = new System.Drawing.Size(0, 24);
+            this.selectTickLabel.Size = new System.Drawing.Size(0, 18);
             this.selectTickLabel.TabIndex = 9;
             // 
             // label38
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(507, 23);
-            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label38.Location = new System.Drawing.Point(380, 19);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(54, 24);
+            this.label38.Size = new System.Drawing.Size(29, 18);
             this.label38.TabIndex = 8;
-            this.label38.Text = "Ticks";
+            this.label38.Text = "ms";
             // 
             // label37
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(264, 135);
-            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label37.Location = new System.Drawing.Point(163, 110);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(202, 24);
+            this.label37.Size = new System.Drawing.Size(164, 18);
             this.label37.TabIndex = 7;
             this.label37.Text = "Best time insertion sort:";
             // 
@@ -1021,10 +950,9 @@
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(264, 100);
-            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label36.Location = new System.Drawing.Point(163, 81);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(190, 24);
+            this.label36.Size = new System.Drawing.Size(151, 18);
             this.label36.TabIndex = 6;
             this.label36.Text = "Best time bubble sort:";
             // 
@@ -1032,19 +960,17 @@
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(263, 63);
-            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label35.Location = new System.Drawing.Point(162, 51);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(206, 24);
+            this.label35.Size = new System.Drawing.Size(167, 18);
             this.label35.TabIndex = 5;
             this.label35.Text = "Best time selection sort:";
             // 
             // sortInt
             // 
-            this.sortInt.Location = new System.Drawing.Point(36, 162);
-            this.sortInt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sortInt.Location = new System.Drawing.Point(27, 132);
             this.sortInt.Name = "sortInt";
-            this.sortInt.Size = new System.Drawing.Size(160, 28);
+            this.sortInt.Size = new System.Drawing.Size(120, 23);
             this.sortInt.TabIndex = 4;
             this.sortInt.Text = "sort int array (1000)";
             this.sortInt.UseVisualStyleBackColor = true;
@@ -1052,10 +978,9 @@
             // 
             // sortReverse
             // 
-            this.sortReverse.Location = new System.Drawing.Point(36, 126);
-            this.sortReverse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sortReverse.Location = new System.Drawing.Point(27, 102);
             this.sortReverse.Name = "sortReverse";
-            this.sortReverse.Size = new System.Drawing.Size(160, 28);
+            this.sortReverse.Size = new System.Drawing.Size(120, 23);
             this.sortReverse.TabIndex = 3;
             this.sortReverse.Text = "reverse sort string";
             this.sortReverse.UseVisualStyleBackColor = true;
@@ -1063,10 +988,9 @@
             // 
             // sortString
             // 
-            this.sortString.Location = new System.Drawing.Point(36, 89);
-            this.sortString.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sortString.Location = new System.Drawing.Point(27, 72);
             this.sortString.Name = "sortString";
-            this.sortString.Size = new System.Drawing.Size(160, 28);
+            this.sortString.Size = new System.Drawing.Size(120, 23);
             this.sortString.TabIndex = 2;
             this.sortString.Text = "sort string array (100)";
             this.sortString.UseVisualStyleBackColor = true;
@@ -1075,19 +999,17 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(32, 25);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Location = new System.Drawing.Point(24, 20);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(152, 17);
+            this.label32.Size = new System.Drawing.Size(117, 13);
             this.label32.TabIndex = 1;
             this.label32.Text = "How many executions?";
             // 
             // execCount
             // 
-            this.execCount.Location = new System.Drawing.Point(36, 55);
-            this.execCount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.execCount.Location = new System.Drawing.Point(27, 45);
             this.execCount.Name = "execCount";
-            this.execCount.Size = new System.Drawing.Size(160, 22);
+            this.execCount.Size = new System.Drawing.Size(120, 20);
             this.execCount.TabIndex = 0;
             // 
             // Search
@@ -1125,10 +1047,9 @@
             this.Search.Controls.Add(this.label6);
             this.Search.Controls.Add(this.intInputBox);
             this.Search.Controls.Add(this.label5);
-            this.Search.Location = new System.Drawing.Point(4, 25);
-            this.Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Search.Location = new System.Drawing.Point(4, 22);
             this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(705, 549);
+            this.Search.Size = new System.Drawing.Size(527, 444);
             this.Search.TabIndex = 2;
             this.Search.Text = "Search";
             this.Search.UseVisualStyleBackColor = true;
@@ -1136,49 +1057,44 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(483, 267);
-            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Location = new System.Drawing.Point(362, 217);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(81, 17);
+            this.label30.Size = new System.Drawing.Size(63, 13);
             this.label30.TabIndex = 32;
             this.label30.Text = "Occurance:";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(483, 12);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Location = new System.Drawing.Point(362, 10);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(81, 17);
+            this.label27.Size = new System.Drawing.Size(63, 13);
             this.label27.TabIndex = 31;
             this.label27.Text = "Occurance:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(411, 423);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(308, 344);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(248, 17);
+            this.label14.Size = new System.Drawing.Size(205, 13);
             this.label14.TabIndex = 30;
             this.label14.Text = "sorted: \"a\", \"c\", \"d\", \"d\", \"g\", \"h\", \"s\", \"t\'";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(415, 159);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(311, 129);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(224, 17);
+            this.label10.Size = new System.Drawing.Size(168, 13);
             this.label10.TabIndex = 29;
             this.label10.Text = "sorted: 2, 2, 3, 3, 3, 4, 4, 5, 5, 7, 7";
             // 
             // compareButton
             // 
-            this.compareButton.Location = new System.Drawing.Point(107, 506);
-            this.compareButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.compareButton.Location = new System.Drawing.Point(80, 411);
             this.compareButton.Name = "compareButton";
-            this.compareButton.Size = new System.Drawing.Size(473, 28);
+            this.compareButton.Size = new System.Drawing.Size(355, 23);
             this.compareButton.TabIndex = 28;
             this.compareButton.Text = "Compare binary and sequential search (output in console)";
             this.compareButton.UseVisualStyleBackColor = true;
@@ -1188,39 +1104,35 @@
             // 
             this.stringResultLabel.AutoSize = true;
             this.stringResultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stringResultLabel.Location = new System.Drawing.Point(101, 382);
-            this.stringResultLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.stringResultLabel.Location = new System.Drawing.Point(76, 310);
             this.stringResultLabel.Name = "stringResultLabel";
-            this.stringResultLabel.Size = new System.Drawing.Size(0, 25);
+            this.stringResultLabel.Size = new System.Drawing.Size(0, 20);
             this.stringResultLabel.TabIndex = 27;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(4, 377);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(3, 306);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(87, 29);
+            this.label11.Size = new System.Drawing.Size(67, 24);
             this.label11.TabIndex = 26;
             this.label11.Text = "Result:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(181, 423);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(136, 344);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(226, 17);
+            this.label12.Size = new System.Drawing.Size(164, 13);
             this.label12.TabIndex = 25;
             this.label12.Text = "BinarySearch (sorts the array first)";
             // 
             // stringBinarySearch
             // 
-            this.stringBinarySearch.Location = new System.Drawing.Point(181, 447);
-            this.stringBinarySearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stringBinarySearch.Location = new System.Drawing.Point(136, 363);
             this.stringBinarySearch.Name = "stringBinarySearch";
-            this.stringBinarySearch.Size = new System.Drawing.Size(100, 28);
+            this.stringBinarySearch.Size = new System.Drawing.Size(75, 23);
             this.stringBinarySearch.TabIndex = 24;
             this.stringBinarySearch.Text = "Search";
             this.stringBinarySearch.UseVisualStyleBackColor = true;
@@ -1228,10 +1140,9 @@
             // 
             // stringMax
             // 
-            this.stringMax.Location = new System.Drawing.Point(396, 352);
-            this.stringMax.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stringMax.Location = new System.Drawing.Point(297, 286);
             this.stringMax.Name = "stringMax";
-            this.stringMax.Size = new System.Drawing.Size(184, 28);
+            this.stringMax.Size = new System.Drawing.Size(138, 23);
             this.stringMax.TabIndex = 23;
             this.stringMax.Text = "find maximum value";
             this.stringMax.UseVisualStyleBackColor = true;
@@ -1239,10 +1150,9 @@
             // 
             // stringMin
             // 
-            this.stringMin.Location = new System.Drawing.Point(181, 352);
-            this.stringMin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stringMin.Location = new System.Drawing.Point(136, 286);
             this.stringMin.Name = "stringMin";
-            this.stringMin.Size = new System.Drawing.Size(180, 28);
+            this.stringMin.Size = new System.Drawing.Size(135, 23);
             this.stringMin.TabIndex = 22;
             this.stringMin.Text = "find minimal value";
             this.stringMin.UseVisualStyleBackColor = true;
@@ -1250,10 +1160,9 @@
             // 
             // stringCustOcc
             // 
-            this.stringCustOcc.Location = new System.Drawing.Point(483, 315);
-            this.stringCustOcc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stringCustOcc.Location = new System.Drawing.Point(362, 256);
             this.stringCustOcc.Name = "stringCustOcc";
-            this.stringCustOcc.Size = new System.Drawing.Size(156, 28);
+            this.stringCustOcc.Size = new System.Drawing.Size(117, 23);
             this.stringCustOcc.TabIndex = 21;
             this.stringCustOcc.Text = "Custom occurance";
             this.stringCustOcc.UseVisualStyleBackColor = true;
@@ -1261,18 +1170,16 @@
             // 
             // stringOccBox
             // 
-            this.stringOccBox.Location = new System.Drawing.Point(483, 287);
-            this.stringOccBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stringOccBox.Location = new System.Drawing.Point(362, 233);
             this.stringOccBox.Name = "stringOccBox";
-            this.stringOccBox.Size = new System.Drawing.Size(132, 22);
+            this.stringOccBox.Size = new System.Drawing.Size(100, 20);
             this.stringOccBox.TabIndex = 20;
             // 
             // stringLastOcc
             // 
-            this.stringLastOcc.Location = new System.Drawing.Point(341, 315);
-            this.stringLastOcc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stringLastOcc.Location = new System.Drawing.Point(256, 256);
             this.stringLastOcc.Name = "stringLastOcc";
-            this.stringLastOcc.Size = new System.Drawing.Size(129, 28);
+            this.stringLastOcc.Size = new System.Drawing.Size(97, 23);
             this.stringLastOcc.TabIndex = 19;
             this.stringLastOcc.Text = "Last occurence";
             this.stringLastOcc.UseVisualStyleBackColor = true;
@@ -1281,19 +1188,17 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(177, 295);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(133, 240);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(183, 17);
+            this.label13.Size = new System.Drawing.Size(138, 13);
             this.label13.TabIndex = 18;
             this.label13.Text = "Find with sequential search:";
             // 
             // stringFirstOcc
             // 
-            this.stringFirstOcc.Location = new System.Drawing.Point(181, 315);
-            this.stringFirstOcc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stringFirstOcc.Location = new System.Drawing.Point(136, 256);
             this.stringFirstOcc.Name = "stringFirstOcc";
-            this.stringFirstOcc.Size = new System.Drawing.Size(140, 28);
+            this.stringFirstOcc.Size = new System.Drawing.Size(105, 23);
             this.stringFirstOcc.TabIndex = 17;
             this.stringFirstOcc.Text = "First occurence";
             this.stringFirstOcc.UseVisualStyleBackColor = true;
@@ -1302,29 +1207,26 @@
             // inputlabel
             // 
             this.inputlabel.AutoSize = true;
-            this.inputlabel.Location = new System.Drawing.Point(15, 295);
-            this.inputlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.inputlabel.Location = new System.Drawing.Point(11, 240);
             this.inputlabel.Name = "inputlabel";
-            this.inputlabel.Size = new System.Drawing.Size(96, 17);
+            this.inputlabel.Size = new System.Drawing.Size(72, 13);
             this.inputlabel.TabIndex = 16;
             this.inputlabel.Text = "Search string:";
             // 
             // stringBox
             // 
-            this.stringBox.Location = new System.Drawing.Point(9, 315);
-            this.stringBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stringBox.Location = new System.Drawing.Point(7, 256);
             this.stringBox.Name = "stringBox";
-            this.stringBox.Size = new System.Drawing.Size(132, 22);
+            this.stringBox.Size = new System.Drawing.Size(100, 20);
             this.stringBox.TabIndex = 15;
             this.stringBox.Leave += new System.EventHandler(this.stringBox_Leave);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(11, 267);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(8, 217);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(282, 17);
+            this.label15.Size = new System.Drawing.Size(230, 13);
             this.label15.TabIndex = 14;
             this.label15.Text = "string array: \"a\", \"g\", \"d\", \"c\", \"t\", \"h\", \"s\", \"d\"";
             // 
@@ -1332,39 +1234,35 @@
             // 
             this.intResultLabel.AutoSize = true;
             this.intResultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intResultLabel.Location = new System.Drawing.Point(101, 130);
-            this.intResultLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.intResultLabel.Location = new System.Drawing.Point(76, 106);
             this.intResultLabel.Name = "intResultLabel";
-            this.intResultLabel.Size = new System.Drawing.Size(0, 25);
+            this.intResultLabel.Size = new System.Drawing.Size(0, 20);
             this.intResultLabel.TabIndex = 13;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(4, 126);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(3, 102);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 29);
+            this.label9.Size = new System.Drawing.Size(67, 24);
             this.label9.TabIndex = 12;
             this.label9.Text = "Result:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(181, 159);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(136, 129);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(226, 17);
+            this.label8.Size = new System.Drawing.Size(164, 13);
             this.label8.TabIndex = 11;
             this.label8.Text = "BinarySearch (sorts the array first)";
             // 
             // intbinary
             // 
-            this.intbinary.Location = new System.Drawing.Point(181, 182);
-            this.intbinary.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.intbinary.Location = new System.Drawing.Point(136, 148);
             this.intbinary.Name = "intbinary";
-            this.intbinary.Size = new System.Drawing.Size(100, 28);
+            this.intbinary.Size = new System.Drawing.Size(75, 23);
             this.intbinary.TabIndex = 10;
             this.intbinary.Text = "Search";
             this.intbinary.UseVisualStyleBackColor = true;
@@ -1372,10 +1270,9 @@
             // 
             // intMax
             // 
-            this.intMax.Location = new System.Drawing.Point(396, 101);
-            this.intMax.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.intMax.Location = new System.Drawing.Point(297, 82);
             this.intMax.Name = "intMax";
-            this.intMax.Size = new System.Drawing.Size(184, 28);
+            this.intMax.Size = new System.Drawing.Size(138, 23);
             this.intMax.TabIndex = 9;
             this.intMax.Text = "find maximum value";
             this.intMax.UseVisualStyleBackColor = true;
@@ -1383,10 +1280,9 @@
             // 
             // intMin
             // 
-            this.intMin.Location = new System.Drawing.Point(181, 101);
-            this.intMin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.intMin.Location = new System.Drawing.Point(136, 82);
             this.intMin.Name = "intMin";
-            this.intMin.Size = new System.Drawing.Size(180, 28);
+            this.intMin.Size = new System.Drawing.Size(135, 23);
             this.intMin.TabIndex = 8;
             this.intMin.Text = "find minimal value";
             this.intMin.UseVisualStyleBackColor = true;
@@ -1394,10 +1290,9 @@
             // 
             // intCustOcc
             // 
-            this.intCustOcc.Location = new System.Drawing.Point(483, 64);
-            this.intCustOcc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.intCustOcc.Location = new System.Drawing.Point(362, 52);
             this.intCustOcc.Name = "intCustOcc";
-            this.intCustOcc.Size = new System.Drawing.Size(156, 28);
+            this.intCustOcc.Size = new System.Drawing.Size(117, 23);
             this.intCustOcc.TabIndex = 7;
             this.intCustOcc.Text = "Custom occurance";
             this.intCustOcc.UseVisualStyleBackColor = true;
@@ -1405,18 +1300,16 @@
             // 
             // intOccBox
             // 
-            this.intOccBox.Location = new System.Drawing.Point(483, 36);
-            this.intOccBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.intOccBox.Location = new System.Drawing.Point(362, 29);
             this.intOccBox.Name = "intOccBox";
-            this.intOccBox.Size = new System.Drawing.Size(132, 22);
+            this.intOccBox.Size = new System.Drawing.Size(100, 20);
             this.intOccBox.TabIndex = 6;
             // 
             // intLastOcc
             // 
-            this.intLastOcc.Location = new System.Drawing.Point(341, 64);
-            this.intLastOcc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.intLastOcc.Location = new System.Drawing.Point(256, 52);
             this.intLastOcc.Name = "intLastOcc";
-            this.intLastOcc.Size = new System.Drawing.Size(129, 28);
+            this.intLastOcc.Size = new System.Drawing.Size(97, 23);
             this.intLastOcc.TabIndex = 5;
             this.intLastOcc.Text = "Last occurence";
             this.intLastOcc.UseVisualStyleBackColor = true;
@@ -1425,19 +1318,17 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(177, 44);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(133, 36);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(183, 17);
+            this.label7.Size = new System.Drawing.Size(138, 13);
             this.label7.TabIndex = 4;
             this.label7.Text = "Find with sequential search:";
             // 
             // intFirstOcc
             // 
-            this.intFirstOcc.Location = new System.Drawing.Point(181, 64);
-            this.intFirstOcc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.intFirstOcc.Location = new System.Drawing.Point(136, 52);
             this.intFirstOcc.Name = "intFirstOcc";
-            this.intFirstOcc.Size = new System.Drawing.Size(140, 28);
+            this.intFirstOcc.Size = new System.Drawing.Size(105, 23);
             this.intFirstOcc.TabIndex = 3;
             this.intFirstOcc.Text = "First occurence";
             this.intFirstOcc.UseVisualStyleBackColor = true;
@@ -1446,28 +1337,25 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 44);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(11, 36);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 17);
+            this.label6.Size = new System.Drawing.Size(82, 13);
             this.label6.TabIndex = 2;
             this.label6.Text = "Search number:";
             // 
             // intInputBox
             // 
-            this.intInputBox.Location = new System.Drawing.Point(9, 64);
-            this.intInputBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.intInputBox.Location = new System.Drawing.Point(7, 52);
             this.intInputBox.Name = "intInputBox";
-            this.intInputBox.Size = new System.Drawing.Size(132, 22);
+            this.intInputBox.Size = new System.Drawing.Size(100, 20);
             this.intInputBox.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 16);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(8, 13);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(240, 17);
+            this.label5.Size = new System.Drawing.Size(179, 13);
             this.label5.TabIndex = 0;
             this.label5.Text = "int array:  3, 5, 7, 2, 3, 4, 7, 3, 4, 5, 2";
             // 
@@ -1497,20 +1385,18 @@
             this.Queue.Controls.Add(this.queuebox);
             this.Queue.Controls.Add(this.label16);
             this.Queue.Controls.Add(this.queueList);
-            this.Queue.Location = new System.Drawing.Point(4, 25);
-            this.Queue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Queue.Location = new System.Drawing.Point(4, 22);
             this.Queue.Name = "Queue";
-            this.Queue.Size = new System.Drawing.Size(705, 549);
+            this.Queue.Size = new System.Drawing.Size(527, 444);
             this.Queue.TabIndex = 3;
             this.Queue.Text = "Queue";
             this.Queue.UseVisualStyleBackColor = true;
             // 
             // pCount
             // 
-            this.pCount.Location = new System.Drawing.Point(561, 214);
-            this.pCount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pCount.Location = new System.Drawing.Point(421, 174);
             this.pCount.Name = "pCount";
-            this.pCount.Size = new System.Drawing.Size(100, 28);
+            this.pCount.Size = new System.Drawing.Size(75, 23);
             this.pCount.TabIndex = 23;
             this.pCount.Text = "Count";
             this.pCount.UseVisualStyleBackColor = true;
@@ -1518,10 +1404,9 @@
             // 
             // pClear
             // 
-            this.pClear.Location = new System.Drawing.Point(561, 150);
-            this.pClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pClear.Location = new System.Drawing.Point(421, 122);
             this.pClear.Name = "pClear";
-            this.pClear.Size = new System.Drawing.Size(100, 28);
+            this.pClear.Size = new System.Drawing.Size(75, 23);
             this.pClear.TabIndex = 22;
             this.pClear.Text = "clear";
             this.pClear.UseVisualStyleBackColor = true;
@@ -1529,10 +1414,9 @@
             // 
             // pPeek
             // 
-            this.pPeek.Location = new System.Drawing.Point(561, 81);
-            this.pPeek.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pPeek.Location = new System.Drawing.Point(421, 66);
             this.pPeek.Name = "pPeek";
-            this.pPeek.Size = new System.Drawing.Size(100, 28);
+            this.pPeek.Size = new System.Drawing.Size(75, 23);
             this.pPeek.TabIndex = 21;
             this.pPeek.Text = "peek";
             this.pPeek.UseVisualStyleBackColor = true;
@@ -1540,10 +1424,9 @@
             // 
             // pDequeue
             // 
-            this.pDequeue.Location = new System.Drawing.Point(373, 383);
-            this.pDequeue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pDequeue.Location = new System.Drawing.Point(280, 311);
             this.pDequeue.Name = "pDequeue";
-            this.pDequeue.Size = new System.Drawing.Size(100, 28);
+            this.pDequeue.Size = new System.Drawing.Size(75, 23);
             this.pDequeue.TabIndex = 20;
             this.pDequeue.Text = "dequeue";
             this.pDequeue.UseVisualStyleBackColor = true;
@@ -1551,10 +1434,9 @@
             // 
             // pEnqueue
             // 
-            this.pEnqueue.Location = new System.Drawing.Point(373, 346);
-            this.pEnqueue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pEnqueue.Location = new System.Drawing.Point(280, 281);
             this.pEnqueue.Name = "pEnqueue";
-            this.pEnqueue.Size = new System.Drawing.Size(100, 28);
+            this.pEnqueue.Size = new System.Drawing.Size(75, 23);
             this.pEnqueue.TabIndex = 19;
             this.pEnqueue.Text = "enqueue";
             this.pEnqueue.UseVisualStyleBackColor = true;
@@ -1563,101 +1445,89 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(515, 289);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Location = new System.Drawing.Point(386, 235);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(51, 17);
+            this.label20.Size = new System.Drawing.Size(37, 13);
             this.label20.TabIndex = 18;
             this.label20.Text = "priority";
             // 
             // pPriority
             // 
-            this.pPriority.Location = new System.Drawing.Point(515, 313);
-            this.pPriority.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pPriority.Location = new System.Drawing.Point(386, 254);
             this.pPriority.Name = "pPriority";
-            this.pPriority.Size = new System.Drawing.Size(67, 22);
+            this.pPriority.Size = new System.Drawing.Size(50, 20);
             this.pPriority.TabIndex = 17;
             // 
             // pInput
             // 
-            this.pInput.Location = new System.Drawing.Point(373, 313);
-            this.pInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pInput.Location = new System.Drawing.Point(280, 254);
             this.pInput.Name = "pInput";
-            this.pInput.Size = new System.Drawing.Size(132, 22);
+            this.pInput.Size = new System.Drawing.Size(100, 20);
             this.pInput.TabIndex = 16;
             // 
             // pCountLabel
             // 
             this.pCountLabel.AutoSize = true;
-            this.pCountLabel.Location = new System.Drawing.Point(557, 251);
-            this.pCountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.pCountLabel.Location = new System.Drawing.Point(418, 204);
             this.pCountLabel.Name = "pCountLabel";
-            this.pCountLabel.Size = new System.Drawing.Size(0, 17);
+            this.pCountLabel.Size = new System.Drawing.Size(0, 13);
             this.pCountLabel.TabIndex = 15;
             // 
             // pPeekLabel
             // 
             this.pPeekLabel.AutoSize = true;
-            this.pPeekLabel.Location = new System.Drawing.Point(557, 118);
-            this.pPeekLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.pPeekLabel.Location = new System.Drawing.Point(418, 96);
             this.pPeekLabel.Name = "pPeekLabel";
-            this.pPeekLabel.Size = new System.Drawing.Size(0, 17);
+            this.pPeekLabel.Size = new System.Drawing.Size(0, 13);
             this.pPeekLabel.TabIndex = 14;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(373, 289);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(280, 235);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(39, 17);
+            this.label19.Size = new System.Drawing.Size(30, 13);
             this.label19.TabIndex = 13;
             this.label19.Text = "input";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(373, 31);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(280, 25);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(146, 17);
+            this.label18.Size = new System.Drawing.Size(109, 13);
             this.label18.TabIndex = 12;
             this.label18.Text = "PriorityQueue content";
             // 
             // pQueueList
             // 
             this.pQueueList.FormattingEnabled = true;
-            this.pQueueList.ItemHeight = 16;
-            this.pQueueList.Location = new System.Drawing.Point(373, 54);
-            this.pQueueList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pQueueList.Location = new System.Drawing.Point(280, 44);
             this.pQueueList.Name = "pQueueList";
-            this.pQueueList.Size = new System.Drawing.Size(159, 228);
+            this.pQueueList.Size = new System.Drawing.Size(120, 186);
             this.pQueueList.TabIndex = 11;
             // 
             // countLabel
             // 
             this.countLabel.AutoSize = true;
-            this.countLabel.Location = new System.Drawing.Point(212, 251);
-            this.countLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.countLabel.Location = new System.Drawing.Point(159, 204);
             this.countLabel.Name = "countLabel";
-            this.countLabel.Size = new System.Drawing.Size(0, 17);
+            this.countLabel.Size = new System.Drawing.Size(0, 13);
             this.countLabel.TabIndex = 10;
             // 
             // peekLabel
             // 
             this.peekLabel.AutoSize = true;
-            this.peekLabel.Location = new System.Drawing.Point(212, 118);
-            this.peekLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.peekLabel.Location = new System.Drawing.Point(159, 96);
             this.peekLabel.Name = "peekLabel";
-            this.peekLabel.Size = new System.Drawing.Size(0, 17);
+            this.peekLabel.Size = new System.Drawing.Size(0, 13);
             this.peekLabel.TabIndex = 9;
             // 
             // countButt
             // 
-            this.countButt.Location = new System.Drawing.Point(212, 214);
-            this.countButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.countButt.Location = new System.Drawing.Point(159, 174);
             this.countButt.Name = "countButt";
-            this.countButt.Size = new System.Drawing.Size(100, 28);
+            this.countButt.Size = new System.Drawing.Size(75, 23);
             this.countButt.TabIndex = 8;
             this.countButt.Text = "count";
             this.countButt.UseVisualStyleBackColor = true;
@@ -1665,10 +1535,9 @@
             // 
             // clearButt
             // 
-            this.clearButt.Location = new System.Drawing.Point(212, 151);
-            this.clearButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clearButt.Location = new System.Drawing.Point(159, 123);
             this.clearButt.Name = "clearButt";
-            this.clearButt.Size = new System.Drawing.Size(100, 28);
+            this.clearButt.Size = new System.Drawing.Size(75, 23);
             this.clearButt.TabIndex = 7;
             this.clearButt.Text = "clear";
             this.clearButt.UseVisualStyleBackColor = true;
@@ -1676,10 +1545,9 @@
             // 
             // peekButt
             // 
-            this.peekButt.Location = new System.Drawing.Point(212, 81);
-            this.peekButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.peekButt.Location = new System.Drawing.Point(159, 66);
             this.peekButt.Name = "peekButt";
-            this.peekButt.Size = new System.Drawing.Size(100, 28);
+            this.peekButt.Size = new System.Drawing.Size(75, 23);
             this.peekButt.TabIndex = 6;
             this.peekButt.Text = "peek";
             this.peekButt.UseVisualStyleBackColor = true;
@@ -1687,10 +1555,9 @@
             // 
             // dequeueButt
             // 
-            this.dequeueButt.Location = new System.Drawing.Point(31, 383);
-            this.dequeueButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dequeueButt.Location = new System.Drawing.Point(23, 311);
             this.dequeueButt.Name = "dequeueButt";
-            this.dequeueButt.Size = new System.Drawing.Size(100, 28);
+            this.dequeueButt.Size = new System.Drawing.Size(75, 23);
             this.dequeueButt.TabIndex = 5;
             this.dequeueButt.Text = "dequeue";
             this.dequeueButt.UseVisualStyleBackColor = true;
@@ -1698,10 +1565,9 @@
             // 
             // enqueueButt
             // 
-            this.enqueueButt.Location = new System.Drawing.Point(31, 346);
-            this.enqueueButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.enqueueButt.Location = new System.Drawing.Point(23, 281);
             this.enqueueButt.Name = "enqueueButt";
-            this.enqueueButt.Size = new System.Drawing.Size(100, 28);
+            this.enqueueButt.Size = new System.Drawing.Size(75, 23);
             this.enqueueButt.TabIndex = 4;
             this.enqueueButt.Text = "enqueue";
             this.enqueueButt.UseVisualStyleBackColor = true;
@@ -1710,39 +1576,34 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(31, 289);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(23, 235);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(39, 17);
+            this.label17.Size = new System.Drawing.Size(30, 13);
             this.label17.TabIndex = 3;
             this.label17.Text = "input";
             // 
             // queuebox
             // 
-            this.queuebox.Location = new System.Drawing.Point(31, 313);
-            this.queuebox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.queuebox.Location = new System.Drawing.Point(23, 254);
             this.queuebox.Name = "queuebox";
-            this.queuebox.Size = new System.Drawing.Size(132, 22);
+            this.queuebox.Size = new System.Drawing.Size(100, 20);
             this.queuebox.TabIndex = 2;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(31, 31);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(23, 25);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(102, 17);
+            this.label16.Size = new System.Drawing.Size(78, 13);
             this.label16.TabIndex = 1;
             this.label16.Text = "Queue content";
             // 
             // queueList
             // 
             this.queueList.FormattingEnabled = true;
-            this.queueList.ItemHeight = 16;
-            this.queueList.Location = new System.Drawing.Point(31, 54);
-            this.queueList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.queueList.Location = new System.Drawing.Point(23, 44);
             this.queueList.Name = "queueList";
-            this.queueList.Size = new System.Drawing.Size(159, 228);
+            this.queueList.Size = new System.Drawing.Size(120, 186);
             this.queueList.TabIndex = 0;
             // 
             // Stack
@@ -1758,10 +1619,9 @@
             this.Stack.Controls.Add(this.stackInput);
             this.Stack.Controls.Add(this.label24);
             this.Stack.Controls.Add(this.stackList);
-            this.Stack.Location = new System.Drawing.Point(4, 25);
-            this.Stack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Stack.Location = new System.Drawing.Point(4, 22);
             this.Stack.Name = "Stack";
-            this.Stack.Size = new System.Drawing.Size(705, 549);
+            this.Stack.Size = new System.Drawing.Size(527, 444);
             this.Stack.TabIndex = 4;
             this.Stack.Text = "Stack";
             this.Stack.UseVisualStyleBackColor = true;
@@ -1769,27 +1629,24 @@
             // sCountLabel
             // 
             this.sCountLabel.AutoSize = true;
-            this.sCountLabel.Location = new System.Drawing.Point(263, 245);
-            this.sCountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.sCountLabel.Location = new System.Drawing.Point(197, 199);
             this.sCountLabel.Name = "sCountLabel";
-            this.sCountLabel.Size = new System.Drawing.Size(0, 17);
+            this.sCountLabel.Size = new System.Drawing.Size(0, 13);
             this.sCountLabel.TabIndex = 21;
             // 
             // sPeekLabel
             // 
             this.sPeekLabel.AutoSize = true;
-            this.sPeekLabel.Location = new System.Drawing.Point(263, 112);
-            this.sPeekLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.sPeekLabel.Location = new System.Drawing.Point(197, 91);
             this.sPeekLabel.Name = "sPeekLabel";
-            this.sPeekLabel.Size = new System.Drawing.Size(0, 17);
+            this.sPeekLabel.Size = new System.Drawing.Size(0, 13);
             this.sPeekLabel.TabIndex = 20;
             // 
             // stackCount
             // 
-            this.stackCount.Location = new System.Drawing.Point(263, 208);
-            this.stackCount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stackCount.Location = new System.Drawing.Point(197, 169);
             this.stackCount.Name = "stackCount";
-            this.stackCount.Size = new System.Drawing.Size(100, 28);
+            this.stackCount.Size = new System.Drawing.Size(75, 23);
             this.stackCount.TabIndex = 19;
             this.stackCount.Text = "count";
             this.stackCount.UseVisualStyleBackColor = true;
@@ -1797,10 +1654,9 @@
             // 
             // stackClear
             // 
-            this.stackClear.Location = new System.Drawing.Point(263, 145);
-            this.stackClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stackClear.Location = new System.Drawing.Point(197, 118);
             this.stackClear.Name = "stackClear";
-            this.stackClear.Size = new System.Drawing.Size(100, 28);
+            this.stackClear.Size = new System.Drawing.Size(75, 23);
             this.stackClear.TabIndex = 18;
             this.stackClear.Text = "clear";
             this.stackClear.UseVisualStyleBackColor = true;
@@ -1808,10 +1664,9 @@
             // 
             // stackPeek
             // 
-            this.stackPeek.Location = new System.Drawing.Point(263, 75);
-            this.stackPeek.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stackPeek.Location = new System.Drawing.Point(197, 61);
             this.stackPeek.Name = "stackPeek";
-            this.stackPeek.Size = new System.Drawing.Size(100, 28);
+            this.stackPeek.Size = new System.Drawing.Size(75, 23);
             this.stackPeek.TabIndex = 17;
             this.stackPeek.Text = "peek";
             this.stackPeek.UseVisualStyleBackColor = true;
@@ -1819,10 +1674,9 @@
             // 
             // stackPop
             // 
-            this.stackPop.Location = new System.Drawing.Point(81, 377);
-            this.stackPop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stackPop.Location = new System.Drawing.Point(61, 306);
             this.stackPop.Name = "stackPop";
-            this.stackPop.Size = new System.Drawing.Size(100, 28);
+            this.stackPop.Size = new System.Drawing.Size(75, 23);
             this.stackPop.TabIndex = 16;
             this.stackPop.Text = "Pop";
             this.stackPop.UseVisualStyleBackColor = true;
@@ -1830,10 +1684,9 @@
             // 
             // stackPush
             // 
-            this.stackPush.Location = new System.Drawing.Point(81, 340);
-            this.stackPush.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stackPush.Location = new System.Drawing.Point(61, 276);
             this.stackPush.Name = "stackPush";
-            this.stackPush.Size = new System.Drawing.Size(100, 28);
+            this.stackPush.Size = new System.Drawing.Size(75, 23);
             this.stackPush.TabIndex = 15;
             this.stackPush.Text = "Push";
             this.stackPush.UseVisualStyleBackColor = true;
@@ -1842,48 +1695,42 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(81, 283);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Location = new System.Drawing.Point(61, 230);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(39, 17);
+            this.label23.Size = new System.Drawing.Size(30, 13);
             this.label23.TabIndex = 14;
             this.label23.Text = "input";
             // 
             // stackInput
             // 
-            this.stackInput.Location = new System.Drawing.Point(81, 306);
-            this.stackInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stackInput.Location = new System.Drawing.Point(61, 249);
             this.stackInput.Name = "stackInput";
-            this.stackInput.Size = new System.Drawing.Size(132, 22);
+            this.stackInput.Size = new System.Drawing.Size(100, 20);
             this.stackInput.TabIndex = 13;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(81, 25);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Location = new System.Drawing.Point(61, 20);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(94, 17);
+            this.label24.Size = new System.Drawing.Size(74, 13);
             this.label24.TabIndex = 12;
             this.label24.Text = "Stack content";
             // 
             // stackList
             // 
             this.stackList.FormattingEnabled = true;
-            this.stackList.ItemHeight = 16;
-            this.stackList.Location = new System.Drawing.Point(81, 48);
-            this.stackList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stackList.Location = new System.Drawing.Point(61, 39);
             this.stackList.Name = "stackList";
-            this.stackList.Size = new System.Drawing.Size(159, 228);
+            this.stackList.Size = new System.Drawing.Size(120, 186);
             this.stackList.TabIndex = 11;
             // 
             // Hash
             // 
             this.Hash.Controls.Add(this.tabControl4);
-            this.Hash.Location = new System.Drawing.Point(4, 25);
-            this.Hash.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Hash.Location = new System.Drawing.Point(4, 22);
             this.Hash.Name = "Hash";
-            this.Hash.Size = new System.Drawing.Size(705, 549);
+            this.Hash.Size = new System.Drawing.Size(527, 444);
             this.Hash.TabIndex = 5;
             this.Hash.Text = "Hash";
             this.Hash.UseVisualStyleBackColor = true;
@@ -1894,10 +1741,9 @@
             this.tabControl4.Controls.Add(this.tabPage9);
             this.tabControl4.Controls.Add(this.tabPage10);
             this.tabControl4.Location = new System.Drawing.Point(0, 0);
-            this.tabControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl4.Name = "tabControl4";
             this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(708, 551);
+            this.tabControl4.Size = new System.Drawing.Size(531, 448);
             this.tabControl4.TabIndex = 0;
             // 
             // tabPage8
@@ -1908,11 +1754,10 @@
             this.tabPage8.Controls.Add(this.bHashAdd);
             this.tabPage8.Controls.Add(this.bHashInput);
             this.tabPage8.Controls.Add(this.bHashBox);
-            this.tabPage8.Location = new System.Drawing.Point(4, 25);
-            this.tabPage8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage8.Size = new System.Drawing.Size(700, 522);
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage8.Size = new System.Drawing.Size(523, 422);
             this.tabPage8.TabIndex = 0;
             this.tabPage8.Text = "BucketHash";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -1920,18 +1765,16 @@
             // bHashLabel
             // 
             this.bHashLabel.AutoSize = true;
-            this.bHashLabel.Location = new System.Drawing.Point(21, 176);
-            this.bHashLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bHashLabel.Location = new System.Drawing.Point(16, 143);
             this.bHashLabel.Name = "bHashLabel";
-            this.bHashLabel.Size = new System.Drawing.Size(0, 17);
+            this.bHashLabel.Size = new System.Drawing.Size(0, 13);
             this.bHashLabel.TabIndex = 5;
             // 
             // bHashSearch
             // 
-            this.bHashSearch.Location = new System.Drawing.Point(21, 139);
-            this.bHashSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bHashSearch.Location = new System.Drawing.Point(16, 113);
             this.bHashSearch.Name = "bHashSearch";
-            this.bHashSearch.Size = new System.Drawing.Size(100, 28);
+            this.bHashSearch.Size = new System.Drawing.Size(75, 23);
             this.bHashSearch.TabIndex = 4;
             this.bHashSearch.Text = "Search";
             this.bHashSearch.UseVisualStyleBackColor = true;
@@ -1939,10 +1782,9 @@
             // 
             // bHashRemove
             // 
-            this.bHashRemove.Location = new System.Drawing.Point(149, 90);
-            this.bHashRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bHashRemove.Location = new System.Drawing.Point(112, 73);
             this.bHashRemove.Name = "bHashRemove";
-            this.bHashRemove.Size = new System.Drawing.Size(100, 28);
+            this.bHashRemove.Size = new System.Drawing.Size(75, 23);
             this.bHashRemove.TabIndex = 3;
             this.bHashRemove.Text = "Remove";
             this.bHashRemove.UseVisualStyleBackColor = true;
@@ -1950,10 +1792,9 @@
             // 
             // bHashAdd
             // 
-            this.bHashAdd.Location = new System.Drawing.Point(21, 90);
-            this.bHashAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bHashAdd.Location = new System.Drawing.Point(16, 73);
             this.bHashAdd.Name = "bHashAdd";
-            this.bHashAdd.Size = new System.Drawing.Size(100, 28);
+            this.bHashAdd.Size = new System.Drawing.Size(75, 23);
             this.bHashAdd.TabIndex = 2;
             this.bHashAdd.Text = "Add";
             this.bHashAdd.UseVisualStyleBackColor = true;
@@ -1961,20 +1802,17 @@
             // 
             // bHashInput
             // 
-            this.bHashInput.Location = new System.Drawing.Point(21, 41);
-            this.bHashInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bHashInput.Location = new System.Drawing.Point(16, 33);
             this.bHashInput.Name = "bHashInput";
-            this.bHashInput.Size = new System.Drawing.Size(132, 22);
+            this.bHashInput.Size = new System.Drawing.Size(100, 20);
             this.bHashInput.TabIndex = 1;
             // 
             // bHashBox
             // 
             this.bHashBox.FormattingEnabled = true;
-            this.bHashBox.ItemHeight = 16;
-            this.bHashBox.Location = new System.Drawing.Point(292, 41);
-            this.bHashBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bHashBox.Location = new System.Drawing.Point(219, 33);
             this.bHashBox.Name = "bHashBox";
-            this.bHashBox.Size = new System.Drawing.Size(288, 308);
+            this.bHashBox.Size = new System.Drawing.Size(217, 251);
             this.bHashBox.TabIndex = 0;
             // 
             // tabPage9
@@ -1982,21 +1820,19 @@
             this.tabPage9.Controls.Add(this.lHashTransform);
             this.tabPage9.Controls.Add(this.lHashLoad);
             this.tabPage9.Controls.Add(this.lHashBox);
-            this.tabPage9.Location = new System.Drawing.Point(4, 25);
-            this.tabPage9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage9.Size = new System.Drawing.Size(700, 522);
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage9.Size = new System.Drawing.Size(523, 422);
             this.tabPage9.TabIndex = 1;
             this.tabPage9.Text = "LinearHash";
             this.tabPage9.UseVisualStyleBackColor = true;
             // 
             // lHashTransform
             // 
-            this.lHashTransform.Location = new System.Drawing.Point(40, 91);
-            this.lHashTransform.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lHashTransform.Location = new System.Drawing.Point(30, 74);
             this.lHashTransform.Name = "lHashTransform";
-            this.lHashTransform.Size = new System.Drawing.Size(159, 28);
+            this.lHashTransform.Size = new System.Drawing.Size(119, 23);
             this.lHashTransform.TabIndex = 2;
             this.lHashTransform.Text = "transform to hash";
             this.lHashTransform.UseVisualStyleBackColor = true;
@@ -2004,10 +1840,9 @@
             // 
             // lHashLoad
             // 
-            this.lHashLoad.Location = new System.Drawing.Point(40, 37);
-            this.lHashLoad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lHashLoad.Location = new System.Drawing.Point(30, 30);
             this.lHashLoad.Name = "lHashLoad";
-            this.lHashLoad.Size = new System.Drawing.Size(159, 28);
+            this.lHashLoad.Size = new System.Drawing.Size(119, 23);
             this.lHashLoad.TabIndex = 1;
             this.lHashLoad.Text = "Load array";
             this.lHashLoad.UseVisualStyleBackColor = true;
@@ -2016,11 +1851,9 @@
             // lHashBox
             // 
             this.lHashBox.FormattingEnabled = true;
-            this.lHashBox.ItemHeight = 16;
-            this.lHashBox.Location = new System.Drawing.Point(255, 37);
-            this.lHashBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lHashBox.Location = new System.Drawing.Point(191, 30);
             this.lHashBox.Name = "lHashBox";
-            this.lHashBox.Size = new System.Drawing.Size(299, 308);
+            this.lHashBox.Size = new System.Drawing.Size(225, 251);
             this.lHashBox.TabIndex = 0;
             // 
             // tabPage10
@@ -2028,20 +1861,18 @@
             this.tabPage10.Controls.Add(this.qHashTransform);
             this.tabPage10.Controls.Add(this.qHashLoad);
             this.tabPage10.Controls.Add(this.qHashBox);
-            this.tabPage10.Location = new System.Drawing.Point(4, 25);
-            this.tabPage10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage10.Location = new System.Drawing.Point(4, 22);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(700, 522);
+            this.tabPage10.Size = new System.Drawing.Size(523, 422);
             this.tabPage10.TabIndex = 2;
             this.tabPage10.Text = "QuadraticHash";
             this.tabPage10.UseVisualStyleBackColor = true;
             // 
             // qHashTransform
             // 
-            this.qHashTransform.Location = new System.Drawing.Point(41, 98);
-            this.qHashTransform.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.qHashTransform.Location = new System.Drawing.Point(31, 80);
             this.qHashTransform.Name = "qHashTransform";
-            this.qHashTransform.Size = new System.Drawing.Size(159, 28);
+            this.qHashTransform.Size = new System.Drawing.Size(119, 23);
             this.qHashTransform.TabIndex = 5;
             this.qHashTransform.Text = "transform to hash";
             this.qHashTransform.UseVisualStyleBackColor = true;
@@ -2049,10 +1880,9 @@
             // 
             // qHashLoad
             // 
-            this.qHashLoad.Location = new System.Drawing.Point(41, 44);
-            this.qHashLoad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.qHashLoad.Location = new System.Drawing.Point(31, 36);
             this.qHashLoad.Name = "qHashLoad";
-            this.qHashLoad.Size = new System.Drawing.Size(159, 28);
+            this.qHashLoad.Size = new System.Drawing.Size(119, 23);
             this.qHashLoad.TabIndex = 4;
             this.qHashLoad.Text = "Load array";
             this.qHashLoad.UseVisualStyleBackColor = true;
@@ -2061,20 +1891,17 @@
             // qHashBox
             // 
             this.qHashBox.FormattingEnabled = true;
-            this.qHashBox.ItemHeight = 16;
-            this.qHashBox.Location = new System.Drawing.Point(256, 44);
-            this.qHashBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.qHashBox.Location = new System.Drawing.Point(192, 36);
             this.qHashBox.Name = "qHashBox";
-            this.qHashBox.Size = new System.Drawing.Size(299, 308);
+            this.qHashBox.Size = new System.Drawing.Size(225, 251);
             this.qHashBox.TabIndex = 3;
             // 
             // Lists
             // 
             this.Lists.Controls.Add(this.tabControl3);
-            this.Lists.Location = new System.Drawing.Point(4, 25);
-            this.Lists.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Lists.Location = new System.Drawing.Point(4, 22);
             this.Lists.Name = "Lists";
-            this.Lists.Size = new System.Drawing.Size(705, 549);
+            this.Lists.Size = new System.Drawing.Size(527, 444);
             this.Lists.TabIndex = 6;
             this.Lists.Text = "Lists";
             this.Lists.UseVisualStyleBackColor = true;
@@ -2085,10 +1912,9 @@
             this.tabControl3.Controls.Add(this.tabPage6);
             this.tabControl3.Controls.Add(this.tabPage7);
             this.tabControl3.Location = new System.Drawing.Point(0, 0);
-            this.tabControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(708, 551);
+            this.tabControl3.Size = new System.Drawing.Size(531, 448);
             this.tabControl3.TabIndex = 0;
             // 
             // tabPage5
@@ -2102,21 +1928,19 @@
             this.tabPage5.Controls.Add(this.lListDelButton);
             this.tabPage5.Controls.Add(this.lListInsert);
             this.tabPage5.Controls.Add(this.linkedList);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage5.Size = new System.Drawing.Size(700, 522);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage5.Size = new System.Drawing.Size(523, 422);
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "LinkedList";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // lListAddRange
             // 
-            this.lListAddRange.Location = new System.Drawing.Point(59, 134);
-            this.lListAddRange.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lListAddRange.Location = new System.Drawing.Point(44, 109);
             this.lListAddRange.Name = "lListAddRange";
-            this.lListAddRange.Size = new System.Drawing.Size(216, 28);
+            this.lListAddRange.Size = new System.Drawing.Size(162, 23);
             this.lListAddRange.TabIndex = 9;
             this.lListAddRange.Text = "Add test data";
             this.lListAddRange.UseVisualStyleBackColor = true;
@@ -2124,10 +1948,9 @@
             // 
             // lListSearch
             // 
-            this.lListSearch.Location = new System.Drawing.Point(225, 70);
-            this.lListSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lListSearch.Location = new System.Drawing.Point(169, 57);
             this.lListSearch.Name = "lListSearch";
-            this.lListSearch.Size = new System.Drawing.Size(100, 28);
+            this.lListSearch.Size = new System.Drawing.Size(75, 23);
             this.lListSearch.TabIndex = 8;
             this.lListSearch.Text = "Search";
             this.lListSearch.UseVisualStyleBackColor = true;
@@ -2135,10 +1958,9 @@
             // 
             // lListLast
             // 
-            this.lListLast.Location = new System.Drawing.Point(223, 319);
-            this.lListLast.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lListLast.Location = new System.Drawing.Point(167, 259);
             this.lListLast.Name = "lListLast";
-            this.lListLast.Size = new System.Drawing.Size(100, 28);
+            this.lListLast.Size = new System.Drawing.Size(75, 23);
             this.lListLast.TabIndex = 7;
             this.lListLast.Text = "Last";
             this.lListLast.UseVisualStyleBackColor = true;
@@ -2146,10 +1968,9 @@
             // 
             // lListFirst
             // 
-            this.lListFirst.Location = new System.Drawing.Point(223, 224);
-            this.lListFirst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lListFirst.Location = new System.Drawing.Point(167, 182);
             this.lListFirst.Name = "lListFirst";
-            this.lListFirst.Size = new System.Drawing.Size(100, 28);
+            this.lListFirst.Size = new System.Drawing.Size(75, 23);
             this.lListFirst.TabIndex = 6;
             this.lListFirst.Text = "First";
             this.lListFirst.UseVisualStyleBackColor = true;
@@ -2157,10 +1978,9 @@
             // 
             // lListNext
             // 
-            this.lListNext.Location = new System.Drawing.Point(223, 271);
-            this.lListNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lListNext.Location = new System.Drawing.Point(167, 220);
             this.lListNext.Name = "lListNext";
-            this.lListNext.Size = new System.Drawing.Size(100, 28);
+            this.lListNext.Size = new System.Drawing.Size(75, 23);
             this.lListNext.TabIndex = 4;
             this.lListNext.Text = "Next ";
             this.lListNext.UseVisualStyleBackColor = true;
@@ -2168,18 +1988,16 @@
             // 
             // lListInput
             // 
-            this.lListInput.Location = new System.Drawing.Point(95, 38);
-            this.lListInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lListInput.Location = new System.Drawing.Point(71, 31);
             this.lListInput.Name = "lListInput";
-            this.lListInput.Size = new System.Drawing.Size(132, 22);
+            this.lListInput.Size = new System.Drawing.Size(100, 20);
             this.lListInput.TabIndex = 3;
             // 
             // lListDelButton
             // 
-            this.lListDelButton.Location = new System.Drawing.Point(116, 70);
-            this.lListDelButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lListDelButton.Location = new System.Drawing.Point(87, 57);
             this.lListDelButton.Name = "lListDelButton";
-            this.lListDelButton.Size = new System.Drawing.Size(100, 28);
+            this.lListDelButton.Size = new System.Drawing.Size(75, 23);
             this.lListDelButton.TabIndex = 2;
             this.lListDelButton.Text = "Delete";
             this.lListDelButton.UseVisualStyleBackColor = true;
@@ -2187,10 +2005,9 @@
             // 
             // lListInsert
             // 
-            this.lListInsert.Location = new System.Drawing.Point(8, 70);
-            this.lListInsert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lListInsert.Location = new System.Drawing.Point(6, 57);
             this.lListInsert.Name = "lListInsert";
-            this.lListInsert.Size = new System.Drawing.Size(100, 28);
+            this.lListInsert.Size = new System.Drawing.Size(75, 23);
             this.lListInsert.TabIndex = 1;
             this.lListInsert.Text = "Insert";
             this.lListInsert.UseVisualStyleBackColor = true;
@@ -2199,11 +2016,9 @@
             // linkedList
             // 
             this.linkedList.FormattingEnabled = true;
-            this.linkedList.ItemHeight = 16;
-            this.linkedList.Location = new System.Drawing.Point(343, 7);
-            this.linkedList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.linkedList.Location = new System.Drawing.Point(257, 6);
             this.linkedList.Name = "linkedList";
-            this.linkedList.Size = new System.Drawing.Size(240, 340);
+            this.linkedList.Size = new System.Drawing.Size(181, 277);
             this.linkedList.TabIndex = 0;
             // 
             // tabPage6
@@ -2219,21 +2034,19 @@
             this.tabPage6.Controls.Add(this.dListDel);
             this.tabPage6.Controls.Add(this.dListInsert);
             this.tabPage6.Controls.Add(this.dLinkedList);
-            this.tabPage6.Location = new System.Drawing.Point(4, 25);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage6.Size = new System.Drawing.Size(700, 522);
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage6.Size = new System.Drawing.Size(523, 422);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "DoublyLinkedList";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // dListPrev
             // 
-            this.dListPrev.Location = new System.Drawing.Point(72, 272);
-            this.dListPrev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dListPrev.Location = new System.Drawing.Point(54, 221);
             this.dListPrev.Name = "dListPrev";
-            this.dListPrev.Size = new System.Drawing.Size(100, 28);
+            this.dListPrev.Size = new System.Drawing.Size(75, 23);
             this.dListPrev.TabIndex = 20;
             this.dListPrev.Text = "Previous";
             this.dListPrev.UseVisualStyleBackColor = true;
@@ -2241,10 +2054,9 @@
             // 
             // dListInsertAfter
             // 
-            this.dListInsertAfter.Location = new System.Drawing.Point(8, 106);
-            this.dListInsertAfter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dListInsertAfter.Location = new System.Drawing.Point(6, 86);
             this.dListInsertAfter.Name = "dListInsertAfter";
-            this.dListInsertAfter.Size = new System.Drawing.Size(171, 28);
+            this.dListInsertAfter.Size = new System.Drawing.Size(128, 23);
             this.dListInsertAfter.TabIndex = 19;
             this.dListInsertAfter.Text = "Insert after (selected)";
             this.dListInsertAfter.UseVisualStyleBackColor = true;
@@ -2252,10 +2064,9 @@
             // 
             // dListAddRange
             // 
-            this.dListAddRange.Location = new System.Drawing.Point(11, 142);
-            this.dListAddRange.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dListAddRange.Location = new System.Drawing.Point(8, 115);
             this.dListAddRange.Name = "dListAddRange";
-            this.dListAddRange.Size = new System.Drawing.Size(168, 28);
+            this.dListAddRange.Size = new System.Drawing.Size(126, 23);
             this.dListAddRange.TabIndex = 18;
             this.dListAddRange.Text = "Add test data";
             this.dListAddRange.UseVisualStyleBackColor = true;
@@ -2263,10 +2074,9 @@
             // 
             // dListSearch
             // 
-            this.dListSearch.Location = new System.Drawing.Point(224, 70);
-            this.dListSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dListSearch.Location = new System.Drawing.Point(168, 57);
             this.dListSearch.Name = "dListSearch";
-            this.dListSearch.Size = new System.Drawing.Size(100, 28);
+            this.dListSearch.Size = new System.Drawing.Size(75, 23);
             this.dListSearch.TabIndex = 17;
             this.dListSearch.Text = "Search";
             this.dListSearch.UseVisualStyleBackColor = true;
@@ -2274,10 +2084,9 @@
             // 
             // dListLast
             // 
-            this.dListLast.Location = new System.Drawing.Point(127, 320);
-            this.dListLast.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dListLast.Location = new System.Drawing.Point(95, 260);
             this.dListLast.Name = "dListLast";
-            this.dListLast.Size = new System.Drawing.Size(100, 28);
+            this.dListLast.Size = new System.Drawing.Size(75, 23);
             this.dListLast.TabIndex = 16;
             this.dListLast.Text = "Last";
             this.dListLast.UseVisualStyleBackColor = true;
@@ -2285,10 +2094,9 @@
             // 
             // dListfirst
             // 
-            this.dListfirst.Location = new System.Drawing.Point(127, 224);
-            this.dListfirst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dListfirst.Location = new System.Drawing.Point(95, 182);
             this.dListfirst.Name = "dListfirst";
-            this.dListfirst.Size = new System.Drawing.Size(100, 28);
+            this.dListfirst.Size = new System.Drawing.Size(75, 23);
             this.dListfirst.TabIndex = 15;
             this.dListfirst.Text = "First";
             this.dListfirst.UseVisualStyleBackColor = true;
@@ -2296,10 +2104,9 @@
             // 
             // dListNext
             // 
-            this.dListNext.Location = new System.Drawing.Point(195, 272);
-            this.dListNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dListNext.Location = new System.Drawing.Point(146, 221);
             this.dListNext.Name = "dListNext";
-            this.dListNext.Size = new System.Drawing.Size(100, 28);
+            this.dListNext.Size = new System.Drawing.Size(75, 23);
             this.dListNext.TabIndex = 14;
             this.dListNext.Text = "Next ";
             this.dListNext.UseVisualStyleBackColor = true;
@@ -2307,18 +2114,16 @@
             // 
             // dListInput
             // 
-            this.dListInput.Location = new System.Drawing.Point(93, 38);
-            this.dListInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dListInput.Location = new System.Drawing.Point(70, 31);
             this.dListInput.Name = "dListInput";
-            this.dListInput.Size = new System.Drawing.Size(132, 22);
+            this.dListInput.Size = new System.Drawing.Size(100, 20);
             this.dListInput.TabIndex = 13;
             // 
             // dListDel
             // 
-            this.dListDel.Location = new System.Drawing.Point(115, 70);
-            this.dListDel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dListDel.Location = new System.Drawing.Point(86, 57);
             this.dListDel.Name = "dListDel";
-            this.dListDel.Size = new System.Drawing.Size(100, 28);
+            this.dListDel.Size = new System.Drawing.Size(75, 23);
             this.dListDel.TabIndex = 12;
             this.dListDel.Text = "Delete";
             this.dListDel.UseVisualStyleBackColor = true;
@@ -2326,10 +2131,9 @@
             // 
             // dListInsert
             // 
-            this.dListInsert.Location = new System.Drawing.Point(7, 70);
-            this.dListInsert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dListInsert.Location = new System.Drawing.Point(5, 57);
             this.dListInsert.Name = "dListInsert";
-            this.dListInsert.Size = new System.Drawing.Size(100, 28);
+            this.dListInsert.Size = new System.Drawing.Size(75, 23);
             this.dListInsert.TabIndex = 11;
             this.dListInsert.Text = "Insert";
             this.dListInsert.UseVisualStyleBackColor = true;
@@ -2338,11 +2142,9 @@
             // dLinkedList
             // 
             this.dLinkedList.FormattingEnabled = true;
-            this.dLinkedList.ItemHeight = 16;
-            this.dLinkedList.Location = new System.Drawing.Point(341, 7);
-            this.dLinkedList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dLinkedList.Location = new System.Drawing.Point(256, 6);
             this.dLinkedList.Name = "dLinkedList";
-            this.dLinkedList.Size = new System.Drawing.Size(240, 340);
+            this.dLinkedList.Size = new System.Drawing.Size(181, 277);
             this.dLinkedList.TabIndex = 10;
             // 
             // tabPage7
@@ -2358,20 +2160,18 @@
             this.tabPage7.Controls.Add(this.cListDelete);
             this.tabPage7.Controls.Add(this.cListInsert);
             this.tabPage7.Controls.Add(this.cLinkedList);
-            this.tabPage7.Location = new System.Drawing.Point(4, 25);
-            this.tabPage7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(700, 522);
+            this.tabPage7.Size = new System.Drawing.Size(523, 422);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "CirculairLinkedList";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // cListPrev
             // 
-            this.cListPrev.Location = new System.Drawing.Point(72, 271);
-            this.cListPrev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cListPrev.Location = new System.Drawing.Point(54, 220);
             this.cListPrev.Name = "cListPrev";
-            this.cListPrev.Size = new System.Drawing.Size(100, 28);
+            this.cListPrev.Size = new System.Drawing.Size(75, 23);
             this.cListPrev.TabIndex = 31;
             this.cListPrev.Text = "Previous";
             this.cListPrev.UseVisualStyleBackColor = true;
@@ -2379,10 +2179,9 @@
             // 
             // cListInsertAfter
             // 
-            this.cListInsertAfter.Location = new System.Drawing.Point(8, 105);
-            this.cListInsertAfter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cListInsertAfter.Location = new System.Drawing.Point(6, 85);
             this.cListInsertAfter.Name = "cListInsertAfter";
-            this.cListInsertAfter.Size = new System.Drawing.Size(171, 28);
+            this.cListInsertAfter.Size = new System.Drawing.Size(128, 23);
             this.cListInsertAfter.TabIndex = 30;
             this.cListInsertAfter.Text = "Insert after (selected)";
             this.cListInsertAfter.UseVisualStyleBackColor = true;
@@ -2390,10 +2189,9 @@
             // 
             // cListAddRange
             // 
-            this.cListAddRange.Location = new System.Drawing.Point(11, 140);
-            this.cListAddRange.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cListAddRange.Location = new System.Drawing.Point(8, 114);
             this.cListAddRange.Name = "cListAddRange";
-            this.cListAddRange.Size = new System.Drawing.Size(168, 28);
+            this.cListAddRange.Size = new System.Drawing.Size(126, 23);
             this.cListAddRange.TabIndex = 29;
             this.cListAddRange.Text = "Add test data";
             this.cListAddRange.UseVisualStyleBackColor = true;
@@ -2401,10 +2199,9 @@
             // 
             // cListSearch
             // 
-            this.cListSearch.Location = new System.Drawing.Point(224, 69);
-            this.cListSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cListSearch.Location = new System.Drawing.Point(168, 56);
             this.cListSearch.Name = "cListSearch";
-            this.cListSearch.Size = new System.Drawing.Size(100, 28);
+            this.cListSearch.Size = new System.Drawing.Size(75, 23);
             this.cListSearch.TabIndex = 28;
             this.cListSearch.Text = "Search";
             this.cListSearch.UseVisualStyleBackColor = true;
@@ -2412,10 +2209,9 @@
             // 
             // cListLast
             // 
-            this.cListLast.Location = new System.Drawing.Point(127, 319);
-            this.cListLast.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cListLast.Location = new System.Drawing.Point(95, 259);
             this.cListLast.Name = "cListLast";
-            this.cListLast.Size = new System.Drawing.Size(100, 28);
+            this.cListLast.Size = new System.Drawing.Size(75, 23);
             this.cListLast.TabIndex = 27;
             this.cListLast.Text = "Last";
             this.cListLast.UseVisualStyleBackColor = true;
@@ -2423,10 +2219,9 @@
             // 
             // cListFirst
             // 
-            this.cListFirst.Location = new System.Drawing.Point(127, 223);
-            this.cListFirst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cListFirst.Location = new System.Drawing.Point(95, 181);
             this.cListFirst.Name = "cListFirst";
-            this.cListFirst.Size = new System.Drawing.Size(100, 28);
+            this.cListFirst.Size = new System.Drawing.Size(75, 23);
             this.cListFirst.TabIndex = 26;
             this.cListFirst.Text = "First";
             this.cListFirst.UseVisualStyleBackColor = true;
@@ -2434,10 +2229,9 @@
             // 
             // cListNext
             // 
-            this.cListNext.Location = new System.Drawing.Point(195, 271);
-            this.cListNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cListNext.Location = new System.Drawing.Point(146, 220);
             this.cListNext.Name = "cListNext";
-            this.cListNext.Size = new System.Drawing.Size(100, 28);
+            this.cListNext.Size = new System.Drawing.Size(75, 23);
             this.cListNext.TabIndex = 25;
             this.cListNext.Text = "Next ";
             this.cListNext.UseVisualStyleBackColor = true;
@@ -2445,18 +2239,16 @@
             // 
             // cListInput
             // 
-            this.cListInput.Location = new System.Drawing.Point(93, 37);
-            this.cListInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cListInput.Location = new System.Drawing.Point(70, 30);
             this.cListInput.Name = "cListInput";
-            this.cListInput.Size = new System.Drawing.Size(132, 22);
+            this.cListInput.Size = new System.Drawing.Size(100, 20);
             this.cListInput.TabIndex = 24;
             // 
             // cListDelete
             // 
-            this.cListDelete.Location = new System.Drawing.Point(115, 69);
-            this.cListDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cListDelete.Location = new System.Drawing.Point(86, 56);
             this.cListDelete.Name = "cListDelete";
-            this.cListDelete.Size = new System.Drawing.Size(100, 28);
+            this.cListDelete.Size = new System.Drawing.Size(75, 23);
             this.cListDelete.TabIndex = 23;
             this.cListDelete.Text = "Delete";
             this.cListDelete.UseVisualStyleBackColor = true;
@@ -2464,10 +2256,9 @@
             // 
             // cListInsert
             // 
-            this.cListInsert.Location = new System.Drawing.Point(7, 69);
-            this.cListInsert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cListInsert.Location = new System.Drawing.Point(5, 56);
             this.cListInsert.Name = "cListInsert";
-            this.cListInsert.Size = new System.Drawing.Size(100, 28);
+            this.cListInsert.Size = new System.Drawing.Size(75, 23);
             this.cListInsert.TabIndex = 22;
             this.cListInsert.Text = "Insert";
             this.cListInsert.UseVisualStyleBackColor = true;
@@ -2476,11 +2267,9 @@
             // cLinkedList
             // 
             this.cLinkedList.FormattingEnabled = true;
-            this.cLinkedList.ItemHeight = 16;
-            this.cLinkedList.Location = new System.Drawing.Point(341, 6);
-            this.cLinkedList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cLinkedList.Location = new System.Drawing.Point(256, 5);
             this.cLinkedList.Name = "cLinkedList";
-            this.cLinkedList.Size = new System.Drawing.Size(240, 340);
+            this.cLinkedList.Size = new System.Drawing.Size(181, 277);
             this.cLinkedList.TabIndex = 21;
             // 
             // Iterator
@@ -2495,10 +2284,9 @@
             this.Iterator.Controls.Add(this.nextIter);
             this.Iterator.Controls.Add(this.addList);
             this.Iterator.Controls.Add(this.listIter);
-            this.Iterator.Location = new System.Drawing.Point(4, 25);
-            this.Iterator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Iterator.Location = new System.Drawing.Point(4, 22);
             this.Iterator.Name = "Iterator";
-            this.Iterator.Size = new System.Drawing.Size(705, 549);
+            this.Iterator.Size = new System.Drawing.Size(527, 444);
             this.Iterator.TabIndex = 7;
             this.Iterator.Text = "Iterator";
             this.Iterator.UseVisualStyleBackColor = true;
@@ -2506,18 +2294,16 @@
             // currentLabel
             // 
             this.currentLabel.AutoSize = true;
-            this.currentLabel.Location = new System.Drawing.Point(476, 228);
-            this.currentLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.currentLabel.Location = new System.Drawing.Point(357, 185);
             this.currentLabel.Name = "currentLabel";
-            this.currentLabel.Size = new System.Drawing.Size(0, 17);
+            this.currentLabel.Size = new System.Drawing.Size(0, 13);
             this.currentLabel.TabIndex = 9;
             // 
             // reset
             // 
-            this.reset.Location = new System.Drawing.Point(480, 114);
-            this.reset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reset.Location = new System.Drawing.Point(360, 93);
             this.reset.Name = "reset";
-            this.reset.Size = new System.Drawing.Size(100, 28);
+            this.reset.Size = new System.Drawing.Size(75, 23);
             this.reset.TabIndex = 8;
             this.reset.Text = "reset";
             this.reset.UseVisualStyleBackColor = true;
@@ -2525,10 +2311,9 @@
             // 
             // iterRemove
             // 
-            this.iterRemove.Location = new System.Drawing.Point(23, 162);
-            this.iterRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iterRemove.Location = new System.Drawing.Point(17, 132);
             this.iterRemove.Name = "iterRemove";
-            this.iterRemove.Size = new System.Drawing.Size(100, 28);
+            this.iterRemove.Size = new System.Drawing.Size(75, 23);
             this.iterRemove.TabIndex = 7;
             this.iterRemove.Text = "remove";
             this.iterRemove.UseVisualStyleBackColor = true;
@@ -2536,10 +2321,9 @@
             // 
             // iterAfter
             // 
-            this.iterAfter.Location = new System.Drawing.Point(23, 288);
-            this.iterAfter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iterAfter.Location = new System.Drawing.Point(17, 234);
             this.iterAfter.Name = "iterAfter";
-            this.iterAfter.Size = new System.Drawing.Size(100, 28);
+            this.iterAfter.Size = new System.Drawing.Size(75, 23);
             this.iterAfter.TabIndex = 6;
             this.iterAfter.Text = "insert after";
             this.iterAfter.UseVisualStyleBackColor = true;
@@ -2547,18 +2331,16 @@
             // 
             // iterInput
             // 
-            this.iterInput.Location = new System.Drawing.Point(23, 219);
-            this.iterInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iterInput.Location = new System.Drawing.Point(17, 178);
             this.iterInput.Name = "iterInput";
-            this.iterInput.Size = new System.Drawing.Size(132, 22);
+            this.iterInput.Size = new System.Drawing.Size(100, 20);
             this.iterInput.TabIndex = 5;
             // 
             // iterBefore
             // 
-            this.iterBefore.Location = new System.Drawing.Point(23, 251);
-            this.iterBefore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iterBefore.Location = new System.Drawing.Point(17, 204);
             this.iterBefore.Name = "iterBefore";
-            this.iterBefore.Size = new System.Drawing.Size(100, 28);
+            this.iterBefore.Size = new System.Drawing.Size(75, 23);
             this.iterBefore.TabIndex = 4;
             this.iterBefore.Text = "insert before";
             this.iterBefore.UseVisualStyleBackColor = true;
@@ -2566,10 +2348,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(480, 162);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(360, 132);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 28);
+            this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
             this.button2.Text = "get current";
             this.button2.UseVisualStyleBackColor = true;
@@ -2577,10 +2358,9 @@
             // 
             // nextIter
             // 
-            this.nextIter.Location = new System.Drawing.Point(23, 114);
-            this.nextIter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nextIter.Location = new System.Drawing.Point(17, 93);
             this.nextIter.Name = "nextIter";
-            this.nextIter.Size = new System.Drawing.Size(100, 28);
+            this.nextIter.Size = new System.Drawing.Size(75, 23);
             this.nextIter.TabIndex = 2;
             this.nextIter.Text = "Next";
             this.nextIter.UseVisualStyleBackColor = true;
@@ -2588,10 +2368,9 @@
             // 
             // addList
             // 
-            this.addList.Location = new System.Drawing.Point(23, 22);
-            this.addList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addList.Location = new System.Drawing.Point(17, 18);
             this.addList.Name = "addList";
-            this.addList.Size = new System.Drawing.Size(100, 28);
+            this.addList.Size = new System.Drawing.Size(75, 23);
             this.addList.TabIndex = 1;
             this.addList.Text = "load list";
             this.addList.UseVisualStyleBackColor = true;
@@ -2600,11 +2379,9 @@
             // listIter
             // 
             this.listIter.FormattingEnabled = true;
-            this.listIter.ItemHeight = 16;
-            this.listIter.Location = new System.Drawing.Point(204, 22);
-            this.listIter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listIter.Location = new System.Drawing.Point(153, 18);
             this.listIter.Name = "listIter";
-            this.listIter.Size = new System.Drawing.Size(229, 324);
+            this.listIter.Size = new System.Drawing.Size(173, 264);
             this.listIter.TabIndex = 0;
             // 
             // SearchTree
@@ -2628,10 +2405,9 @@
             this.SearchTree.Controls.Add(this.treeInput);
             this.SearchTree.Controls.Add(this.searchButton);
             this.SearchTree.Controls.Add(this.Insert);
-            this.SearchTree.Location = new System.Drawing.Point(4, 25);
-            this.SearchTree.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SearchTree.Location = new System.Drawing.Point(4, 22);
             this.SearchTree.Name = "SearchTree";
-            this.SearchTree.Size = new System.Drawing.Size(705, 549);
+            this.SearchTree.Size = new System.Drawing.Size(527, 444);
             this.SearchTree.TabIndex = 8;
             this.SearchTree.Text = "SearchTree";
             this.SearchTree.UseVisualStyleBackColor = true;
@@ -2640,19 +2416,17 @@
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(163, 306);
-            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label40.Location = new System.Drawing.Point(122, 249);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(383, 17);
+            this.label40.Size = new System.Drawing.Size(286, 13);
             this.label40.TabIndex = 20;
             this.label40.Text = "Select a item in the list box to show it\'s left or right sub node";
             // 
             // rangeButton
             // 
-            this.rangeButton.Location = new System.Drawing.Point(9, 266);
-            this.rangeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rangeButton.Location = new System.Drawing.Point(7, 216);
             this.rangeButton.Name = "rangeButton";
-            this.rangeButton.Size = new System.Drawing.Size(135, 28);
+            this.rangeButton.Size = new System.Drawing.Size(101, 23);
             this.rangeButton.TabIndex = 19;
             this.rangeButton.Text = "add test data";
             this.rangeButton.UseVisualStyleBackColor = true;
@@ -2661,19 +2435,16 @@
             // orderedTreeBox
             // 
             this.orderedTreeBox.FormattingEnabled = true;
-            this.orderedTreeBox.ItemHeight = 16;
-            this.orderedTreeBox.Location = new System.Drawing.Point(483, 11);
-            this.orderedTreeBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.orderedTreeBox.Location = new System.Drawing.Point(362, 9);
             this.orderedTreeBox.Name = "orderedTreeBox";
-            this.orderedTreeBox.Size = new System.Drawing.Size(192, 260);
+            this.orderedTreeBox.Size = new System.Drawing.Size(145, 212);
             this.orderedTreeBox.TabIndex = 18;
             // 
             // postButton
             // 
-            this.postButton.Location = new System.Drawing.Point(407, 345);
-            this.postButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.postButton.Location = new System.Drawing.Point(305, 280);
             this.postButton.Name = "postButton";
-            this.postButton.Size = new System.Drawing.Size(100, 28);
+            this.postButton.Size = new System.Drawing.Size(75, 23);
             this.postButton.TabIndex = 17;
             this.postButton.Text = "PostOrder";
             this.postButton.UseVisualStyleBackColor = true;
@@ -2681,10 +2452,9 @@
             // 
             // preButton
             // 
-            this.preButton.Location = new System.Drawing.Point(299, 345);
-            this.preButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.preButton.Location = new System.Drawing.Point(224, 280);
             this.preButton.Name = "preButton";
-            this.preButton.Size = new System.Drawing.Size(100, 28);
+            this.preButton.Size = new System.Drawing.Size(75, 23);
             this.preButton.TabIndex = 16;
             this.preButton.Text = "PreOrder";
             this.preButton.UseVisualStyleBackColor = true;
@@ -2692,10 +2462,9 @@
             // 
             // inButton
             // 
-            this.inButton.Location = new System.Drawing.Point(191, 346);
-            this.inButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inButton.Location = new System.Drawing.Point(143, 281);
             this.inButton.Name = "inButton";
-            this.inButton.Size = new System.Drawing.Size(100, 28);
+            this.inButton.Size = new System.Drawing.Size(75, 23);
             this.inButton.TabIndex = 15;
             this.inButton.Text = "InOrder ";
             this.inButton.UseVisualStyleBackColor = true;
@@ -2703,10 +2472,9 @@
             // 
             // rightNode
             // 
-            this.rightNode.Location = new System.Drawing.Point(359, 278);
-            this.rightNode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rightNode.Location = new System.Drawing.Point(269, 226);
             this.rightNode.Name = "rightNode";
-            this.rightNode.Size = new System.Drawing.Size(100, 28);
+            this.rightNode.Size = new System.Drawing.Size(75, 23);
             this.rightNode.TabIndex = 14;
             this.rightNode.Text = "Right node";
             this.rightNode.UseVisualStyleBackColor = true;
@@ -2714,10 +2482,9 @@
             // 
             // leftNode
             // 
-            this.leftNode.Location = new System.Drawing.Point(225, 278);
-            this.leftNode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.leftNode.Location = new System.Drawing.Point(169, 226);
             this.leftNode.Name = "leftNode";
-            this.leftNode.Size = new System.Drawing.Size(100, 28);
+            this.leftNode.Size = new System.Drawing.Size(75, 23);
             this.leftNode.TabIndex = 13;
             this.leftNode.Text = "Left node";
             this.leftNode.UseVisualStyleBackColor = true;
@@ -2726,46 +2493,41 @@
             // treeMaxLabel
             // 
             this.treeMaxLabel.AutoSize = true;
-            this.treeMaxLabel.Location = new System.Drawing.Point(144, 219);
-            this.treeMaxLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.treeMaxLabel.Location = new System.Drawing.Point(108, 178);
             this.treeMaxLabel.Name = "treeMaxLabel";
-            this.treeMaxLabel.Size = new System.Drawing.Size(0, 17);
+            this.treeMaxLabel.Size = new System.Drawing.Size(0, 13);
             this.treeMaxLabel.TabIndex = 12;
             // 
             // treeMinLabel
             // 
             this.treeMinLabel.AutoSize = true;
-            this.treeMinLabel.Location = new System.Drawing.Point(144, 182);
-            this.treeMinLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.treeMinLabel.Location = new System.Drawing.Point(108, 148);
             this.treeMinLabel.Name = "treeMinLabel";
-            this.treeMinLabel.Size = new System.Drawing.Size(0, 17);
+            this.treeMinLabel.Size = new System.Drawing.Size(0, 13);
             this.treeMinLabel.TabIndex = 11;
             // 
             // treeSearchLabel
             // 
             this.treeSearchLabel.AutoSize = true;
-            this.treeSearchLabel.Location = new System.Drawing.Point(143, 111);
-            this.treeSearchLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.treeSearchLabel.Location = new System.Drawing.Point(107, 90);
             this.treeSearchLabel.Name = "treeSearchLabel";
-            this.treeSearchLabel.Size = new System.Drawing.Size(0, 17);
+            this.treeSearchLabel.Size = new System.Drawing.Size(0, 13);
             this.treeSearchLabel.TabIndex = 10;
             // 
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(11, 11);
-            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label39.Location = new System.Drawing.Point(8, 9);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(39, 17);
+            this.label39.Size = new System.Drawing.Size(31, 13);
             this.label39.TabIndex = 9;
             this.label39.Text = "Input";
             // 
             // delButton
             // 
-            this.delButton.Location = new System.Drawing.Point(9, 138);
-            this.delButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.delButton.Location = new System.Drawing.Point(7, 112);
             this.delButton.Name = "delButton";
-            this.delButton.Size = new System.Drawing.Size(100, 28);
+            this.delButton.Size = new System.Drawing.Size(75, 23);
             this.delButton.TabIndex = 8;
             this.delButton.Text = "Delete";
             this.delButton.UseVisualStyleBackColor = true;
@@ -2773,10 +2535,9 @@
             // 
             // max
             // 
-            this.max.Location = new System.Drawing.Point(9, 210);
-            this.max.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.max.Location = new System.Drawing.Point(7, 171);
             this.max.Name = "max";
-            this.max.Size = new System.Drawing.Size(100, 28);
+            this.max.Size = new System.Drawing.Size(75, 23);
             this.max.TabIndex = 6;
             this.max.Text = "Max";
             this.max.UseVisualStyleBackColor = true;
@@ -2784,10 +2545,9 @@
             // 
             // Min
             // 
-            this.Min.Location = new System.Drawing.Point(9, 174);
-            this.Min.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Min.Location = new System.Drawing.Point(7, 141);
             this.Min.Name = "Min";
-            this.Min.Size = new System.Drawing.Size(100, 28);
+            this.Min.Size = new System.Drawing.Size(75, 23);
             this.Min.TabIndex = 5;
             this.Min.Text = "Min";
             this.Min.UseVisualStyleBackColor = true;
@@ -2796,28 +2556,24 @@
             // treeBox
             // 
             this.treeBox.FormattingEnabled = true;
-            this.treeBox.ItemHeight = 16;
-            this.treeBox.Location = new System.Drawing.Point(225, 11);
-            this.treeBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.treeBox.Location = new System.Drawing.Point(169, 9);
             this.treeBox.Name = "treeBox";
-            this.treeBox.Size = new System.Drawing.Size(232, 260);
+            this.treeBox.Size = new System.Drawing.Size(175, 212);
             this.treeBox.TabIndex = 4;
             this.treeBox.SelectedIndexChanged += new System.EventHandler(this.sortInt_Click);
             // 
             // treeInput
             // 
-            this.treeInput.Location = new System.Drawing.Point(9, 34);
-            this.treeInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.treeInput.Location = new System.Drawing.Point(7, 28);
             this.treeInput.Name = "treeInput";
-            this.treeInput.Size = new System.Drawing.Size(132, 22);
+            this.treeInput.Size = new System.Drawing.Size(100, 20);
             this.treeInput.TabIndex = 3;
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(9, 102);
-            this.searchButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchButton.Location = new System.Drawing.Point(7, 83);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(100, 28);
+            this.searchButton.Size = new System.Drawing.Size(75, 23);
             this.searchButton.TabIndex = 2;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
@@ -2825,10 +2581,9 @@
             // 
             // Insert
             // 
-            this.Insert.Location = new System.Drawing.Point(9, 66);
-            this.Insert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Insert.Location = new System.Drawing.Point(7, 54);
             this.Insert.Name = "Insert";
-            this.Insert.Size = new System.Drawing.Size(100, 28);
+            this.Insert.Size = new System.Drawing.Size(75, 23);
             this.Insert.TabIndex = 0;
             this.Insert.Text = "Insert";
             this.Insert.UseVisualStyleBackColor = true;
@@ -2836,11 +2591,10 @@
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 574);
+            this.ClientSize = new System.Drawing.Size(533, 466);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Main";
             this.Text = "Main";
             this.tabControl1.ResumeLayout(false);

@@ -1,12 +1,19 @@
 ﻿using System;
 /*
  *      AUTEUR: Nathan van Vliet 
+ *      
+ *      Source for lock() :
+ *      https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/lock-statement
+ *      
+ *      Time measurement and lock() is used at the Sort functions, 
+ *      from line 483 
  */
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
 using System.Windows.Forms;
 using AlgoDLL;
+using System.Diagnostics;
 
 namespace Eindopdracht
 {
@@ -29,7 +36,7 @@ namespace Eindopdracht
         _Stack<string> stringStack = new _Stack<string>();
 
         // sort
-        private long time_bubble = long.MaxValue, time_selection = long.MaxValue, time_insertion = long.MaxValue;
+        private double time_bubble = double.MaxValue, time_selection = double.MaxValue, time_insertion = double.MaxValue;
 
         // binary search tree
         BinarySearchTree<string> stringTree = new BinarySearchTree<string>();
@@ -48,11 +55,14 @@ namespace Eindopdracht
         LinearHash lHash = new LinearHash();
         string[] data = new string[9];
 
+        //Lock
+        object _lock = new object();
+
         public Main()
         {
        
-    //set the priority of the program to the highest
-    System.Diagnostics.Process.GetCurrentProcess().PriorityClass = System.Diagnostics.ProcessPriorityClass.RealTime;
+        //set the priority of the program to the highest (for the time measurement)
+        System.Diagnostics.Process.GetCurrentProcess().PriorityClass = System.Diagnostics.ProcessPriorityClass.RealTime;
             InitializeComponent();
             fillIterList();
         }
@@ -293,18 +303,18 @@ namespace Eindopdracht
                 test[i] = i;
             }
             TimeModule watch = new TimeModule();
-            watch.start();
+            watch.Start();
             int pos = Search<int>.firstSeqSearch(test, 213);
-            watch.stop();
-            Console.WriteLine("sequential search took {0} ticks", watch.elapseTime());
-            Console.WriteLine("Sequential pos " + pos);
+            watch.Stop();
+            Debug.WriteLine("sequential search took {0} ms", watch.Duration);
+            Debug.WriteLine("Sequential pos " + pos);
 
             TimeModule watch2 = new TimeModule();
-            watch2.start();
+            watch2.Start();
             pos = Search<int>.binarySearch(test, 213);
-            watch2.stop();
-            Console.WriteLine("binary search took {0} ticks", watch2.elapseTime());
-            Console.WriteLine("binary pos " + pos);
+            watch2.Stop();
+            Debug.WriteLine("binary search took {0} ms", watch2.Duration);
+            Debug.WriteLine("binary pos " + pos);
         }
 
         #endregion
@@ -477,35 +487,38 @@ namespace Eindopdracht
         #region Selection sort
         private void selectSortString_Click(object sender, EventArgs e)
         {
-            clearSortLists();
-            //Array of 100 strings
-            String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
-            //start the selection sorter
-            try
+            lock (_lock) // lock so the measurement can run twice at the same time
             {
-                //copy of the array to sort
-                String[] tempArray = array;
-                int n = tempArray.Length;
-                for (int i = 0; i < n; i++)
+                clearSortLists();
+                //Array of 100 strings
+                String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
+                //start the selection sorter
+                try
                 {
-                    selectUnsortBox.Items.Add(tempArray[i]);
+                    //copy of the array to sort
+                    String[] tempArray = array;
+                    int n = tempArray.Length;
+                    for (int i = 0; i < n; i++)
+                    {
+                        selectUnsortBox.Items.Add(tempArray[i]);
+                    }
+
+                    //start the sorting
+                    ArrayList temp = _Sort.Selection(tempArray);
+
+                    timeLabelSelect.Text = temp[0].ToString();
+                    String[] sorted = (string[])temp[1];
+
+                    int m = sorted.Length;
+                    for (int i = 0; i < m; i++)
+                    {
+                        selectSortBox.Items.Add(sorted[i]);
+                    }
                 }
-
-                //start the sorting
-                ArrayList temp = _Sort.Selection(tempArray);
-
-                timeLabelSelect.Text = temp[0].ToString();
-                String[] sorted = (string[])temp[1];
-
-                int m = sorted.Length;
-                for (int i = 0; i < m; i++)
+                catch (Exception ex)
                 {
-                    selectSortBox.Items.Add(sorted[i]);
+                    Console.WriteLine(ex);
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
             }
         }
 
@@ -517,37 +530,40 @@ namespace Eindopdracht
         private void selectReverse_Click(object sender, EventArgs e)
         {
             clearSortLists();
-            //Array of 100 strings
-            String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
-            _Sort.Insertion(array);
-            Array.Reverse(array);
-
-            //start the selection sorter
-            try
+            lock (_lock) // lock so the measurement can run twice at the same time
             {
-                //copy of the array to sort
-                String[] tempArray = array;
-                int n = tempArray.Length;
-                for (int i = 0; i < n; i++)
+                //Array of 100 strings
+                String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
+                _Sort.Insertion(array);
+                Array.Reverse(array);
+
+                //start the selection sorter
+                try
                 {
-                    selectUnsortBox.Items.Add(tempArray[i]);
+                    //copy of the array to sort
+                    String[] tempArray = array;
+                    int n = tempArray.Length;
+                    for (int i = 0; i < n; i++)
+                    {
+                        selectUnsortBox.Items.Add(tempArray[i]);
+                    }
+
+                    //start the sorting
+                    ArrayList temp = _Sort.Selection(tempArray);
+
+                    timeLabelSelect.Text = temp[0].ToString();
+                    String[] sorted = (string[])temp[1];
+
+                    int m = sorted.Length;
+                    for (int i = 0; i < m; i++)
+                    {
+                        selectSortBox.Items.Add(sorted[i]);
+                    }
                 }
-
-                //start the sorting
-                ArrayList temp = _Sort.Selection(tempArray);
-
-                timeLabelSelect.Text = temp[0].ToString();
-                String[] sorted = (string[])temp[1];
-
-                int m = sorted.Length;
-                for (int i = 0; i < m; i++)
+                catch (Exception ex)
                 {
-                    selectSortBox.Items.Add(sorted[i]);
+                    Console.WriteLine(ex);
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
             }
         }
 
@@ -556,38 +572,41 @@ namespace Eindopdracht
             try
             {
                 clearSortLists();
-                //create an array of ints
-                int[] numbers = new int[1000];
-                //fill the array
-                int temp = 0;
-                Random rnd = new Random();
-
-                int max = numbers.Length;
-                while (temp < max)
+                lock (_lock) // lock so the measurement can run twice at the same time
                 {
-                    numbers[temp] = rnd.Next(1, 5000);
-                    temp++;
-                }
+                    //create an array of ints
+                    int[] numbers = new int[1000];
+                    //fill the array
+                    int temp = 0;
+                    Random rnd = new Random();
 
-                ////start the selection sorter
-                //copy of the array to sort
-                int[] tempArray = numbers;
-                int n = tempArray.Length;
-                for (int i = 0; i < n; i++)
-                {
-                    selectUnsortBox.Items.Add(tempArray[i]);
-                }
+                    int max = numbers.Length;
+                    while (temp < max)
+                    {
+                        numbers[temp] = rnd.Next(1, 5000);
+                        temp++;
+                    }
 
-                //start the sorting
-                ArrayList tempp = _Sort.Selection(tempArray);
+                    ////start the selection sorter
+                    //copy of the array to sort
+                    int[] tempArray = numbers;
+                    int n = tempArray.Length;
+                    for (int i = 0; i < n; i++)
+                    {
+                        selectUnsortBox.Items.Add(tempArray[i]);
+                    }
 
-                timeLabelSelect.Text = tempp[0].ToString();
-                int[] sorted = (int[])tempp[1];
+                    //start the sorting
+                    ArrayList tempp = _Sort.Selection(tempArray);
 
-                int m = sorted.Length;
-                for (int i = 0; i < m; i++)
-                {
-                    selectSortBox.Items.Add(sorted[i]);
+                    timeLabelSelect.Text = tempp[0].ToString();
+                    int[] sorted = (int[])tempp[1];
+
+                    int m = sorted.Length;
+                    for (int i = 0; i < m; i++)
+                    {
+                        selectSortBox.Items.Add(sorted[i]);
+                    }
                 }
             }
             catch (Exception ex)
@@ -611,28 +630,31 @@ namespace Eindopdracht
             try
             {
                 clearSortLists();
-                //Array of 100 strings
-                String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
-                //start the Bubble sorter
-            
-                //copy of the array to sort
-                String[] tempArray = array;
-                int n = tempArray.Length;
-                for (int i = 0; i < n; i++)
+                lock (_lock) // lock so the measurement can run twice at the same time
                 {
-                    bubbleUnsort.Items.Add(tempArray[i]);
-                }
+                    //Array of 100 strings
+                    String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
+                    //start the Bubble sorter
 
-                //start the sorting
-                ArrayList temp = _Sort.Bubble(tempArray);
+                    //copy of the array to sort
+                    String[] tempArray = array;
+                    int n = tempArray.Length;
+                    for (int i = 0; i < n; i++)
+                    {
+                        bubbleUnsort.Items.Add(tempArray[i]);
+                    }
 
-                bubbleTimeLabel.Text = temp[0].ToString();
-                String[] sorted = (string[])temp[1];
+                    //start the sorting
+                    ArrayList temp = _Sort.Bubble(tempArray);
 
-                int m = sorted.Length;
-                for (int i = 0; i < m; i++)
-                {
-                    bubbleSorted.Items.Add(sorted[i]);
+                    bubbleTimeLabel.Text = temp[0].ToString();
+                    String[] sorted = (string[])temp[1];
+
+                    int m = sorted.Length;
+                    for (int i = 0; i < m; i++)
+                    {
+                        bubbleSorted.Items.Add(sorted[i]);
+                    }
                 }
             }
             catch (Exception ex)
@@ -647,30 +669,33 @@ namespace Eindopdracht
             try
             {
                 clearSortLists();
-                //Array of 100 strings
-                String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
-                _Sort.Insertion(array);
-                Array.Reverse(array);
-
-            
-                //copy of the array to sort
-                String[] tempArray = array;
-                int n = tempArray.Length;
-                for (int i = 0; i < n; i++)
+                lock (_lock) // lock so the measurement can run twice at the same time
                 {
-                    bubbleUnsort.Items.Add(tempArray[i]);
-                }
+                    //Array of 100 strings
+                    String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
+                    _Sort.Insertion(array);
+                    Array.Reverse(array);
 
-                //start the sorting
-                ArrayList temp = _Sort.Bubble(tempArray);
 
-                bubbleTimeLabel.Text = temp[0].ToString();
-                String[] sorted = (string[])temp[1];
+                    //copy of the array to sort
+                    String[] tempArray = array;
+                    int n = tempArray.Length;
+                    for (int i = 0; i < n; i++)
+                    {
+                        bubbleUnsort.Items.Add(tempArray[i]);
+                    }
 
-                int m = sorted.Length;
-                for (int i = 0; i < m; i++)
-                {
-                    bubbleSorted.Items.Add(sorted[i]);
+                    //start the sorting
+                    ArrayList temp = _Sort.Bubble(tempArray);
+
+                    bubbleTimeLabel.Text = temp[0].ToString();
+                    String[] sorted = (string[])temp[1];
+
+                    int m = sorted.Length;
+                    for (int i = 0; i < m; i++)
+                    {
+                        bubbleSorted.Items.Add(sorted[i]);
+                    }
                 }
             }
             catch (Exception ex)
@@ -685,37 +710,40 @@ namespace Eindopdracht
             try
             {
                 clearSortLists();
-                //create an array of ints
-                int[] array = new int[1000];
-                //fill the array
-                int temp = 0;
-                Random rnd = new Random();
-
-                int max = array.Length;
-                while (temp < max)
+                lock (_lock) // lock so the measurement can run twice at the same time
                 {
-                    array[temp] = rnd.Next(1, 5000);
-                    temp++;
-                }
+                    //create an array of ints
+                    int[] array = new int[1000];
+                    //fill the array
+                    int temp = 0;
+                    Random rnd = new Random();
 
-                //copy of the array to sort
-                int[] tempArray = array;
-                int n = tempArray.Length;
-                for (int i = 0; i < n; i++)
-                {
-                    bubbleUnsort.Items.Add(tempArray[i]);
-                }
+                    int max = array.Length;
+                    while (temp < max)
+                    {
+                        array[temp] = rnd.Next(1, 5000);
+                        temp++;
+                    }
 
-                //start the sorting
-                ArrayList tempp = _Sort.Bubble(tempArray);
+                    //copy of the array to sort
+                    int[] tempArray = array;
+                    int n = tempArray.Length;
+                    for (int i = 0; i < n; i++)
+                    {
+                        bubbleUnsort.Items.Add(tempArray[i]);
+                    }
 
-                bubbleTimeLabel.Text = tempp[0].ToString();
-                int[] sorted = (int[])tempp[1];
+                    //start the sorting
+                    ArrayList tempp = _Sort.Bubble(tempArray);
 
-                int m = sorted.Length;
-                for (int i = 0; i < m; i++)
-                {
-                    bubbleSorted.Items.Add(sorted[i]);
+                    bubbleTimeLabel.Text = tempp[0].ToString();
+                    int[] sorted = (int[])tempp[1];
+
+                    int m = sorted.Length;
+                    for (int i = 0; i < m; i++)
+                    {
+                        bubbleSorted.Items.Add(sorted[i]);
+                    }
                 }
             }
             catch (Exception ex)
@@ -740,27 +768,30 @@ namespace Eindopdracht
             try
             {
                 clearSortLists();
-                //Array of 100 strings
-                String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
-            
-                //copy of the array to sort
-                String[] tempArray = array;
-                int n = tempArray.Length;
-                for (int i = 0; i < n; i++)
+                lock (_lock) // lock so the measurement can run twice at the same time
                 {
-                    insertUnsort.Items.Add(tempArray[i]);
-                }
+                    //Array of 100 strings
+                    String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
 
-                //start the sorting
-                ArrayList temp = _Sort.Insertion(tempArray);
+                    //copy of the array to sort
+                    String[] tempArray = array;
+                    int n = tempArray.Length;
+                    for (int i = 0; i < n; i++)
+                    {
+                        insertUnsort.Items.Add(tempArray[i]);
+                    }
 
-                insertTimeLabel.Text = temp[0].ToString();
-                String[] sorted = (string[])temp[1];
+                    //start the sorting
+                    ArrayList temp = _Sort.Insertion(tempArray);
 
-                int m = sorted.Length;
-                for (int i = 0; i < m; i++)
-                {
-                    insertSorted.Items.Add(sorted[i]);
+                    insertTimeLabel.Text = temp[0].ToString();
+                    String[] sorted = (string[])temp[1];
+
+                    int m = sorted.Length;
+                    for (int i = 0; i < m; i++)
+                    {
+                        insertSorted.Items.Add(sorted[i]);
+                    }
                 }
             }
             catch (Exception ex)
@@ -775,30 +806,33 @@ namespace Eindopdracht
             try
             {
                 clearSortLists();
-                //Array of 100 strings
-                String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
-                _Sort.Insertion(array);
-                Array.Reverse(array);
-
-           
-                //copy of the array to sort
-                String[] tempArray = array;
-                int n = tempArray.Length;
-                for (int i = 0; i < n; i++)
+                lock (_lock) // lock so the measurement can run twice at the same time
                 {
-                    insertUnsort.Items.Add(tempArray[i]);
-                }
+                    //Array of 100 strings
+                    String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
+                    _Sort.Insertion(array);
+                    Array.Reverse(array);
 
-                //start the sorting
-                ArrayList temp = _Sort.Insertion(tempArray);
 
-                insertTimeLabel.Text = temp[0].ToString();
-                String[] sorted = (string[])temp[1];
+                    //copy of the array to sort
+                    String[] tempArray = array;
+                    int n = tempArray.Length;
+                    for (int i = 0; i < n; i++)
+                    {
+                        insertUnsort.Items.Add(tempArray[i]);
+                    }
 
-                int m = sorted.Length;
-                for (int i = 0; i < m; i++)
-                {
-                    insertSorted.Items.Add(sorted[i]);
+                    //start the sorting
+                    ArrayList temp = _Sort.Insertion(tempArray);
+
+                    insertTimeLabel.Text = temp[0].ToString();
+                    String[] sorted = (string[])temp[1];
+
+                    int m = sorted.Length;
+                    for (int i = 0; i < m; i++)
+                    {
+                        insertSorted.Items.Add(sorted[i]);
+                    }
                 }
             }
             catch (Exception ex)
@@ -813,38 +847,41 @@ namespace Eindopdracht
             try
             {
                 clearSortLists();
-                //create an array of ints
-                int[] array = new int[1000];
-                //fill the array
-                int temp = 0;
-                Random rnd = new Random();
-
-                int max = array.Length;
-                while (temp < max)
+                lock (_lock) // lock so the measurement can run twice at the same time
                 {
-                    array[temp] = rnd.Next(1, 5000);
-                    temp++;
-                }
+                    //create an array of ints
+                    int[] array = new int[1000];
+                    //fill the array
+                    int temp = 0;
+                    Random rnd = new Random();
 
-           
-                //copy of the array to sort
-                int[] tempArray = array;
-                int n = tempArray.Length;
-                for (int i = 0; i < n; i++)
-                {
-                    insertUnsort.Items.Add(tempArray[i]);
-                }
+                    int max = array.Length;
+                    while (temp < max)
+                    {
+                        array[temp] = rnd.Next(1, 5000);
+                        temp++;
+                    }
 
-                //start the sorting
-                ArrayList tempp = _Sort.Insertion(tempArray);
 
-                insertTimeLabel.Text = tempp[0].ToString();
-                int[] sorted = (int[])tempp[1];
+                    //copy of the array to sort
+                    int[] tempArray = array;
+                    int n = tempArray.Length;
+                    for (int i = 0; i < n; i++)
+                    {
+                        insertUnsort.Items.Add(tempArray[i]);
+                    }
 
-                int m = sorted.Length;
-                for (int i = 0; i < m; i++)
-                {
-                    insertSorted.Items.Add(sorted[i]);
+                    //start the sorting
+                    ArrayList tempp = _Sort.Insertion(tempArray);
+
+                    insertTimeLabel.Text = tempp[0].ToString();
+                    int[] sorted = (int[])tempp[1];
+
+                    int m = sorted.Length;
+                    for (int i = 0; i < m; i++)
+                    {
+                        insertSorted.Items.Add(sorted[i]);
+                    }
                 }
             }
             catch (Exception ex)
@@ -855,15 +892,17 @@ namespace Eindopdracht
 
         private void clearSortLists()
         {
-            bubbleUnsort.Items.Clear();
-            bubbleSorted.Items.Clear();
-            bubbleTimeLabel.Text = " ";
-            selectUnsortBox.Items.Clear();
-            selectSortBox.Items.Clear();
-            timeLabelSelect.Text = " ";
-            insertSorted.Items.Clear();
-            insertUnsort.Items.Clear();
-            insertTimeLabel.Text = " ";
+            lock (_lock) { //lock so the items can't be cleared while there is a measurement on go
+                bubbleUnsort.Items.Clear();
+                bubbleSorted.Items.Clear();
+                bubbleTimeLabel.Text = " ";
+                selectUnsortBox.Items.Clear();
+                selectSortBox.Items.Clear();
+                timeLabelSelect.Text = " ";
+                insertSorted.Items.Clear();
+                insertUnsort.Items.Clear();
+                insertTimeLabel.Text = " ";
+            }
         }
 
 
@@ -876,14 +915,16 @@ namespace Eindopdracht
         {
             try
             {
-                time_bubble = long.MaxValue;
-                time_insertion = long.MaxValue;
-                time_selection = long.MaxValue;
+                time_bubble = double.MaxValue;
+                time_insertion = double.MaxValue;
+                time_selection = double.MaxValue;
                 //Array of 100 strings
                 String[] array = new String[] { "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "condensed", "szombathely", "outthrusting", "tragion", "academe", "bighorns", "extravehicular", "dialectic", "hemiscotosis", "dolorimetric", "presupervised", "protrude", "overspiced", "chirography", "toltec", "broteas", "extensity", "soprano", "outsit", "proctor", "unresuscitative", "underring", "doodlesack", "multiplicand", "linearize", "superlikelihood", "parasitically", "bedrid", "predominate", "anadromous", "upthrow", "blabber", "tokodynamometer", "poleaxe", "semisatirical", "liverwort", "commination", "materiel", "chanc", "previsitor", "carthusian", "roe", "heathenism", "thiocyanogen", "polonese", "madrigalist", "singultuses", "vendible", "brecknock", "struve", "quits", "porphyrogenite", "videvdat", "immigrational", "rapidity", "geoisotherm", "atamasco", "flatbread", "getter", "macintosh", "augmented", "egadi", "androspore", "heterochromatin", "sphericity", "kreutzer", "nonvirulent", "touchingness", "ectene", "boyhood" };
-                _Sort.Insertion(array);
-                Array.Reverse(array);
-
+                lock (_lock) // lock so the measurement can run twice at the same time
+                {
+                    _Sort.Insertion(array);
+                    Array.Reverse(array);
+                }
 
 
                 //set the counter to 0 and check if the numberfield is a int. if not set it to 1
@@ -895,13 +936,16 @@ namespace Eindopdracht
                     //start the Bubble sorter
                     try
                     {
-                        //copy the array
-                        String[] tempArray = array;
+                        lock (_lock) // lock so the measurement can run twice at the same time
+                        {
+                            //copy the array
+                            String[] tempArray = array;
 
-                        //start the sorting
-                        ArrayList a = _Sort.Bubble(tempArray);
-                        long temp = (long)a[0];
-                        time_bubble = (temp < time_bubble) ? temp : time_bubble; //if the new value is smaller as the old, save the new value
+                            //start the sorting
+                            ArrayList a = _Sort.Bubble(tempArray);
+                            double temp = (double)a[0];
+                            time_bubble = (temp < time_bubble) ? temp : time_bubble; //if the new value is smaller as the old, save the new value
+                        }
                     }
                     catch (Exception)
                     {
@@ -911,13 +955,16 @@ namespace Eindopdracht
                     //start the selection sorter
                     try
                     {
-                        //copy the array
-                        String[] tempArray = array;
+                        lock (_lock) // lock so the measurement can run twice at the same time
+                        {
+                            //copy the array
+                            String[] tempArray = array;
 
-                        //start the sorting
-                        ArrayList a = _Sort.Selection(tempArray);
-                        long temp = (long)a[0];
-                        time_selection = (temp < time_selection) ? temp : time_selection; //if the new value is smaller as the old, save the new value
+                            //start the sorting
+                            ArrayList a = _Sort.Selection(tempArray);
+                            double temp = (double)a[0];
+                            time_selection = (temp < time_selection) ? temp : time_selection; //if the new value is smaller as the old, save the new value
+                        }
                     }
                     catch (Exception)
                     {
@@ -927,13 +974,16 @@ namespace Eindopdracht
                     //start the insertion sorter
                     try
                     {
-                        //copy the array
-                        String[] tempArray = array;
+                        lock (_lock) // lock so the measurement can run twice at the same time
+                        {
+                            //copy the array
+                            String[] tempArray = array;
 
-                        //start the sorting
-                        ArrayList a = _Sort.Insertion(tempArray);
-                        long temp = (long)a[0];
-                        time_insertion = (temp < time_insertion) ? temp : time_insertion; //if the new value is smaller as the old, save the new value
+                            //start the sorting
+                            ArrayList a = _Sort.Insertion(tempArray);
+                            double temp = (double)a[0];
+                            time_insertion = (temp < time_insertion) ? temp : time_insertion; //if the new value is smaller as the old, save the new value
+                        }
                     }
                     catch (Exception)
                     {
@@ -955,9 +1005,9 @@ namespace Eindopdracht
         {
             try
             {
-                time_bubble = long.MaxValue;
-                time_insertion = long.MaxValue;
-                time_selection = long.MaxValue;
+                time_bubble = double.MaxValue;
+                time_insertion = double.MaxValue;
+                time_selection = double.MaxValue;
                 //create an array of ints
                 int[] numbers = new int[1000];
                 //fill the array
@@ -981,10 +1031,13 @@ namespace Eindopdracht
                     //start the Bubble sorter
                     try
                     {
-                        // copy of the int array.
-                        int[] array = numbers;
-                        ArrayList a = _Sort.Bubble(array);
-                        time_bubble = (long)a[0];
+                        lock (_lock) // lock so the measurement can run twice at the same time
+                        {
+                            // copy of the int array.
+                            int[] array = numbers;
+                            ArrayList a = _Sort.Bubble(array);
+                            time_bubble = (double)a[0];
+                        }
                     }
                     catch (Exception)
                     {
@@ -994,10 +1047,13 @@ namespace Eindopdracht
                     //start the selection sorter
                     try
                     {
-                        // copy of the int array.
-                        int[] array = numbers;
-                        ArrayList a = _Sort.Selection(array);
-                        time_selection = (long)a[0];
+                        lock (_lock) // lock so the measurement can run twice at the same time
+                        {
+                            // copy of the int array.
+                            int[] array = numbers;
+                            ArrayList a = _Sort.Selection(array);
+                            time_selection = (double)a[0];
+                        }
                     }
                     catch (Exception)
                     {
@@ -1007,10 +1063,13 @@ namespace Eindopdracht
                     //start the insertion sorter
                     try
                     {
-                        // copy of the int array.
-                        int[] array = numbers;
-                        ArrayList a = _Sort.Insertion(array);
-                        time_insertion = (long)a[0];
+                        lock (_lock) // lock so the measurement can run twice at the same time
+                        {
+                            // copy of the int array.
+                            int[] array = numbers;
+                            ArrayList a = _Sort.Insertion(array);
+                            time_insertion = (double)a[0];
+                        }
                     }
                     catch (Exception)
                     {
@@ -1033,9 +1092,9 @@ namespace Eindopdracht
         {
             try
             {
-                time_bubble = long.MaxValue;
-                time_insertion = long.MaxValue;
-                time_selection = long.MaxValue;
+                time_bubble = double.MaxValue;
+                time_insertion = double.MaxValue;
+                time_selection = double.MaxValue;
                 //set the counter to 0 and check if the numberfield is a int. if not set it to 1
                 int executionCount = 0, requiredExecutions = (Convert.ToInt32(execCount.Value) > 0) ? Convert.ToInt32(execCount.Value) : 1;
 
@@ -1048,13 +1107,16 @@ namespace Eindopdracht
                     //start the Bubble sorter
                     try
                     {
-                        //copy of the array to sort
-                        String[] tempArray = array;
+                        lock (_lock) // lock so the measurement can run twice at the same time
+                        {
+                            //copy of the array to sort
+                            String[] tempArray = array;
 
-                        //start the sorting
-                        ArrayList a = _Sort.Bubble(tempArray);
-                        long temp = (long)a[0];
-                        time_bubble = (temp < time_bubble) ? temp : time_bubble; //if the new value is smaller as the old, save the new value
+                            //start the sorting
+                            ArrayList a = _Sort.Bubble(tempArray);
+                            double temp = (double)a[0];
+                            time_bubble = (temp < time_bubble) ? temp : time_bubble; //if the new value is smaller as the old, save the new value
+                        }
                     }
                     catch (Exception)
                     {
@@ -1064,13 +1126,16 @@ namespace Eindopdracht
                     //start the selection sorter
                     try
                     {
-                        //copy of the array to sort
-                        String[] tempArray = array;
+                        lock (_lock) // lock so the measurement can run twice at the same time
+                        {
+                            //copy of the array to sort
+                            String[] tempArray = array;
 
-                        //start the sorting
-                        ArrayList a = _Sort.Selection(tempArray);
-                        long temp = (long)a[0];
-                        time_selection = (temp < time_selection) ? temp : time_selection; //if the new value is smaller as the old, save the new value
+                            //start the sorting
+                            ArrayList a = _Sort.Selection(tempArray);
+                            double temp = (double)a[0];
+                            time_selection = (temp < time_selection) ? temp : time_selection; //if the new value is smaller as the old, save the new value
+                        }
                     }
                     catch (Exception)
                     {
@@ -1080,13 +1145,16 @@ namespace Eindopdracht
                     //start the insertion sorter
                     try
                     {
-                        //copy of the array to sort
-                        String[] tempArray = array;
+                        lock (_lock) // lock so the measurement can run twice at the same time
+                        {
+                            //copy of the array to sort
+                            String[] tempArray = array;
 
-                        //start the sorting
-                        ArrayList a = _Sort.Insertion(tempArray);
-                        long temp = (long)a[0];
-                        time_insertion = (temp < time_insertion) ? temp : time_insertion; //if the new value is smaller as the old, save the new value
+                            //start the sorting
+                            ArrayList a = _Sort.Insertion(tempArray);
+                            double temp = (double)a[0];
+                            time_insertion = (temp < time_insertion) ? temp : time_insertion; //if the new value is smaller as the old, save the new value
+                        }
                     }
                     catch (Exception)
                     {
@@ -1101,46 +1169,50 @@ namespace Eindopdracht
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                Debug.WriteLine(ex);
             }
         }
 
 
         private void callWinner()
         {
-            try
+            lock (_lock) // lock so you can't call a winner while there is still a measurement ongoing
             {
-                String Winner = null;
-                if (time_bubble < time_selection)
+                try
                 {
-                    if (time_bubble < time_insertion)
+                    String Winner = null;
+                    if (time_bubble < time_selection)
                     {
-                        Winner = "Bubble Sort";
+                        if (time_bubble < time_insertion)
+                        {
+                            Winner = "Bubble Sort";
+                        }
+                        else
+                        {
+                            Winner = "Insertion Sort";
+                        }
                     }
                     else
                     {
-                        Winner = "Insertion Sort";
+                        if (time_selection < time_insertion)
+                        {
+                            Winner = "Selection Sort";
+                        }
+                        else
+                        {
+                            Winner = "Insertion Sort";
+                        }
                     }
-                }
-                else
-                {
-                    if (time_selection < time_insertion)
-                    {
-                        Winner = "Selection Sort";
-                    }
-                    else
-                    {
-                        Winner = "Insertion Sort";
-                    }
-                }
 
-                selectTickLabel.Text = time_selection.ToString();
-                bubbleTickLabel.Text = time_bubble.ToString();
-                insertionTickLabel.Text = time_insertion.ToString();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
+                    selectTickLabel.Text = time_selection.ToString();
+                    bubbleTickLabel.Text = time_bubble.ToString();
+                    insertionTickLabel.Text = time_insertion.ToString();
+                    Debug.WriteLine(Winner);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
             }
         }
         #endregion

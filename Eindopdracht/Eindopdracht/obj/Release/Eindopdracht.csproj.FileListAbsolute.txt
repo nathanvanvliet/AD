@@ -1,0 +1,11 @@
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\Eindopdracht\bin\Release\Eindopdracht.exe.config
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\Eindopdracht\bin\Release\Eindopdracht.exe
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\Eindopdracht\bin\Release\Eindopdracht.pdb
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\Eindopdracht\bin\Release\AlgoDLL.dll
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\Eindopdracht\bin\Release\Microsoft.QualityTools.Testing.Fakes.dll
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.csprojResolveAssemblyReference.cache
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.Main.resources
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.Properties.Resources.resources
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.csproj.GenerateResource.Cache
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.exe
+D:\Users\Natha\Google Drive\AD\Eindopdracht\Eindopdracht\Eindopdracht\obj\Release\Eindopdracht.pdb

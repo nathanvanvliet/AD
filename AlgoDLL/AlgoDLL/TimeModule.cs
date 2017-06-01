@@ -1,99 +1,100 @@
 ﻿/*
- *      AUTEUR: Henk Lambeck
- */
-
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
- * Waarom Stopwatch()?
- * We hebben gekozen voor stopwatch omdat we er achter kwamen dat stopwatch de queryPerformanceTimer gebruikt
- * om de tijd te bepalen.
- * deze heeft zelfs als voordeel dat je de tijd in Ticks kan laten weergeven.
- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+ * 
+ * 
+ * AUTEUR: Nathan van Vliet
+ * Source: https://www.codeproject.com/Articles/2635/High-Performance-Timer-in-C
+ * 
+ * 
+ * We switched to performance counter because stopwatch isn't thread safe
+ * source: https://stackoverflow.com/questions/6664538/is-stopwatch-elapsedticks-threadsafe
+ * */
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace AlgoDLL
 {
+   
     public class TimeModule
     {
-        private TimeSpan time;
-        private Stopwatch stopwatch = new Stopwatch();
-        private Boolean isRunning = false;
+        // import DLL 
+        [DllImport("Kernel32.dll")]
+        // create performance counter
+        private static extern bool QueryPerformanceCounter(
+          out long lpPerformanceCount);
 
+        // import DLL
+        [DllImport("Kernel32.dll")]
+        // create performance frequency
+        private static extern bool QueryPerformanceFrequency(
+            out long lpFrequency);
+
+        // long starttime, stoptime and freq for storing values 
+        private long startTime, stopTime;
+        private long freq;
+        
+
+        /// <summary>
+        /// Constructor
+        /// Sets priority to high, (re)sets the variables and checks if the counter is supported by the OS
+        /// </summary>
         public TimeModule()
         {
+            //Set Process priority & affinity
+            Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
+            Process.GetCurrentProcess().ProcessorAffinity = (IntPtr)0x0001;
 
-        }
+            // (re)set variables to zero
+            startTime = 0;
+            stopTime = 0;
+            freq = 0;
 
-        /// <summary>
-        ///     Start the time module
-        /// </summary>
-        public void start()
-        {
-            try
+            if (QueryPerformanceFrequency(out freq) == false)
             {
-                if (!isRunning)         //if the stopwatch is already running you can't start an other one.
-                {
-                    Debug.WriteLine("Time measurement started.");
-                    stopwatch.Start();
-                    isRunning = true;
-                }
-                else
-                {                       // if there is one running send a message to the debugger but send it to the user
-                    Debug.WriteLine("There is already a measurment ongoing.");
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex);
+                // if the performance counter is not supported
+                throw new Win32Exception();
             }
         }
 
-        /// <summary>
-        ///     stop the time module and save the total time elapsed.
-        /// </summary>
-        public void stop()
-        {
-            try
-            {
-                if (isRunning)
-                {
-                    stopwatch.Stop();
-                    time = stopwatch.Elapsed;
 
-                    Debug.WriteLine("Time measurement Stopped.");
-                    Debug.WriteLine("Elapsed Ticks: " + elapseTime());
-                    Debug.WriteLine("=====================");
-                }
-                else
-                {
-                    Debug.WriteLine("There is already a measurment ongoing.");
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex);
-            }
+        /// <summary>
+        /// Start the timer
+        /// </summary>
+        public void Start()
+        {
+                // lets do the waiting threads there work
+                Thread.Sleep(0);
+                // start performance counter, set start time
+                QueryPerformanceCounter(out startTime);
         }
 
+        
         /// <summary>
-        ///     calculated the amount of ticks from the time elapsed
+        /// Stop the timer
         /// </summary>
-        /// <returns>amount of ticks</returns>
-        public long elapseTime()
+        public void Stop()
         {
-            try
+                // stop performance counter, set stop time
+                QueryPerformanceCounter(out stopTime);
+        }
+
+         
+        /// <summary>
+        /// Returns the duration of the timer (in milliseconds)
+        /// </summary>
+        public double Duration
+        {
+            get
             {
-                return time.Ticks;
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex);
-                return default(long);
+                // calculate and return the duration in MS
+                return ((double)(stopTime - startTime) / (double)freq) * 1000;
             }
         }
     }

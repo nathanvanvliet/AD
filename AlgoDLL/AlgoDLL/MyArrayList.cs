@@ -1,5 +1,6 @@
 ﻿/*
  *      AUTEUR: Nathan van Vliet 
+ *      SOURCE: McMillan, M. (2007). Data Structures and Algorithms Using C#. Cambridge, Groot-Brittannië: Cambridge University Press
  */
 using System;
 using System.Collections;
@@ -129,6 +130,7 @@ namespace AlgoDLL
         {
             try
             {
+                //return the length of the array
                 return array.Length;
             }
             catch (Exception ex)
@@ -186,6 +188,7 @@ namespace AlgoDLL
         {
             try
             {
+                //return the capacity of the array
                 return array.Length;
             }
             catch (Exception ex)
@@ -233,7 +236,10 @@ namespace AlgoDLL
         {
             try
             {
+                //create a copy of the array
                 newArray = array;
+
+                //return the copy
                 return newArray;
             }
             catch (Exception ex)
@@ -281,6 +287,7 @@ namespace AlgoDLL
         {
             try
             {
+                //resize the array to size+1
                 Array.Resize(ref array, array.Length + 1);
             }
             catch (Exception ex)
@@ -302,6 +309,7 @@ namespace AlgoDLL
         {
             try
             {
+                //return the array as a IEnumerable object
                 return new MyEnum<T>(array);
             }
             catch (Exception ex)
@@ -332,12 +340,19 @@ namespace AlgoDLL
             array = list;
         }
 
+        /// <summary>
+        /// go to the next item in the array
+        /// </summary>
+        /// <returns>if the array position is valid</returns>
         public bool MoveNext()
         {
             position++;
             return (position < array.Length);
         }
 
+        /// <summary>
+        /// set the active position to the start
+        /// </summary>
         public void Reset()
         {
             position = -1;
@@ -351,6 +366,9 @@ namespace AlgoDLL
             }
         }
 
+        /// <summary>
+        /// return the current element
+        /// </summary>
         public T Current
         {
             get

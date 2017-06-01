@@ -1,5 +1,6 @@
 ﻿/*
  *      AUTEUR: Nathan van Vliet 
+ *      SOURCE: McMillan, M. (2007). Data Structures and Algorithms Using C#. Cambridge, Groot-Brittannië: Cambridge University Press
  */
 using System;
 using System.Collections;

@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="BinarySearchTree.cs" />
     <Compile Include="BucketHash.cs" />
+    <Compile Include="TimeModule.cs" />
     <Compile Include="Hash.cs" />
     <Compile Include="LinearHash.cs" />
     <Compile Include="ListIter.cs" />
@@ -50,8 +51,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuadraticHash.cs" />
     <Compile Include="Search.cs" />
-    <Compile Include="Sort.cs" />
-    <Compile Include="TimeModule.cs" />
     <Compile Include="_CirculairLinkedList.cs" />
     <Compile Include="_DoublyLinkedList.cs" />
     <Compile Include="_LinkedList.cs" />

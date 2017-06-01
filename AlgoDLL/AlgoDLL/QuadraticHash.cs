@@ -1,5 +1,7 @@
 ﻿/*
  *      AUTEUR: Henk Lambeck
+ *      SOURCE: McMillan, M. (2007). Data Structures and Algorithms Using C#. Cambridge, Groot-Brittannië: Cambridge University Press
+ *            + http://academic.regis.edu/dbahr/generalpages/datastructures/datastrucpart11.pdf
  */
 
 using System;
@@ -66,11 +68,14 @@ namespace AlgoDLL
             try
             {
                 int tot = 0;
+                //Convert the string to characters
                 char[] cname = s.ToCharArray();
 
+                //for every character add the value to the total
                 for (int i = 0; i <= cname.GetUpperBound(0); i++)
                     tot += (int)cname[i];
 
+                //return the int (total modulus arr length/upperbound)
                 return tot % arr.GetUpperBound(0);
             }
             catch (Exception ex)
@@ -94,11 +99,12 @@ namespace AlgoDLL
                 char[] cname = s.ToCharArray();
 
                 for (int i = 0; i <= cname.GetUpperBound(0); i++)
-                    tot += 37 * tot + (int)cname[i];
+                    tot += 37 * tot + (int)cname[i]; // *37, this has to do with it being prime so it helps with collisions + Covers all the letters, numbers, and a space. + Making as large or larger than the alphabet helps avoid collisions.  
 
-                tot = tot % arr.GetUpperBound(0);
-                if (tot < 0)
-                    tot += arr.GetUpperBound(0);
+
+                tot = tot % arr.GetUpperBound(0); //total modulus arr length/upperbound
+                if (tot < 0) //if the total is smaller as 0
+                    tot += arr.GetUpperBound(0); //ass the total length of the array to the total
 
                 return (int)tot;
             }
@@ -117,10 +123,11 @@ namespace AlgoDLL
         {
             try
             {
+                //loop through all array items
                 for (int i = 0; i <= arr.GetUpperBound(0); i++)
                 {
-                    if (arr[i] != null)
-                        Debug.WriteLine(i + " " + arr[i]);
+                    if (arr[i] != null)//if not empty/null
+                        Debug.WriteLine(i + " " + arr[i]);//print the information
                 }
             }
             catch (Exception ex)

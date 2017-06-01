@@ -1,5 +1,6 @@
 ﻿/*
  *      AUTEUR: Henk Lambeck
+ *      SOURCE: McMillan, M. (2007). Data Structures and Algorithms Using C#. Cambridge, Groot-Brittannië: Cambridge University Press
  */
 
 using System;
@@ -108,7 +109,10 @@ namespace AlgoDLL
             {
                 Node<T> newNode = new Node<T>(theElement);
 
+                //set the next node of the new node to the current next node
                 newNode.nextNode = current.nextNode;
+
+                //set the next node of the current node to the new node
                 current.nextNode = newNode;
                 NextLink();
             }
@@ -124,6 +128,7 @@ namespace AlgoDLL
         public void remove() {
             try
             {
+                //remove the references to the current node, carbage collector will remove the node
                 previous.nextNode = current.nextNode;
                 current = previous.nextNode;
             }
@@ -139,6 +144,7 @@ namespace AlgoDLL
         public void reset() {
             try
             {
+                //reset the list to the start
                 current = theList.GetFirst();
                 previous = null;
             }
@@ -155,6 +161,7 @@ namespace AlgoDLL
         public bool AtEnd() {
             try
             {
+                //return if the current node is the last node
                 return (current.nextNode == null);
             }
             catch (Exception ex)

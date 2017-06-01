@@ -1,5 +1,6 @@
 ﻿/*
  *      AUTEUR: Henk Lambeck
+ *      SOURCE: McMillan, M. (2007). Data Structures and Algorithms Using C#. Cambridge, Groot-Brittannië: Cambridge University Press
  */
 
 using System;
@@ -22,7 +23,7 @@ namespace AlgoDLL
 
         public Node()
         {
-            //creat the new node and fill it with a default value and empty references
+            //create the new node and fill it with a default value and empty references
             Element = default(T);
             nextNode = null;
             previousNode = null;
@@ -30,7 +31,7 @@ namespace AlgoDLL
 
         public Node(T Element)
         {
-            //creat the new node and fill it with the element and empty references
+            //create the new node and fill it with the element and empty references
             this.Element = Element;
             nextNode = null;
             previousNode = null;

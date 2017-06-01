@@ -1,5 +1,6 @@
 ﻿/*
- *      AUTEUR: Henk Lambeck
+ *      AUTEUR: Henk Lambeck, Nathan van Vliet
+ *      SOURCE: McMillan, M. (2007). Data Structures and Algorithms Using C#. Cambridge, Groot-Brittannië: Cambridge University Press
  */
 
 using System;
@@ -14,6 +15,8 @@ namespace AlgoDLL
 {
     public static class _Sort
     {
+        private static TimeModule time = new TimeModule(); //creat a timemodule to keep record of the time
+
         /// <summary>
         ///     Sorts the Array using a Selection sort
         /// </summary>
@@ -22,48 +25,49 @@ namespace AlgoDLL
         /// <returns>The amount of ticks to completion</returns>
         public static ArrayList Selection<T>(this T[] arr) where T : IComparable<T>
         {
-            TimeModule watch = new TimeModule(); //creat a timemodule to keep record of the time
-
             try
             {
-                int arrLength = arr.Length;
-                //start looping the sorter
-                //pos_min is short for position of min
-                int pos_min;
+                lock (time) {
+                    int arrLength = arr.Length;
+                    //start looping the sorter
+                    //pos_min is short for position of min
+                    int pos_min;
 
-                //start the timemodule
-                watch.start();
+                    //start the timemodule
+                    time.Start();
 
 
-                for (int i = 0; i < arrLength - 1; i++)
-                {
-                    pos_min = i; //set pos_min to the current index of array
-
-                    for (int j = i + 1; j < arrLength; j++)
+                    for (int i = 0; i < arrLength - 1; i++)
                     {
-                        // We now use 'CompareTo' instead of '<'
-                        if (arr[j].CompareTo(arr[pos_min]) < 0)
+                        pos_min = i; //set pos_min to the current index of array
+
+                        for (int j = i + 1; j < arrLength; j++)
                         {
-                            //pos_min will keep track of the index that min is in, this is needed when a swap happens
-                            pos_min = j;
+                            // We now use 'CompareTo' instead of '<'
+                            if (arr[j].CompareTo(arr[pos_min]) < 0)
+                            {
+                                //pos_min will keep track of the index that min is in, this is needed when a swap happens
+                                pos_min = j;
+                            }
+                        }
+
+                        //if pos_min no longer equals i than a smaller value must have been found, so a swap must occur
+                        if (pos_min != i)
+                        {
+                            T temp = arr[i];
+                            arr[i] = arr[pos_min];
+                            arr[pos_min] = temp;
                         }
                     }
 
-                    //if pos_min no longer equals i than a smaller value must have been found, so a swap must occur
-                    if (pos_min != i)
-                    {
-                        T temp = arr[i];
-                        arr[i] = arr[pos_min];
-                        arr[pos_min] = temp;
-                    }
-                }
 
-                //log the result
-                watch.stop();
+                    //log the result
+                    time.Stop();
+                }
 
                 //return the ticks
                 ArrayList returnArray = new ArrayList();
-                returnArray.Add(watch.elapseTime());
+                returnArray.Add(time.Duration);
                 returnArray.Add(arr);
                 return returnArray;
             }
@@ -82,49 +86,50 @@ namespace AlgoDLL
         /// <returns>The amount of ticks to completion</returns>
         public static ArrayList Bubble<T>(this T[] arr) where T : IComparable<T>
         {
-            TimeModule watch = new TimeModule(); //creat a timemodule to keep record of the time
 
             try
             {
-                T[] checkArray = arr;
-                int arrLength = arr.Length;
-                Boolean done = false;
 
-                //start the timemodule
-                watch.start();
+                    T[] checkArray = arr;
+                    int arrLength = arr.Length;
+                    Boolean done = false;
 
-                while (!done)
-                {
-                    for (var i = 1; i < arrLength; i++)
+                    //start the timemodule
+                    time.Start();
+
+                    while (!done)
                     {
-                        for (var j = 0; j < arrLength - i; j++)
+                        for (var i = 1; i < arrLength; i++)
                         {
-                            if (arr[j].CompareTo(arr[j + 1]) > 0)
+                            for (var j = 0; j < arrLength - i; j++)
                             {
-                                T temp = arr[j];
-                                arr[j] = arr[j + 1];
-                                arr[j + 1] = temp;
+                                if (arr[j].CompareTo(arr[j + 1]) > 0)
+                                {
+                                    T temp = arr[j];
+                                    arr[j] = arr[j + 1];
+                                    arr[j + 1] = temp;
+                                }
                             }
                         }
-                    }
 
-                    //check if the sorting changed anything
-                    if (arr.SequenceEqual(checkArray))    //the sorting didnt change (its done!)
-                    {
-                        done = true;
-                        //stop timer
-                        watch.stop();
+                        //check if the sorting changed anything
+                        if (arr.SequenceEqual(checkArray))    //the sorting didnt change (its done!)
+                        {
+                            done = true;
+                            //stop timer
+                            time.Stop();
+                        }
+                        else
+                        {
+                            //the sorting did change (its not yet done)
+                            checkArray = arr;
+                        }
                     }
-                    else
-                    {
-                        //the sorting did change (its not yet done)
-                        checkArray = arr;
-                    }
-                }
+                
                 
                 //return the ticks
                 ArrayList returnArray = new ArrayList();
-                returnArray.Add(watch.elapseTime());
+                returnArray.Add(time.Duration);
                 returnArray.Add(arr);
                 return returnArray;
             }
@@ -144,34 +149,35 @@ namespace AlgoDLL
         public static ArrayList Insertion<T>(this T[] arr) where T : IComparable<T>
         {
             int i, j;
-            TimeModule watch = new TimeModule();    //creat a timemodule to keep record of the time
+
 
 
             try
             {
-                int arrLength = arr.Length;         //Length of the array
+                    int arrLength = arr.Length;         //Length of the array
 
-                //start the timemodule
-                watch.start();
+                    //start the timemodule
+                    time.Start();
 
-                for (i = 1; i < arrLength; i++)
-                {
-                    T value = arr[i];
-                    j = i - 1;
-                    while ((j >= 0) && (arr[j].CompareTo(value) > 0))
+                    for (i = 1; i < arrLength; i++)
                     {
-                        arr[j + 1] = arr[j];
-                        j--;
+                        T value = arr[i];
+                        j = i - 1;
+                        while ((j >= 0) && (arr[j].CompareTo(value) > 0))
+                        {
+                            arr[j + 1] = arr[j];
+                            j--;
+                        }
+                        arr[j + 1] = value;
                     }
-                    arr[j + 1] = value;
-                }
 
-                //log the result
-                watch.stop();
+                    //log the result
+                    time.Stop();
+                
 
                 //return the ticks
                 ArrayList returnArray = new ArrayList();
-                returnArray.Add(watch.elapseTime());
+                returnArray.Add(time.Duration);
                 returnArray.Add(arr);
                 return returnArray;
             }

@@ -1,5 +1,7 @@
 ﻿/*
  *      AUTEUR: Henk Lambeck
+ *      SOURCE: McMillan, M. (2007). Data Structures and Algorithms Using C#. Cambridge, Groot-Brittannië: Cambridge University Press
+ *            + http://academic.regis.edu/dbahr/generalpages/datastructures/datastrucpart11.pdf 
  */
 
 using System;
